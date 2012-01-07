@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<event>
+    <name>Collect Smolt profile</name>
+    <description>Save your computer's hardware profile information</description>
+    <description xml:lang="bg">Запазва информация за хардуера на компютъра Ви</description>
+    <description xml:lang="da">Gem information om din computers hardwareprofil</description>
+    <description xml:lang="es">Almacena la información del perfil de hardware de su computadora</description>
+    <description xml:lang="fi">Tallenna tietokoneen laitteistoprofiilitiedot</description>
+    <description xml:lang="fr">Enregistrer les informations relatives à votre matériel</description>
+    <description xml:lang="it">Salva il tuo profilo di informazioni hardware del tuo computer</description>
+    <description xml:lang="nl">Sla hardware profiel informatie van jouw computer op</description>
+    <description xml:lang="pl">Zapisuje informacje o profilu sprzętu komputera</description>
+    <description xml:lang="pt_BR">Salve a informação do perfil do hardware do seu computador</description>
+    <description xml:lang="ru">Создание профиля оборудования</description>
+    <description xml:lang="sv">Sparar din dators hårdvaruprofilinformation</description>
+    <description xml:lang="uk">Зберегти дані щодо профілю обладнання комп’ютера</description>
+    <description xml:lang="zh_CN">保存您的电脑的硬件信息</description>
+    <description xml:lang="zh_TW">儲存您的電腦硬體資訊</description>
+    <long-description>Runs smoltSendProfile -p and saves its output as 'smolt_data' element.</long-description>
+    <long-description xml:lang="bg">Стартира smoltSendProfile -p и записва получените от това данни като 'smolt_data' елемент.</long-description>
+    <long-description xml:lang="es">Ejecuta smoltSendProfile -p y almacena el resultado como un elemento 'smolt_data'.</long-description>
+    <long-description xml:lang="fi">Suorittaa komennon smoltSendProfile -p ja tallentaa sen tulosteen ”smolt_data”-elementtinä.</long-description>
+    <long-description xml:lang="fr">Exécutez smoltSendProfile -p et sauvegardez sa sortie comme un élément « smolt_data »</long-description>
+    <long-description xml:lang="it">Eseguire smoltSendProfile -p e salvare il suo output come  elemento 'smolt_data'.</long-description>
+    <long-description xml:lang="nl">Draait smoltSendProfile -p en slaat de output hiervan op als 'smolt_data' element.</long-description>
+    <long-description xml:lang="pl">Wykonuje polecenie smoltSendProfile -p i zapisuje wynik jako element "smolt_data".</long-description>
+    <long-description xml:lang="ru">Запуск smoltSendProfile -p с сохранением данных в ячейку «smolt_data».</long-description>
+    <long-description xml:lang="sv">Kör smoltSendProfile -p och sparar dess utdata som ”smolt_data”-element.</long-description>
+    <long-description xml:lang="uk">Запускає «smoltSendProfile -p» і зберігає виведені дані у елементі «smolt_data».</long-description>
+    <long-description xml:lang="zh_TW">執行 smoltSendProfile -p 並將它的輸出儲存為「smolt_data」元素。</long-description>
+    <creates-items>smolt_data</creates-items>
+</event>

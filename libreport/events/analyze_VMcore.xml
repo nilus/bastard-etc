@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<event>
+    <name>Analyze VM core</name>
+    <name xml:lang="bg">Анализира VM средата</name>
+    <name xml:lang="cs">Analyzovat jádro VM</name>
+    <name xml:lang="da">Analysér VM-kerne</name>
+    <name xml:lang="es">Analiza el núcleo VM</name>
+    <name xml:lang="fi">Analysoi VM-ydin</name>
+    <name xml:lang="fr">Analyse VM core</name>
+    <name xml:lang="it">Analizza core VM</name>
+    <name xml:lang="nl">analyseer VM core</name>
+    <name xml:lang="pl">Analizuje plik core maszyny wirtualnej</name>
+    <name xml:lang="pt">Analisar núcleo VM</name>
+    <name xml:lang="ru">Разбор отказа системы</name>
+    <name xml:lang="sv">Analysera VM-kärna</name>
+    <name xml:lang="uk">Проаналізувати ядро ВМ</name>
+    <name xml:lang="zh_TW">分析 VM 核心</name>
+    <description>Install kernel debuginfo packages, generate kernel log and oops message</description>
+    <description xml:lang="bg">Инсталира debuginfo пакети за ядрото, генерира журнал за ядрото и oops съобщение</description>
+    <description xml:lang="da">Installér kerne-debuginfo pakkerne, generér kernelog og oops-besked</description>
+    <description xml:lang="es">Instala paquetes de información de depuración del kernel, genera registro de kernel y mensajes de alerta</description>
+    <description xml:lang="fi">Asenna debuginfo-paketit, luo ytimen loki ja oops-viesti</description>
+    <description xml:lang="fr">installe le paquet kernel debuginfo, génère la journalisation du noyau et les messages oops</description>
+    <description xml:lang="it">Install pacchetti kernel debuginfo, genera log kernel e messaggio di oops</description>
+    <description xml:lang="nl">Installeer kernel debuginfo pakketten, genereer kernel log en oops boodschap</description>
+    <description xml:lang="pl">Instaluje pakiety debuginfo jądra, tworzy dziennik jądra i komunikat oops</description>
+    <description xml:lang="pt_BR">Instalar pacotes debuginfo do Kernel, gerar log e mensagens oops do Kernel</description>
+    <description xml:lang="ru">Установка пакетов для отладки ядра, создание журнала и запись сообщений об ошибках ядра</description>
+    <description xml:lang="sv">Installera kärnans felsökningspaket, generera kärnlogg och oops-meddelanden</description>
+    <description xml:lang="uk">Встановити пакунки діагностичних даних ядра, створити журнал дій ядра і повідомлень щодо помилок</description>
+    <description xml:lang="zh_TW">安裝內核 debuginfo 套件，產生內核紀錄與 oops 訊息</description>
+    <long-description>Needs to install kernel debuginfo packages, which might take significant time, and take up disk space.</long-description>
+    <long-description xml:lang="bg">Нуждае се от инсталиране на debuginfo пакети, което може да отнеме значително време и ще заеме дисково пространство.</long-description>
+    <long-description xml:lang="cs">Je třeba nainstalovat ladící balíčky jádra, což může chvíli trvat a zabere část místa na pevném disku.</long-description>
+    <long-description xml:lang="da">Mangler at installere kerne debuginfo-pakker, kan tage ret lang tid og optage diskplads.</long-description>
+    <long-description xml:lang="es">Es necesario instalar paquetes de información de depuración del kernel, lo que puede llevar algo de tiempo y ocupar espacio en disco.</long-description>
+    <long-description xml:lang="fi">Ytimen debuginfo-paketit on asennettava, tämä saattaa viedä paljon aikaa ja levytilaa</long-description>
+    <long-description xml:lang="fr">Nécessite l'installation du paquet kernel debuginfo, cela pourrait prendre beaucoup de temps, et occuper de la place sur le disque.</long-description>
+    <long-description xml:lang="it">E' necessario installare i pacchetti kernel debuginfo, che possono richiedere un tempo significativo e spazio su disco.</long-description>
+    <long-description xml:lang="nl">Kernel debuginfo pakketten moeten geïnstalleerd worden, dat kan behoorlijk wat tijd kosten en veel schijfruimte vergen.</long-description>
+    <long-description xml:lang="pl">Należy zainstalować pakiety debuginfo jądra, co może zająć dużo czasu i miejsca na dysku.</long-description>
+    <long-description xml:lang="pt_BR">É necessário instalar pacotes de debuginfo do Kernel, o que pode levar um tempo significante, e ocupar espaço em disco.</long-description>
+    <long-description xml:lang="ru">Требует загрузки отладочных пакетов к ядру, что может занимать значительное время и дисковое пространство.</long-description>
+    <long-description xml:lang="sv">Behöver installera paket med felsökningsinformation för kärnan, vilket kan ta en hel del tid, och använda diskutrymme.</long-description>
+    <long-description xml:lang="uk">Потребує встановлення пакунків діагностичних даних ядра, на що може знадобитися доволі багато часу і місця на диску.</long-description>
+    <long-description xml:lang="zh_TW">需要安裝內核 debuginfo 套件，並且可能會花上一段長時間以及消耗磁碟空間。</long-description>
+    <creates-items>backtrace</creates-items>
+</event>

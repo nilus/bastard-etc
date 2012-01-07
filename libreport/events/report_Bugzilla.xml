@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<event>
+    <name>Bugzilla</name>
+    <description>Report to Bugzilla bug tracker</description>
+
+    <requires-items>component,duphash,os_release</requires-items>
+    <exclude-items-by-default>coredump,count,event_log,reported_to,vmcore</exclude-items-by-default>
+    <exclude-items-always/>
+    <exclude-binary-items>no</exclude-binary-items>
+    <include-items-by-default/>
+    <minimal-rating>3</minimal-rating>
+
+    <options>
+        <option type="text" name="Bugzilla_BugzillaURL">
+            <label>Bugzilla URL</label>
+            <allow-empty>no</allow-empty>
+            <description>Address of Bugzilla server</description>
+            <default-value>https://bugs.gentoo.org</default-value>
+            <note-html>You can create a Gentoo Bugzilla account &lt;a href="https://bugs.gentoo.org/createaccount.cgi"&gt;here&lt;/a&gt;</note-html>
+        </option>
+        <option type="text" name="Bugzilla_Login">
+            <label>User name</label>
+            <allow-empty>no</allow-empty>
+            <description>Bugzilla account user name</description>
+        </option>
+        <option type="password" name="Bugzilla_Password">
+            <label>Password</label>
+            <allow-empty>no</allow-empty>
+            <description>Bugzilla account password</description>
+        </option>
+        <option type="bool" name="Bugzilla_SSLVerify">
+            <label>Verify SSL</label>
+            <description>Check SSL key validity</description>
+            <default-value>yes</default-value>
+        </option>
+        <option type="text" name="Bugzilla_Product">
+            <label>OS Product name</label>
+            <allow-empty>yes</allow-empty>
+            <note-html>Specify this only if you modified your /etc/system-release file</note-html>
+        </option>
+    </options>
+</event>

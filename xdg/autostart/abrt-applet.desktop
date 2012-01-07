@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Automatic Bug Reporting Tool
+Name[ru]=Автоматизированный регистратор ошибок
+Comment=ABRT notification applet
+Comment[ru]=Апплет уведомлений ABRT
+Icon=abrt
+Exec=abrt-applet
+Terminal=false
+Type=Application
+X-GNOME-Autostart-enabled=true

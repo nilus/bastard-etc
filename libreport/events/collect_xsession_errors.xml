@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<event>
+    <name>Collect .xsession-errors</name>
+    <description>Save relevant lines from ~/.xsession-errors file</description>
+    <description xml:lang="bg">Запазва съответните линии от файла ~/.xsession-errors</description>
+    <description xml:lang="cs">Uložit relevantní řádky ze souboru ~/.xsession-errors</description>
+    <description xml:lang="da">Gem relevante linjer fra filen ~/.xsession-errors</description>
+    <description xml:lang="de">Relevante Zeilen der Datei ~/.xsession-errors speichern</description>
+    <description xml:lang="en_GB">Save relevant lines from ~/.xsession-errors file</description>
+    <description xml:lang="es">Guardar las líneas relevantes del archivo  ~/.xsession-errors</description>
+    <description xml:lang="fi">Tallenna tärkeät rivit tiedostosta ~/.xsession-errors</description>
+    <description xml:lang="fr">Sauvegarder les informations pertinentes du fichier ~/.xsession-errors</description>
+    <description xml:lang="it">Salva le righe utili dal file ~/.xsession-errors</description>
+    <description xml:lang="nl">Sla relevante regels uit ~/.xsession-errors bestand op</description>
+    <description xml:lang="pl">Zapisuje ważne wiersze z pliku ~/.xsession-errors</description>
+    <description xml:lang="pt">Gravar linhas relevantes do ficheiro ~/.xsession-errors</description>
+    <description xml:lang="pt_BR">Salvar linhas relevantes do arquivo ~/.xsession-errors</description>
+    <description xml:lang="ru">Извлечение значимых строк из файла ~/.xsession-errors</description>
+    <description xml:lang="sv">Spara relevanta rader från filen ~/.xsession-errors</description>
+    <description xml:lang="uk">Зберегти відповідні рядки з файла ~/.xsession-errors</description>
+    <description xml:lang="zh_CN">从 ~/.xsession-errors 文件保存有关行</description>
+    <description xml:lang="zh_TW">從 ~/.xsession-error 檔案儲存相關的紀錄列</description>
+    <long-description>Scans through ~/.xsession-errors file and saves those lines which contain executable's name. The result is saved as 'xsession_errors' element.</long-description>
+    <long-description xml:lang="bg">Сканира целия файл ~/.xsession-errors и записва линиите, съдържащи имена на програми. Резултатът се записва като 'xsession_errors' елемент.</long-description>
+    <long-description xml:lang="cs">Prohlédnout soubor ~/.xsession-errors a uložit řádky, které obsahují jméno spustitelného souboru. Výsledek je uložen jako položka 'xsession_errors'.</long-description>
+    <long-description xml:lang="da">Skanner gennem filen ~/.xsession-errors og gemmer de linjer som indeholder kørbares navne. Resultatet bliver gemt som "xsession_errors"-element.</long-description>
+    <long-description xml:lang="de">Liest die Datei ~/.xsession-errors ein und speichert die Zeilen, die Namen ausführbarer Dateien enthalten. Das Ergebnis wird als »xsession_errors«-Element gespeichert.</long-description>
+    <long-description xml:lang="en_GB">Scans through ~/.xsession-errors file and saves those lines which contain executable's name. The result is saved as 'xsession_errors' element.</long-description>
+    <long-description xml:lang="es">Examina el archivo ~/.xsession-errors y guarda aquellas líneas que pudieran contener el nombre del ejecutable. El resultado se guarda como el elemento 'xsession_errors'.</long-description>
+    <long-description xml:lang="fi">Tutkii tiedoston ~/.xsession-errors ja tallentaa rivit, jotka sisältävät suoritettavan tiedoston nimen. Tulos tallennetaan ”xsession_errors”-elementtinä.</long-description>
+    <long-description xml:lang="fr">Scanne le fichier ~/.xsession-errors et sauve les lignes contenant le nom de l'exécutable. Les résultats sont sauvés comme élément « xsession_errors ».</long-description>
+    <long-description xml:lang="it">Scansiona il file  ~/.xsession-errors e salva le righe contenenti i nomi di eseguibili. Il risultato è salvato come elemento 'xsession_errors'.</long-description>
+    <long-description xml:lang="nl">Bekijk het ~/.xsession-errors bestand en sla de regels op die de naam van het uitvoerbare bestand bevatten. Het resultaat wordt opgeslagen als het 'xsession_errors' element.</long-description>
+    <long-description xml:lang="pl">Skanuje plik ~/.xsession-errors i zapisuje te wiersze, które zawierają nazwę pliku wykonywalnego. Wynik jest zapisywany jako element "xsession_errors".</long-description>
+    <long-description xml:lang="pt">Analisa através do ficheiro ~/.xsession-errors e grava as linhas que contêm o nome do executável. O resultado é gravado como elemento 'xsession_errors'.</long-description>
+    <long-description xml:lang="pt_BR">Verificar arquivo ~/.xsession-errors e salvar aquelas linhas que contém nomes de executáveis. O resultado é salvo como o elemento 'xsession_errors'.</long-description>
+    <long-description xml:lang="ru">Сканирование файла ~/.xsession-errors с сохранением строк, содержащих названия исполняемых файлов. Результат помещается в ячейку «xsession_errors».</long-description>
+    <long-description xml:lang="sv">Söker igenom filen ~/.xsession-errors och sparar de rader som innehåller progranamn.  Resultatet sparas som elementet ”xsession_errors”.</long-description>
+    <long-description xml:lang="uk">Виконує пошук у файлі ~/.xsession-errors і зберігає ті рядки, які містять назву виконуваного файла. Результат зберігається у елементі «xsession_errors».</long-description>
+    <long-description xml:lang="zh_CN">扫描 ~/.xsession-errors 文件并保存包含可执行文件名称的行。结果存为“xsession_errors”元素。</long-description>
+    <long-description xml:lang="zh_TW">掃描 ~/.xsession-errors 檔案並儲存那些包含執行檔名稱的紀錄列。結果會以「xsession_errors」元素儲存。</long-description>
+    <creates-items>xsession_errors</creates-items>
+</event>

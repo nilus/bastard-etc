@@ -1,0 +1,18 @@
+[__section_info__]
+description=User interface events
+description[ru]=События пользовательского интерфейса
+
+[clicked]
+file=gtk-events/clicked.wav
+description=Click on command button
+description[ru]=Щелчок на кнопке
+
+[activate]
+file=gtk-events/activate.wav
+description=Choose menu item
+description[ru]=Выбор пункта меню
+
+[toggled]
+file=gtk-events/toggled.wav
+description=Select check box
+description[ru]=Установка или снятие флажка

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<event>
+    <name>Kerneloops.org</name>
+    <name xml:lang="de">Kerneloops.org</name>
+    <name xml:lang="en_GB">Kerneloops.org</name>
+    <name xml:lang="es">Kerneloops.org</name>
+    <name xml:lang="fi">Kerneloops.org</name>
+    <name xml:lang="fr">Kerneloops.org</name>
+    <name xml:lang="it">Kerneloops.org</name>
+    <name xml:lang="ja">Kerneloops.org</name>
+    <name xml:lang="nl">Kerneloops.org</name>
+    <name xml:lang="pl">Kerneloops.org</name>
+    <name xml:lang="pt">Kerneloops.org</name>
+    <name xml:lang="pt_BR">Kerneloops.org</name>
+    <name xml:lang="sv">Kerneloops.org</name>
+    <name xml:lang="uk">Kerneloops.org</name>
+    <name xml:lang="zh_CN">Kerneloops.org</name>
+    <name xml:lang="zh_TW">Kerneloops.org</name>
+    <description>Send to kernel oops tracker</description>
+
+    <requires-items>backtrace</requires-items>
+    <exclude-items-by-default/>
+    <exclude-items-always>*</exclude-items-always>
+    <exclude-binary-items>yes</exclude-binary-items>
+    <include-items-by-default/>
+    <minimal-rating>0</minimal-rating>
+
+    <options>
+        <option type="text" name="KerneloopsReporter_SubmitURL">
+            <label>Kerneloops URL</label>
+            <label xml:lang="de">Kerneloops URL</label>
+            <label xml:lang="en_GB">Kerneloops URL</label>
+            <label xml:lang="es">URL Kerneloops </label>
+            <label xml:lang="fr">URL de kerneloops</label>
+            <label xml:lang="it">URL di Kerneloops</label>
+            <label xml:lang="nl">Kerneloops URL</label>
+            <label xml:lang="pl">Adres URL witryny Kerneloops</label>
+            <label xml:lang="pt">URL do kerneloops</label>
+            <label xml:lang="pt_BR">URL do Kerneloops</label>
+            <label xml:lang="sv">Kerneloops-URL</label>
+            <label xml:lang="uk">Адреса Kerneloops</label>
+            <label xml:lang="zh_CN">内核错误 URL</label>
+            <label xml:lang="zh_TW">Kerneloops 網址</label>
+            <allow-empty>no</allow-empty>
+            <description>Oops server url</description>
+            <description xml:lang="de">Oops-Serveradresse</description>
+            <description xml:lang="en_GB">Oops server url</description>
+            <description xml:lang="es">upss servidor url</description>
+            <description xml:lang="fr">URL du serveur oops</description>
+            <description xml:lang="it">URL di server Oops</description>
+            <description xml:lang="nl">Oops server url</description>
+            <description xml:lang="pl">Adres URL serwera awarii</description>
+            <description xml:lang="pt">Url do servidor oops</description>
+            <description xml:lang="pt_BR">Url do servidor oops</description>
+            <description xml:lang="sv">Oops-server-url</description>
+            <description xml:lang="uk">Адреса сервера некритичних помилок</description>
+            <description xml:lang="zh_CN">错误服务器 url</description>
+            <description xml:lang="zh_TW">Oops 伺服器網址</description>
+            <default-value>http://submit.kerneloops.org/submitoops.php</default-value>
+        </option>
+    </options>
+</event>

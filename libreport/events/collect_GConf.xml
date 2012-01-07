@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<event>
+    <name>Collect GConf configuration</name>
+    <name xml:lang="bg">Събира GConf конфигурацията</name>
+    <name xml:lang="da">Saml konfiguration for GConf</name>
+    <name xml:lang="es">Obtiene configuración GConf</name>
+    <name xml:lang="fi">Kerää GConf-asetukset</name>
+    <name xml:lang="fr">Récupère le configuration GConf</name>
+    <name xml:lang="it">Colleziona configurazione GConf</name>
+    <name xml:lang="nl">Verzamel GConf configuratie</name>
+    <name xml:lang="pl">Zbiera konfigurację GConf</name>
+    <name xml:lang="pt">Recolher configuração GConf</name>
+    <name xml:lang="pt_BR">Coletar configuração GConf</name>
+    <name xml:lang="ru">Сбор параметров GConf</name>
+    <name xml:lang="sv">Samla in GConf-konfiguration</name>
+    <name xml:lang="uk">Зібрати дані щодо налаштувань GConf</name>
+    <name xml:lang="zh_CN">收集 GConf 配置</name>
+    <name xml:lang="zh_TW">收集 GConf 組態</name>
+    <description>Save configuration from application's GConf directory</description>
+    <description xml:lang="bg">Запазва конфигурацията от GConf директорията на приложенията</description>
+    <description xml:lang="da">Gem konfiguration fra programmets GConf-mappe</description>
+    <description xml:lang="es">Guarda la configuración desde el directorio de la aplicación GConf</description>
+    <description xml:lang="fi">Tallenna asetukset ohjelman GConf-hakemistosta</description>
+    <description xml:lang="fr">Enregistre la configuration depuis le répertoire de l'application GConf</description>
+    <description xml:lang="it">Salva la configurazione dalla directory GConf della applicazione</description>
+    <description xml:lang="nl">Sla configuratie op uit GConf map van toepassing</description>
+    <description xml:lang="pl">Zapisuje konfigurację z katalogu GConf aplikacji</description>
+    <description xml:lang="pt_BR">Salvar a configuração do diretório de aplicativos do GConf</description>
+    <description xml:lang="ru">Чтение параметров приложений из каталога GConf</description>
+    <description xml:lang="sv">Spara konfigurationen från programmets GConf-katalog</description>
+    <description xml:lang="uk">Зберегти налаштування з каталогу GConf програми</description>
+    <description xml:lang="zh_TW">從應用程式的 GConf 目錄儲存組態</description>
+    <long-description>Runs gconftool-2 --recursive-list /apps/executable and saves it as 'gconf_subtree' element.</long-description>
+    <long-description xml:lang="bg">Стартира gconftool-2 --recursive-list /apps/executable и го записва като 'gconf_subtree' елемент.</long-description>
+    <long-description xml:lang="da">Kører gconftool-2 --recursive-list /apps/executable og gemmer det som "gconf_subtree"-element.</long-description>
+    <long-description xml:lang="es">Ejecuta gconftool-2 --recursive-list /apps/executable y lo guarda como elemento 'gconf_subtree'.</long-description>
+    <long-description xml:lang="fi">Suorittaa gconftool-2 --recursive-list /apps/ohjelma ja tallentaa sen ”gconf_subtree”-elementtinä.</long-description>
+    <long-description xml:lang="fr">Lance gconftool-2 --recursive-list /apps/executable et sauvegarde la sortie comme l'élément « gconf_subtree ».</long-description>
+    <long-description xml:lang="it">Esegue gconftool-2 --recursive-list /apps/executable e lo salva  come un elemento di 'gconf_subtree'.</long-description>
+    <long-description xml:lang="nl">Draait gconftool-2 --recursive-list /apps/executable en slaat het op als 'gconf_subtree' element.</long-description>
+    <long-description xml:lang="pl">Wykonuje polecenie gconftool-2 --recursive-list /apps/plik-wykonywalny i zapisuje wynik jako element "gconf_subtree".</long-description>
+    <long-description xml:lang="pt_BR">Executar gconftool-2 --recursive-list /apps/executable/ e salve-o como um elemento 'gconf_subtree'.</long-description>
+    <long-description xml:lang="ru">Запуск gconftool-2 --recursive-list /apps/executable с сохранением данных в ячейку «gconf_subtree».</long-description>
+    <long-description xml:lang="sv">Kör gconftool-2 --recursive-list /apps/executable och sparar det som ”gconf_subtree”-element.</long-description>
+    <long-description xml:lang="uk">Запускає gconftool-2 --recursive-list /apps/виконуваний_файл і зберігає дані як елемент «gconf_subtree».</long-description>
+    <long-description xml:lang="zh_TW">執行 gconftool-2 --recursive-list /apps/executable 並儲存為「gconf_subtree」元素。</long-description>
+    <creates-items>gconf_subtree</creates-items>
+</event>

@@ -1,0 +1,16 @@
+[Desktop Entry]
+Name=Disk Notifications
+Name[ru]=Уведомления диска
+Comment=Provides notifications related to disks
+Comment[ru]=Уведомления, относящиеся к дискам
+Icon=gdu-notification-daemon
+Exec=/usr/libexec/gdu-notification-daemon
+Terminal=false
+Type=Application
+Categories=
+OnlyShowIn=GNOME;Unity;
+X-GNOME-Bugzilla-Bugzilla=GNOME
+X-GNOME-Bugzilla-Product=gnome-disk-utility
+X-GNOME-Bugzilla-Component=notifications
+X-GNOME-Bugzilla-Version=3.0.2
+#X-GNOME-AutoRestart=true

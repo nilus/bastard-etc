@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<event>
+    <name>Local GNU Debugger</name>
+    <name xml:lang="bg">Локален GNU Debugger</name>
+    <name xml:lang="cs">Lokální GNU Debugger</name>
+    <name xml:lang="da">Lokal GNU-fejlsøger</name>
+    <name xml:lang="de">Lokaler GNU-Debugger</name>
+    <name xml:lang="en_GB">Local GNU Debugger</name>
+    <name xml:lang="es">Depurador Local GNU</name>
+    <name xml:lang="fa">باگ‌زدای محلی گنو</name>
+    <name xml:lang="fi">Paikallinen GNU-virheenjäljitin</name>
+    <name xml:lang="fr">Correcteur d'anomalie GNU local</name>
+    <name xml:lang="he">מנפה שגיאות GNU מקומי</name>
+    <name xml:lang="it">Debugger GNU locale</name>
+    <name xml:lang="ja">ローカル GNU デバッガ</name>
+    <name xml:lang="nl">Lokale GNU debugger</name>
+    <name xml:lang="pl">Lokalny debuger GDB</name>
+    <name xml:lang="pt">Depurador GNU local</name>
+    <name xml:lang="pt_BR">GNU Debugger Local</name>
+    <name xml:lang="ru">Локальный отладчик (GNU Debugger)</name>
+    <name xml:lang="sk">Lokálny GNU Debbuger</name>
+    <name xml:lang="sv">Lokal GNU-felsökare</name>
+    <name xml:lang="uk">Локальний зневаджувач GNU</name>
+    <name xml:lang="zh_CN">本地 GNU 调试器</name>
+    <name xml:lang="zh_TW">本地端 GNU 除錯器</name>
+    <description>Download debuginfo packages and generate backtrace locally using GDB</description>
+    <description xml:lang="bg">Сваляне на debuginfo пакети и генериране на обратно проследяващ анализ локално с използването на GDB</description>
+    <description xml:lang="cs">Stahování balíčku debuginfo a lokální generování backtrace za použití GDB</description>
+    <description xml:lang="da">Hent debuginfo-pakker og generér backtrace lokalt med GDB</description>
+    <description xml:lang="de">Debuginfo-Pakete herunterladen und Backtrace lokal mit GDB erstellen</description>
+    <description xml:lang="en_GB">Download debuginfo packages and generate backtrace locally using GDB</description>
+    <description xml:lang="es">Descargar paquetes de depuración y generar trazado local usando GDB</description>
+    <description xml:lang="fi">Lataa debuginfo-paketit ja luo pinolistaus paikallisesti GDB:tä käyttäen</description>
+    <description xml:lang="fr">Télécharger les paquets debuginfo et générer localement une trace de débogage en utilisant GDB</description>
+    <description xml:lang="he">הורדת חבילות ניפוי שגיאות ויצירת מידע הקריסה באופן מקומי באמצעות GDB</description>
+    <description xml:lang="it">Scarica i pacchetti di debuginfo e crea localmente il backtrace usando GDB</description>
+    <description xml:lang="ja">パッケージをダウンロードし、GDB を使用してローカルの backtrace を生成する</description>
+    <description xml:lang="nl">Download debuginfo pakketten en genereer de backtrace lokaal met behulp van GDB</description>
+    <description xml:lang="pl">Pobiera pakiety debuginfo i tworzy wyjątek lokalnie używając GDB</description>
+    <description xml:lang="pt">Descarregar pacotes debuginfo e gerar traçagem inversa localmente utilizando GDB</description>
+    <description xml:lang="pt_BR">Baixar os pacotes debuginfo e gerar o backtrace localmente usando o GDB</description>
+    <description xml:lang="ru">Загрузка отладочных пакетов и создание протоколов о сбоях локально при помощи GDB</description>
+    <description xml:lang="sk">Stiahntuť debuginfo balíčky a vytvoriť backtrace lokálne s použitím GDB</description>
+    <description xml:lang="sv">Hämta paket med felsökningsinformation och generera stackspår lokalt med GDB</description>
+    <description xml:lang="uk">Отримати пакунки debuginfo і створити дані зворотного трасування локально за допомогою GDB</description>
+    <description xml:lang="zh_CN">下载 debuginfo 软件包并用 GDB 在本地生成回溯数据</description>
+    <description xml:lang="zh_TW">下載 debuginfo 套件並透過本地端的 GDB 產生追蹤資訊</description>
+    <long-description>Needs to downloads debuginfo packages, which might take significant time, and take up disk space. However, unlike RetraceServer, doesn't send coredump to remote machines.</long-description>
+    <long-description xml:lang="bg">Нуждае се от сваляне на debuginfo пакети, което може да отнеме значително време и ще заеме дисково пространство. Но пък за разлика от ползването на анализиращ сървър (RetraceServer), не изпраща копия на паметта към отдалечени машини.</long-description>
+    <long-description xml:lang="cs">Potřebuje stáhnout balíčky s ladicími údaji, což může trvat značnou dobu a zabrat jistý prostor na disku. Avšak, na rozdíl od RetraceServeru, neodesílá obrazy paměti na vzdálené stroje.</long-description>
+    <long-description xml:lang="da">Skal hente debuginfo-pakker, som kan tage ret lang tid og optage diskplads. Men som, ulig RetraceServer, ikke sender kernedump til fjernmaskiner.</long-description>
+    <long-description xml:lang="de">Es ist nötig, Debuginfo-Pakete herunterzuladen, was einige Zeit in Anspruch nehmen kann und zusätzlichen Plattenplatz belegt. Jedoch wird nicht wie bei RetraceServer ein Coredump an entfernte Rechner gesendet.</long-description>
+    <long-description xml:lang="en_GB">Needs to downloads debuginfo packages, which might take significant time, and take up disk space. However, unlike RetraceServer, doesn't send coredump to remote machines.</long-description>
+    <long-description xml:lang="es">Necesita descargar paquetes  debuginfo, esto puede tardar un tiempo significativo, y ocupar espacio en disco. Sin embargo, a diferencia del Servidor de Trazado, no envía el volcado a equipos remotos.</long-description>
+    <long-description xml:lang="fi">Debuginfo-paketit on ladattava paikallisesti, mikä saattaa viedä paljon aikaa ja levytilaa. Ei kuitenkaan lähetä muistivedosta etäkoneille, toisin kuin RetraceServer.</long-description>
+    <long-description xml:lang="fr">Il est nécessaire de télécharger les paquets de debuginfo, ce qui peut prendre beaucoup de temps et de l'espace disque. Toutefois, contrairement à RetraceServer, il n'envoie pas de core dump sur les machines distantes.</long-description>
+    <long-description xml:lang="he">צריך להוריד חבילות ניפוי שגיאות, וזה תהליך שעלול לקחת זמן רב ולבזבז מקום בדיסק. לעומת זאת, בניגוד לשרת ההמעקב־מחדש, לא שולח את ה־coredump לשרתים מרוחקים.</long-description>
+    <long-description xml:lang="it">Occorre scaricare i pacchetti di debuginfo, il che potrebbe durare diverso tempo ed occupare spazio sul disco. Comunque, a differenza di RetraceServer, non invia coredump alla macchina remota.</long-description>
+    <long-description xml:lang="ja">debuginfo パッケージをダウンロードする必要があります。これは多くの時間がかかり、ディスクスペースも要します。しかし RetraceServer とは異なり、コアダンプをリモートマシンに送信したりしません。</long-description>
+    <long-description xml:lang="nl">Debuginfo pakketten moeten gedownload worden, wat veel tijd en schijfruimte zou kunnen kosten. In tegenstelling tot RetraceServer echter, wordt geen coredump naar machines op afstand gestuurd.</long-description>
+    <long-description xml:lang="pl">Należy pobrać pakiety debuginfo, co może zająć dużo czasu i miejsca na dysku. Jednakże, w przeciwieństwie do RetraceServer, nie wysyła zrzutów core do zdalnych komputerów.</long-description>
+    <long-description xml:lang="pt">Precisa de descarregar pacotes debuginfo, o que demora tempo considerável, e consome espaço em disco. Contudo, ao contrário do RetraceServer, não envia coredumps para máquinas remotas.</long-description>
+    <long-description xml:lang="pt_BR">É preciso baixar os pacotes debuginfo, o que pode levar um tempo significante, e ocupar espaço em disco. Por outro lado, ao contrário do RetraceServer, não envia o despejo de memória para máquinas remotas.</long-description>
+    <long-description xml:lang="ru">Требует загрузки отладочных пакетов, что может занимать значительное время и дисковое пространство. Отличается от обрабатывающего сервера тем, что не передаёт дампы на удалённые машины.</long-description>
+    <long-description xml:lang="sv">Behöver hämta paket med felsökningsinformation, vilket kan ta en hel del tid, och använda diskutrymme.  Men, till skillnad mot RetraceServer, skickar inte en kärndump till fjärrmaskiner.</long-description>
+    <long-description xml:lang="uk">Доведеться звантажити пакунки debuginfo. Звантаження може тривати досить довго, пакунки, які буде встановлено, можуть значно зменшити об’єм вільного місця на диску. Втім, на відміну від RetraceServer, не доведеться надсилати дамп ядра на віддалений комп’ютер.</long-description>
+    <long-description xml:lang="zh_CN">需要下载 debuginfo 软件包，这可能要花较长时间并占用很多磁盘空间。然而和追溯服务器不同的是，它不把内存转储发送至远程机器。</long-description>
+    <long-description xml:lang="zh_TW">需要下載 debuginfo 套件，並且可能會花上一段時間以及消耗一些磁碟空間。然而，這不像 RetraceServer，所以不會傳送核心傾印資料至遠端機器。</long-description>
+    <creates-items>backtrace</creates-items>
+</event>

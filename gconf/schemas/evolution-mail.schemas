@@ -1,0 +1,2359 @@
+<gconfschemafile>
+  <schemalist>
+
+    <!-- Composer settings -->
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/composer/charset</key>
+      <applyto>/apps/evolution/mail/composer/charset</applyto>
+      <owner>evolution-mail</owner>
+      <type>string</type>
+      <default></default>
+      <locale name="C">
+         <short>Default charset in which to compose messages</short>
+         <long>
+          Default charset in which to compose messages.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Кодировка по умолчанию для составления сообщений</short>
+         <long>Кодировка по умолчанию для составления сообщений.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/composer/inline_spelling</key>
+      <applyto>/apps/evolution/mail/composer/inline_spelling</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+         <short>Spell check inline</short>
+         <long>
+         Draw spelling error indicators on words as you type.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Проверять орфографию при вводе</short>
+         <long>Подчеркивать ошибки орфографии при вводе текста</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/composer/magic_links</key>
+      <applyto>/apps/evolution/mail/composer/magic_links</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+         <short>Automatic link recognition</short>
+         <long>
+         Recognize links in text and replace them.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Автоматическое распознавание гиперссылок</short>
+         <long>Распознавать ссылки в тексте и заменять их.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/composer/magic_smileys</key>
+      <applyto>/apps/evolution/mail/composer/magic_smileys</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+         <short>Automatic emoticon recognition</short>
+         <long>
+         Recognize emoticons in text and replace them with images.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Автоматическое распознавание эмоций</short>
+         <long>Распознавать эмоции в тексте и заменять их значками.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/composer/group_reply_to_list</key>
+      <applyto>/apps/evolution/mail/composer/group_reply_to_list</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+         <short>Group Reply replies to list</short>
+         <long>
+           Instead of the normal "Reply to All" behaviour, this option will
+	   make the 'Group Reply' toolbar button try to reply only to the
+	   mailing list through which you happened to receive the copy of
+	   the message to which you're replying.
+	 </long>
+      </locale>
+
+      <locale name="ru">
+         <short>«Ответить всем» отвечает в список</short>
+         <long>Вместо обычного поведения «Ответить всем», этот параметр настроит кнопку «Ответить всем» на панели инструментов на ответ только в список рассылки, через который вы получили копию сообщения, на которое отвечаете.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/composer/reply_start_bottom</key>
+      <applyto>/apps/evolution/mail/composer/reply_start_bottom</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Put the cursor at the bottom of replies</short>
+        <long>Users get all up in arms over where the cursor should go when
+        replying to a message. This determines whether the cursor is placed
+        at the top of the message or the bottom.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Помещать курсор в начало при ответе</short>
+        <long>Пользователь получает полный контроль над тем, куда должен попадать курсор при ответе на сообщения. Этот параметр определяет, будет ли курсор в начале или в конце сообщения.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/composer/request_receipt</key>
+      <applyto>/apps/evolution/mail/composer/request_receipt</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+         <short>Always request read receipt</short>
+         <long>
+         Whether a read receipt request gets added to every message by default.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Всегда запрашивать отчёт о прочтении</short>
+         <long>Добавлять ли отчёт о прочтении к каждому сообщению.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/composer/send_html</key>
+      <applyto>/apps/evolution/mail/composer/send_html</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+         <short>Send HTML mail by default</short>
+         <long>
+          Send HTML mail by default.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Отправлять почту в формате HTML по умолчанию</short>
+         <long>Отправлять почту в формате HTML по умолчанию.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/composer/spell_color</key>
+      <applyto>/apps/evolution/mail/composer/spell_color</applyto>
+      <owner>evolution-mail</owner>
+      <type>string</type>
+      <default>#FFFF00000000</default>
+      <locale name="C">
+        <short>Spell checking color</short>
+        <long>
+          Underline color for misspelled words when using inline spelling.
+        </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Цвет проверки орфографии</short>
+        <long>Цвет подчёркивания для слов с ошибкой при проверке орфографии.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/composer/spell_languages</key>
+      <applyto>/apps/evolution/mail/composer/spell_languages</applyto>
+      <owner>evolution-mail</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[]</default>
+      <locale name="C">
+        <short>Spell checking languages</short>
+        <long>
+          List of dictionary language codes used for spell checking.
+        </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Языки проверки орфографии</short>
+        <long>Список языков, используемый для проверки орфографии.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/composer/show_mail_bcc</key>
+      <applyto>/apps/evolution/mail/composer/show_mail_bcc</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+         <short>Show "Bcc" field when sending a mail message</short>
+         <long>
+           Show the "Bcc" field when sending a mail message.  This is
+           controlled from the View menu when a mail account is chosen.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Отображать поле «Скрытая копия» при отправке почтового сообщения</short>
+         <long>Показывать поле «Скрытая копия» при отправке почтового сообщения. Этот параметр управляется из меню Вид, когда выбрана учётная запись почты.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/composer/show_mail_cc</key>
+      <applyto>/apps/evolution/mail/composer/show_mail_cc</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+         <short>Show "Cc" field when sending a mail message</short>
+         <long>
+           Show the "Cc" field when sending a mail message.  This is
+           controlled from the View menu when a mail account is chosen.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Отображать поле «Копия» при отправке почтового сообщения</short>
+         <long>Показывать поле «Копия» при отправке почтового сообщения. Этот параметр управляется из меню Вид, когда выбрана учётная запись почты.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/composer/show_mail_reply_to</key>
+      <applyto>/apps/evolution/mail/composer/show_mail_reply_to</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+         <short>Show "Reply To" field when sending a mail message</short>
+         <long>
+           Show the "Reply To" field when sending a mail message.  This
+           is controlled from the View menu when a mail account is chosen.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Отображать поле «Адрес для ответа» при отправке почтовых сообщений</short>
+         <long>Показывать поле «Адрес для ответа» при отправке почтового сообщения. Этот параметр управляется из меню Вид, когда выбрана почтовая учётная запись.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/composer/show_post_from</key>
+      <applyto>/apps/evolution/mail/composer/show_post_from</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+         <short>Show "From" field when posting to a newsgroup</short>
+         <long>
+           Show the "From" field when posting to a newsgroup.  This is
+           controlled from the View menu when a news account is chosen.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Отображать поле «От» при отправке в группу новостей</short>
+         <long>Показывать поле «От» при отправке в группу новостей. Этот параметр управляется из меню Вид, когда выбрана учётная запись новостей.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/composer/show_post_reply_to</key>
+      <applyto>/apps/evolution/mail/composer/show_post_reply_to</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+         <short>Show "Reply To" field when posting to a newsgroup</short>
+         <long>
+           Show the "Reply To" field when posting to a newsgroup.  This
+           is controlled from the View menu when a news account is chosen.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Отображать поле «Адрес для ответа» при отправке в группу новостей</short>
+         <long>Показывать поле «Адрес для ответа» при отправке в группу новостей. Этот параметр управляется из меню Вид, когда выбрана учётная запись новостей.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/composer/outlook_filenames</key>
+      <applyto>/apps/evolution/mail/composer/outlook_filenames</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+         <short>Encode file names in an Outlook/GMail way</short>
+         <long>
+          Encode file names in the mail headers same as Outlook or GMail do, to let them display correctly file names with UTF-8 letters sent by Evolution, because they do not follow the RFC 2231, but use the incorrect RFC 2047 standard.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Кодировать имена файлов в стиле Outlook/GMail</short>
+         <long>Кодировать имена файлов в заголовках таким же образ, как это делают Outlook и GMail, чтобы они могли открывать отправленные из Evolution файлы с именами в формате UTF-8, потому что они не полностью следуют RFC 2231, но используют некорректный стандарт RFC 2047.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/composer/top_signature</key>
+      <applyto>/apps/evolution/mail/composer/top_signature</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Put personalized signatures at the top of replies</short>
+        <long>Users get all up in arms over where their signature should go
+        when replying to a message. This determines whether the signature is
+        placed at the top of the message or the bottom.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Помещать персональную подпись в верхней части ответов</short>
+        <long>Пользователь может определить, где должна размещаться его подпись при ответе на сообщение. Этот параметр определяет, будет ли подпись в начале или в конце сообщения.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/composer/no_signature_delim</key>
+      <applyto>/apps/evolution/mail/composer/no_signature_delim</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Do not add signature delimiter</short>
+        <long>Set to TRUE in case you do not want to add signature delimiter
+	before your signature when composing a mail.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Не добавлять разделитель для подписи.</short>
+        <long>Установите в значение ИСТИНА, если вы не хотите добавлять разделитель подписи при создании почтового сообщения</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/composer/width</key>
+      <applyto>/apps/evolution/mail/composer/width</applyto>
+      <owner>evolution-mail</owner>
+      <type>int</type>
+      <default>600</default>
+      <locale name="C">
+         <short>Composer Window default width</short>
+         <long>Default width of the Composer Window.</long>
+      </locale>
+
+      <locale name="ru">
+         <short>Ширина окна редактора по умолчанию</short>
+         <long>Ширина окна редактора по умолчанию.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/composer/height</key>
+      <applyto>/apps/evolution/mail/composer/height</applyto>
+      <owner>evolution-mail</owner>
+      <type>int</type>
+      <default>500</default>
+      <locale name="C">
+         <short>Composer Window default height</short>
+         <long>Default height of the Composer Window.</long>
+      </locale>
+
+      <locale name="ru">
+         <short>Высота окна редактора по умолчанию</short>
+         <long>Высота окна редактора по умолчанию.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/composer/ignore_list_reply_to</key>
+      <applyto>/apps/evolution/mail/composer/ignore_list_reply_to</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+         <short>Ignore list Reply-To:</short>
+         <long>
+	   Some mailing lists set a Reply-To: header to trick users into
+	   sending replies to the list, even when they ask Evolution to
+	   make a private reply. Setting this option to TRUE will attempt
+	   to ignore such Reply-To: headers, so that Evolution will do
+	   as you ask it. If you use the private reply action, it will
+	   reply privately, while if you use the 'Reply to List' action
+	   it will do that. It works by comparing the Reply-To: header
+	   with a List-Post: header, if there is one.
+	 </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Игнорировать «Обратный адрес» списка</short>
+         <long>Некоторые списки рассылки устанавливают заголовок обратного адреса, чтобы принудить пользователей отправлять ответы в список, даже если они попросили Evolution отправить ответ лично. Установка этого параметра заставит Evolution пытаться игнорировать заголовки обратного адреса. Если вы отправляете ответ лично, то он будет отправлен лично. Действие «Ответить в список» отправит ответ в список. Работа этого параметра основана на сравнении заголовков обратного адреса и списка рассылки.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/composer/message_attribution</key>
+      <applyto>/apps/evolution/mail/composer/message_attribution</applyto>
+      <owner>evolution-mail</owner>
+      <type>string</type>
+      <default></default>
+      <locale name="C">
+         <short>Attribute message.</short>
+         <long>The text that is inserted when replying to a message,
+	 attributing the message to the original author.</long>
+      </locale>
+
+      <locale name="ru">
+         <short>Вложенное сообщение.</short>
+         <long>Текст, вставляемый при ответе, указывающий на первоначального отправителя сообщения.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/composer/message_forward</key>
+      <applyto>/apps/evolution/mail/composer/message_forward</applyto>
+      <owner>evolution-mail</owner>
+      <type>string</type>
+      <default></default>
+      <locale name="C">
+         <short>Forward message.</short>
+         <long>The text that is inserted when forwarding a message,
+	 saying that the forwarded message follows.</long>
+      </locale>
+
+      <locale name="ru">
+         <short>Пересылаемое сообщение.</short>
+         <long>Текст, вставляемый при перенаправлении, обозначающий перенаправляемое сообщение.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/composer/message_original</key>
+      <applyto>/apps/evolution/mail/composer/message_original</applyto>
+      <owner>evolution-mail</owner>
+      <type>string</type>
+      <default></default>
+      <locale name="C">
+         <short>Original message.</short>
+         <long>The text that is inserted when replying to a message (top
+	 posting), saying that the original message follows.</long>
+      </locale>
+
+      <locale name="ru">
+         <short>Исходное сообщение.</short>
+         <long>Текст, вставляемый при ответе (top posting), обозначающий исходное сообщение.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/composer/gallery_path</key>
+      <applyto>/apps/evolution/mail/composer/gallery_path</applyto>
+      <owner>evolution-mail</owner>
+      <type>string</type>
+      <default></default>
+      <locale name="C">
+         <short>Path where picture gallery should search for its content</short>
+         <long>This value can be an empty string, which means it'll use
+	 the system Picture folder, usually set to ~/Pictures. This folder will
+	 be also used when the set path is not pointing to the existent folder.</long>
+      </locale>
+
+      <locale name="ru">
+         <short>Путь, по которому происходит поиск содержимого для галереи изображений</short>
+         <long>Строка может быть пустой. В таком случае будет использована системная папка для хранения изображений по умолчанию. Эта папка также будет использоваться, если папка, указанная пользователем, не существует.</long>
+      </locale>
+    </schema>
+
+    <!-- Display Settings -->
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/display/animated_images</key>
+      <applyto>/apps/evolution/mail/display/animated_images</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Show image animations</short>
+        <long>Enable animated images in HTML mail. Many users find animated
+        images annoying and prefer to see a static image instead.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Показывать анимацию изображений</short>
+        <long>Включить анимацию изображений в сообщениях HTML. Многие пользователи находят анимированные изображения раздражающими и вместо этого предпочитают видеть статические изображения.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/display/side_bar_search</key>
+      <applyto>/apps/evolution/mail/display/side_bar_search</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+         <short>Enable or disable type ahead search feature</short>
+         <long>
+          Enable the side bar search feature to allow interactive searching of folder names.
+       </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Enable or disable type ahead search feature</short>
+         <long>Включить функцию поиска в боковой панели, для интерактивного поиска названий папок.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/display/no_folder_dots</key>
+      <applyto>/apps/evolution/mail/display/no_folder_dots</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+         <short>Disable or enable ellipsizing of folder names in side bar</short>
+         <long>
+           Whether disable ellipsizing feature of folder names in side bar.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Включить или выключить сокращение имён папок в боковой панели</short>
+         <long>Выключить ли сокращение имён в дереве папок в боковой панели.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/display/magic_spacebar</key>
+      <applyto>/apps/evolution/mail/display/magic_spacebar</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+         <short>Enable or disable magic space bar</short>
+         <long> Enable this to use Space bar key to scroll in message preview, message list and folders.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Включить или выключить «волшебный пробел»</short>
+         <long>Установите этот ключ, чтобы можно было использовать клавишу пробела для прокрутки предпросмотра сообщения, списка сообщений и папок.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/display/global_view_setting</key>
+      <applyto>/apps/evolution/mail/display/global_view_setting</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+         <short>Enable to use a similar message list view settings for all folders</short>
+         <long> Enable to use a similar message list view settings for all folders.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Использовать установленные параметры отображения списка сообщений для всех папок.</short>
+         <long>Использовать установленные параметры отображения списка сообщений для всех папок.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/display/mark_citations</key>
+      <applyto>/apps/evolution/mail/display/mark_citations</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+         <short>Mark citations in the message "Preview"</short>
+         <long>
+          Mark citations in the message "Preview".
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Помечать цитирование в сообщении в панели предварительного просмотра</short>
+         <long>Помечать цитирование в сообщении в панели предварительного просмотра.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/display/citation_colour</key>
+      <applyto>/apps/evolution/mail/display/citation_colour</applyto>
+      <owner>evolution-mail</owner>
+      <type>string</type>
+      <default>#737373</default>
+      <locale name="C">
+         <short>Citation highlight color</short>
+         <long>
+          Citation highlight color.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Цвет подсветки цитирования</short>
+         <long>Цвет подсветки цитирования.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/display/caret_mode</key>
+      <applyto>/apps/evolution/mail/display/caret_mode</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+         <short>Enable/disable caret mode</short>
+         <long>
+          Enable caret mode, so that you can see a cursor when reading mail.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Включить/выключить режим каретки</short>
+         <long>Включить режим каретки, то есть вы сможете видеть курсор при чтении почты.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/display/charset</key>
+      <applyto>/apps/evolution/mail/display/charset</applyto>
+      <owner>evolution-mail</owner>
+      <type>string</type>
+      <default></default>
+      <locale name="C">
+         <short>Default charset in which to display messages</short>
+         <long>
+          Default charset in which to display messages.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Кодировка по умолчанию для отображения сообщений</short>
+         <long>Кодировка по умолчанию для отображения сообщений.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/display/load_http_images</key>
+      <applyto>/apps/evolution/mail/display/load_http_images</applyto>
+      <owner>evolution-mail</owner>
+      <type>int</type>
+      <default>0</default>
+      <locale name="C">
+         <short>Load images for HTML messages over HTTP</short>
+         <long>
+          Load images for HTML messages over HTTP(S). Possible values are:
+          "0" - Never load images off the net.
+          "1" - Load images in messages from contacts.
+          "2" - Always load images off the net.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Загружать сообщения для HTML-сообщений по HTTP</short>
+         <long>Загружать изображения для HTML-сообщений по HTTP(S). Возможные значения: «0» — никогда не загружать изображения из сети; «1» — загружать изображения, если отправитель есть в адресной книге; «2» — всегда загружать изображения из сети.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/display/animate_images</key>
+      <applyto>/apps/evolution/mail/display/animate_images</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+         <short>Show Animations</short>
+         <long>
+          Show animated images as animations.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Показывать анимацию</short>
+         <long>Показывать анимированные изображения как анимации.</long>
+      </locale>
+    </schema>   
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/display/show_all_headers</key>
+      <applyto>/apps/evolution/mail/display/show_all_headers</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Show all message headers</short>
+        <long>
+          Show all the headers when viewing a messages.
+        </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Показывать все заголовки сообщений</short>
+        <long>Показывать все заголовки при просмотре сообщений.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/display/headers</key>
+      <applyto>/apps/evolution/mail/display/headers</applyto>
+      <owner>evolution-mail</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[]</default>
+      <locale name="C">
+         <short>List of custom headers and whether they are enabled.</short>
+         <long>
+           This key should contain a list of XML structures specifying custom headers, 
+           and whether they are to be displayed. The format of the XML structure is 
+           &lt;header enabled&gt; - set enabled if the header is to be displayed 
+           in the mail view.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Список дополнительных заголовков и включены ли они.</short>
+         
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/display/sender_photo</key>
+      <applyto>/apps/evolution/mail/display/sender_photo</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+         <short>Show photo of the sender</short>
+         <long>
+          Show the photo of the sender in the message reading pane.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Показать фотографию отправителя</short>
+         <long>Показывать фотографию отправителя в панели чтения сообщений.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/evolution/mail/display/photo_local</key>
+      <applyto>/apps/evolution/mail/display/photo_local</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+         <short>Search for the sender photo in local address books </short>
+         <long>
+          This option would help in improving the speed of fetching.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Искать фотографии отправителя в локальных адресных книгах</short>
+         <long>Этот параметр должен увеличить скорость загрузки.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/display/mime_types</key>
+      <applyto>/apps/evolution/mail/display/mime_types</applyto>
+      <owner>evolution-mail</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[]</default>
+      <locale name="C">
+         <short>List of MIME types to check for Bonobo component viewers</short>
+         <long>
+           If there isn't a builtin viewer for a particular MIME type inside Evolution,
+           any MIME types appearing in this list which map to a Bonobo component viewer
+           in GNOME's MIME type database may be used for displaying content.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Список типов mime для подбора компонента просмотра через Bonobo</short>
+         <long>Если в программе Evolution отсутствует встроенная программа просмотра для определённого типа MIME, все типы MIME из этого списка, которые связаны с компонентом просмотра Bonobo среды GNOME будут отображаться с использованием этого компонента.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/display/mark_seen</key>
+      <applyto>/apps/evolution/mail/display/mark_seen</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+         <short>Mark as Seen after specified timeout</short>
+         <long>
+          Mark as Seen after specified timeout.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Помечать как просмотренные через указанное время</short>
+         <long>Помечать сообщение как просмотренное через указанный период времени.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/display/show_email</key>
+      <applyto>/apps/evolution/mail/display/show_email</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+         <short>Sender email-address column in the message list</short>
+         <long>
+          Show the email-address of the sender in a separate column in the message list.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Показывать адрес отправителя в столбце списка сообщений</short>
+         <long>Показывать адрес отправителя в отдельном столбце списка сообщений.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/display/vertical_view_fonts</key>
+      <applyto>/apps/evolution/mail/display/vertical_view_fonts</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+         <short>Determines whether to use the same fonts for both "From" and "Subject" lines in the "Messages" column in vertical view.</short>
+         <long> 
+         Determines whether to use the same fonts for both "From" and "Subject" lines in the "Messages" column in vertical view.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Определяет, надо ли использовать одинаковые шрифты для строк «От» и «Тема» в столбце «Сообщения» в вертикальном режиме просмотра.</short>
+         <long>Определяет, надо ли использовать одинаковые шрифты для строк «От» и «Тема» в столбце «Сообщения» в вертикальном режиме просмотра.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/display/mark_seen_timeout</key>
+      <applyto>/apps/evolution/mail/display/mark_seen_timeout</applyto>
+      <owner>evolution-mail</owner>
+      <type>int</type>
+      <default>1500</default>
+      <locale name="C">
+         <short>Timeout for marking message as seen</short>
+         <long>
+          Timeout for marking message as seen.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Задержка перед отметкой сообщения о просмотре</short>
+         <long>Задержка перед отметкой сообщения о просмотре.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/display/show_deleted</key>
+      <applyto>/apps/evolution/mail/display/show_deleted</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+         <short>Show deleted messages in the message-list</short>
+         <long>
+          Show deleted messages (with a strike-through) in the message-list.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Показывать удалённые сообщения в списке сообщений</short>
+         <long>Показывать удалённые сообщения (как перечеркнутые) в списке сообщений.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/display/enable_vfolders</key>
+      <applyto>/apps/evolution/mail/display/enable_vfolders</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+         <short>Enable search folders</short>
+         <long>
+          Enable search folders on startup.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Включить папки поиска</short>
+         <long>Включить папки поиска при запуске.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/display/safe_list</key>
+      <applyto>/apps/evolution/mail/display/safe_list</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+         <short>Hides the per-folder preview and removes the selection</short>
+         <long>
+          This key is read only once and reset to "false" after read. This
+          unselects the mail in the list and removes the preview for that
+          folder.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Скрыть предварительный просмотр для каждого каталога и удалить выделение</short>
+         <long>Этот ключ читается только один раз и сбрасывается в ложь после чтения. С помощью него можно отменить выделение почты и отключить панель просмотра текущего каталога.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/display/paned_size</key>
+      <applyto>/apps/evolution/mail/display/paned_size</applyto>
+      <owner>evolution-mail</owner>
+      <type>int</type>
+      <default>144</default>
+      <locale name="C">
+         <short>Height of the message-list pane</short>
+         <long>
+          Height of the message-list pane.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Высота панели списка сообщений</short>
+         <long>Высота панели спика сообщений.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/display/hpaned_size</key>
+      <applyto>/apps/evolution/mail/display/hpaned_size</applyto>
+      <owner>evolution-mail</owner>
+      <type>int</type>
+      <default>450</default>
+      <locale name="C">
+         <short>Width of the message-list pane</short>
+         <long>
+          Width of the message-list pane.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Ширина панели списка сообщений</short>
+         <long>Высота панели спика сообщений.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/display/layout</key>
+      <applyto>/apps/evolution/mail/display/layout</applyto>
+      <owner>evolution-mail</owner>
+      <type>int</type>
+      <default>0</default>
+      <locale name="C">
+        <short>Layout style</short>
+        <long>
+          The layout style determines where to place the preview pane
+          in relation to the message list.  "0" (Classic View) places
+          the preview pane below the message list.  "1" (Vertical View)
+          places the preview pane next to the message list.
+        </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Стиль размещения</short>
+        <long>Стиль размещения задаёт место для панели предварительного просмотра относительно списка сообщений. «0» (классический вид) помещает панель под список сообщений. «1» (вертикальный вид) помещает панель рядом со списком сообщений.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/display/fonts/variable</key>
+      <applyto>/apps/evolution/mail/display/fonts/variable</applyto>
+      <owner>evolution-mail</owner>
+      <type>string</type>
+      <default>Sans 12</default>
+      <locale name="C">
+         <short>Variable width font</short>
+         <long>
+         The variable width font for mail display.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Шрифт переменной ширины</short>
+         <long>Пропорциональный шрифт для основного дисплея.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/display/fonts/monospace</key>
+      <applyto>/apps/evolution/mail/display/fonts/monospace</applyto>
+      <owner>evolution-mail</owner>
+      <type>string</type>
+      <default>Monospace 12</default>
+      <locale name="C">
+         <short>Terminal font</short>
+         <long>
+         The terminal font for mail display.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Шрифт терминала</short>
+         <long>Шрифт терминала для отображения почты.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/display/fonts/use_custom</key>
+      <applyto>/apps/evolution/mail/display/fonts/use_custom</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+         <short>Use custom fonts</short>
+         <long>
+         Use custom fonts for displaying mail.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Использовать другие шрифты</short>
+         <long>Использовать другие шрифты для отображения почты.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/display/address_compress</key>
+      <applyto>/apps/evolution/mail/display/address_compress</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+         <short>Compress display of addresses in TO/CC/BCC</short>
+         <long>
+         Compress display of addresses in TO/CC/BCC to the number 
+         specified in address_count.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Сжимать отображение адресов в TO/CC/BCC</short>
+         <long>Уменьшить количество адресов отображаемых в TO/CC/BCC адресов до числа, указанного в address_count.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/display/force_message_limit</key>
+      <applyto>/apps/evolution/mail/display/force_message_limit</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+         <short>Display only message texts not exceeding certain size</short>
+         <long>
+         Enable to display only message texts not exceeding size defined in 'message_text_part_limit' key.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Показывать тексты сообщений, не превышающих определённого размера</short>
+         <long>Показывает текст сообщений, размер которых не превышает размера, определённого ключом «message_text_part_limit».</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/display/message_text_part_limit</key>
+      <applyto>/apps/evolution/mail/display/message_text_part_limit</applyto>
+      <owner>evolution-mail</owner>
+      <type>int</type>
+      <default>4096</default>
+      <locale name="C">
+         <short>Message text limit for display</short>
+         <long>
+         This decides the max size of the message text that will be displayed under
+         Evolution, specified in terms of KB. The default is 4096 (4MB). This value
+         is used only when 'force_message_limit' key is activated.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Ограничение отображаемого текста сообщения</short>
+         <long>Определяет максимальный размер текста сообщения, который может быть показан в Evolution. Размер по умолчанию: 4МБ (4096 КБ). Это значение используется только при включённом ключе «force_message_limit».</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/display/address_count</key>
+      <applyto>/apps/evolution/mail/display/address_count</applyto>
+      <owner>evolution-mail</owner>
+      <type>int</type>
+      <default>5</default>
+      <locale name="C">
+         <short>Number of addresses to display in TO/CC/BCC</short>
+         <long>
+         This sets the number of addresses to show in default message list
+         view, beyond which a '...' is shown.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Количество адресов, отображаемых в TO/CC/BCC</short>
+         <long>Устанавливает количество адресов, отображаемых при просмотре сообщения, за которыми отображается «...».</long>
+      </locale>
+    </schema>
+    
+    <schema>
+      <key>/schemas/apps/evolution/mail/display/thread_subject</key>
+      <applyto>/apps/evolution/mail/display/thread_subject</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+         <short>Thread the message-list based on Subject</short>
+         <long>
+          Whether or not to fall back on threading by subjects when the
+          messages do not contain In-Reply-To or References headers.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Сохранять список сообщений по полю «Тема»</short>
+         <long>Переходить ли к разворачиванию обсуждений по теме, если сообщения не содержат заголовков In-Reply-To и References.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/display/thread_expand</key>
+      <applyto>/apps/evolution/mail/display/thread_expand</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+         <short>Default value for thread expand state</short>
+         <long>
+          This setting specifies whether the threads should be in expanded
+          or collapsed state by default. Requires a restart to apply.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Состояние обсуждения по умолчанию</short>
+         <long>Этот ключ определяет состояние обсуждений по умолчанию. Чтобы изменения вступили в силу, необходимо перезапустить Evolution.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/display/thread_latest</key>
+      <applyto>/apps/evolution/mail/display/thread_latest</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+         <short>Whether sort threads based on latest message in that thread</short>
+         <long>
+          This setting specifies whether the threads should be sorted based
+          on latest message in each thread, rather than by message's date.
+          Evolution requires a restart.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Упорядочивать ли обсуждения по последнему сообщению в этом обсуждении</short>
+         <long>Этот ключ определяет, должны ли обсуждения упорядочиваться по последнему сообщению в каждом обсуждении, а не по дате сообщения. Чтобы изменение этого ключа вступило в силу, надо перезапустить Evolution.</long>
+      </locale>
+    </schema>
+    
+    <schema>
+      <key>/schemas/apps/evolution/mail/display/paned_view_headers_state</key>
+      <applyto>/apps/evolution/mail/display/paned_view_headers_state</applyto>
+      <owner>evolution-mail</owner>
+      <type>int</type>
+      <default>0</default>
+      <locale name="C">
+      	<short>State of message headers in paned view</short>
+      	<long>
+      	   Describes whether message headers in paned view should be collapsed or expanded by default.
+      	   "0" = expanded
+      	   "1" = collapsed
+      	</long>
+      </locale>
+
+      <locale name="ru">
+      	<short>Состояние заголовков сообщений в виде с раздельными окнами.</short>
+      	<long>Описывает, должны ли заголовки сообщений быть по умолчанию свёрнутыми или развёрнутыми . «0» = развёрнутые; «1» = свёрнутые.</long>
+      </locale>
+    </schema>
+      
+    <!-- Mail Browser -->
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/mail_browser_width</key>
+      <applyto>/apps/evolution/mail/mail_browser_width</applyto>
+      <owner>evolution-mail</owner>
+      <type>int</type>
+      <default>600</default>
+      <locale name="C">
+         <short>Mail browser width</short>
+         <long>Default width of the mail browser window.</long>
+      </locale>
+
+      <locale name="ru">
+         <short>Ширина браузера почты</short>
+         <long>Ширина окна браузера почты по умолчанию</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/mail_browser_height</key>
+      <applyto>/apps/evolution/mail/mail_browser_height</applyto>
+      <owner>evolution-mail</owner>
+      <type>int</type>
+      <default>400</default>
+      <locale name="C">
+         <short>Mail browser height</short>
+         <long>Default height of the mail browser window.</long>
+      </locale>
+
+      <locale name="ru">
+         <short>Высота браузера почты</short>
+         <long>Высота окна браузера почты по умолчанию.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/mail_browser_maximized</key>
+      <applyto>/apps/evolution/mail/mail_browser_maximized</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Mail browser maximized</short>
+        <long>Default maximized state of the mail browser window.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Браузер почты имеет максимальные размеры</short>
+        <long>Развёрнутое состояние окна браузера почты по умолчанию </long>
+      </locale>
+    </schema>
+
+    <!-- Subscribe dialog -->
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/subscription_editor_height</key>
+      <applyto>/apps/evolution/mail/subscription_editor_height</applyto>
+      <owner>evolution-mail</owner>
+      <type>int</type>
+      <default>400</default>
+      <locale name="C">
+        <short>"Folder Subscriptions" window height</short>
+        <long>
+          Initial height of the "Folder Subscriptions" window.
+          The value updates as the user resizes the window vertically.
+        </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Высота окна «Подписка на папки»</short>
+        <long>Исходное значение высоты окна «Подписка на папки». Значение обновляется, когда пользователь изменяет размер окна по вертикали.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/subscription_editor_maximized</key>
+      <applyto>/apps/evolution/mail/subscription_editor_maximized</applyto>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>"Folder Subscriptions" window maximize state</short>
+        <long>
+          Initial maximize state of the "Folder Subscriptions" window.
+          The value updates when the user maximizes or unmaximizes the
+          window.  Note, this particular value is not used by Evolution
+          since the "Folder Subscriptions" window cannot be maximized.
+          This key exists only as an implementation detail.
+        </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Состояние распахнутого окна «Подписка на папки»</short>
+        <long>Исходное состояние окна «Редактор фильтров». Значение обновляется, когда пользователь разворачивает окно на весь экран или восстанавливает его. Это значение не используется Evolution, так как окно «Подписка на папки» не может быть развёрнуто на весь экран. Этот ключ существует только из-за деталей реализации.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/subscription_editor_width</key>
+      <applyto>/apps/evolution/mail/subscription_editor_width</applyto>
+      <owner>evolution-mail</owner>
+      <type>int</type>
+      <default>600</default>
+      <locale name="C">
+        <short>"Folder Subscriptions" window width</short>
+        <long>
+          Initial width of the "Folder Subscriptions" window.
+          The value updates as the user resizes the window horizontally.
+        </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Ширина окна «Подписка на папки»</short>
+        <long>Исходное значение высоты окна «Подписка на папки». Значение обновляется, когда пользователь изменяет размер окна по горизонтали.</long>
+      </locale>
+    </schema>
+
+    <!-- Filter logging -->
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/filters/log</key>
+      <applyto>/apps/evolution/mail/filters/log</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+         <short>Log filter actions</short>
+         <long>
+          Log filter actions to the specified log file.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Регистрировать действия фильтра</short>
+         <long>Регистрировать действия фильтра в указанном файле журнала.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/filters/logfile</key>
+      <applyto>/apps/evolution/mail/filters/logfile</applyto>
+      <owner>evolution-mail</owner>
+      <type>string</type>
+      <default></default>
+      <locale name="C">
+         <short>Logfile to log filter actions</short>
+         <long>
+          Logfile to log filter actions.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Файл журнала действий фильтра</short>
+         <long>Файл журнала действий фильтра.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/filters/flush-outbox</key>
+      <applyto>/apps/evolution/mail/filters/flush-outbox</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+         <short>Flush Outbox after filtering</short>
+         <long>
+          Whether to flush Outbox after filtering is done. Outbox flush will happen
+	  only when there was used any 'Forward to' filter action and approximately
+	  one minute after the last action invocation.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Отправить исходящие после фильтрации</short>
+         <long>Отправлять ли исходящие сообщения после применения фильтрации. Отправка произойдёт только при использовании какого-либо действия фильтра «Перенаправить» и примерно через минуту после выполнения последнего действия.</long>
+      </locale>
+    </schema>
+
+    <!-- Format settings -->
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/format/forward_style</key>
+      <applyto>/apps/evolution/mail/format/forward_style</applyto>
+      <owner>evolution-mail</owner>
+      <type>int</type>
+      <default>0</default>
+      <locale name="C">
+         <short>Default forward style</short>
+         <long>
+          
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Стиль пересылки по умолчанию</short>
+         
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/format/reply_style</key>
+      <applyto>/apps/evolution/mail/format/reply_style</applyto>
+      <owner>evolution-mail</owner>
+      <type>int</type>
+      <default>0</default>
+      <locale name="C">
+         <short>Default reply style</short>
+         <long>
+          
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Стиль ответа по умолчанию</short>
+         
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/format/message_display_style</key>
+      <applyto>/apps/evolution/mail/format/message_display_style</applyto>
+      <owner>evolution-mail</owner>
+      <type>int</type>
+      <default>0</default>
+      <locale name="C">
+         <short>Message-display style ("normal", "full headers", "source")</short>
+         <long>
+          
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Тип отображения сообщения («normal», «full headers», «source»)</short>
+         
+      </locale>
+    </schema>
+
+    <!-- Prompt settings -->
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/prompts/empty_subject</key>
+      <applyto>/apps/evolution/mail/prompts/empty_subject</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+         <short>Prompt on empty subject</short>
+         <long>
+          Prompt the user when he or she tries to send a message
+          without a Subject.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Предупреждать, если тема пустая</short>
+         <long>Предупреждать, если пользователь пытается отправить сообщение без темы.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/prompts/expunge</key>
+      <applyto>/apps/evolution/mail/prompts/expunge</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+         <short>Prompt when user expunges</short>
+         <long>
+          Prompt the user when he or she tries to expunge a folder.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Предупреждать при очистке пользователем</short>
+         <long>Предупреждать, если пользователь пытается очистить удалённые сообщения в папке.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/prompts/only_bcc</key>
+      <applyto>/apps/evolution/mail/prompts/only_bcc</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+         <short>Prompt when user only fills Bcc</short>
+         <long>
+          Prompt when user tries to send a message with no To or Cc recipients.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Предупреждать, если пользователь заполнил только поле скрытой копии</short>
+         <long>Предупреждать при попытке отправки сообщений с пустыми полями «Кому» или «Копия».</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/prompts/unwanted_html</key>
+      <applyto>/apps/evolution/mail/prompts/unwanted_html</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+         <short>Prompt when user tries to send unwanted HTML</short>
+         <long>
+          Prompt when user tries to send HTML mail to recipients that
+          may not want to receive HTML mail.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Предупреждать, когда пользователь пытается отправить нежелательный HTML</short>
+         <long>Предупреждать при отправке сообщений в формате HTML тем, кто не желает этого.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/prompts/open_many</key>
+      <applyto>/apps/evolution/mail/prompts/open_many</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+         <short>Prompt when user tries to open 10 or more messages at once</short>
+         <long>
+          If a user tries to open 10 or more messages at one time, ask the user
+          if they really want to do it.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Выводить запрос при попытке пользователя открыть 10 или более сообщений одновременно</short>
+         <long>Если пользователь пытается открыть 10 или более сообщений одновременно, выводить диалог запроса, действительно ли пользователь хочет это сделать.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/prompts/mark_all_read</key>
+      <applyto>/apps/evolution/mail/prompts/mark_all_read</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+         <short>Prompt while marking multiple messages</short>
+         <long>
+        Enable or disable the prompt whilst marking multiple messages.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Предупреждать при пометке нескольких сообщений</short>
+         <long>Включает/выключает запрос подтверждения при пометке нескольких сообщений.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/prompts/delete_in_vfolder</key>
+      <applyto>/apps/evolution/mail/prompts/delete_in_vfolder</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+         <short>Prompt when deleting messages in search folder</short>
+         <long>
+         It disables/enables the repeated prompts to warn that deleting
+         messages from a search folder permanently deletes the message, not
+         simply removing it from the search results.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Предупреждать при удалении сообщений в папке поиска</short>
+         <long>Включает/выключает повторяющиеся предупреждения о том, что при удалении сообщений из папки поиска они удаляются совсем, а не только из результатов поиска.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/prompts/private_list_reply</key>
+      <applyto>/apps/evolution/mail/prompts/private_list_reply</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+         <short>Prompt when replying privately to list messages</short>
+         <long>
+         It disables/enables the repeated prompts to warn that you are
+	 sending a private reply to a message which arrived via a
+	 mailing list.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Предупреждать при личном ответе в список сообщений</short>
+         <long>Включает/выключает повторяющиеся предупреждения при отправке личного сообщения, попадающего в список рассылки.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/prompts/list_reply_to</key>
+      <applyto>/apps/evolution/mail/prompts/list_reply_to</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+         <short>Prompt when mailing list hijacks private replies</short>
+         <long>It disables/enables the repeated prompts to warn that you are trying sending a private reply to a message which arrived via a mailing list, but the list sets a Reply-To: header which redirects your reply back to the list</long>
+      </locale>
+
+      <locale name="ru">
+         <short>Предупреждать, когда список рассылки захватывает личные ответы </short>
+         <long>Включает/выключает повторяющиеся предупреждения при попытке отправки личных ответов на сообщения, полученные через список рассылки, в заголовке которых установлен обратный адрес, перенаправляющий ответы обратно в список.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/prompts/reply_many_recips</key>
+      <applyto>/apps/evolution/mail/prompts/reply_many_recips</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+         <short>Prompt when replying to many recipients</short>
+         <long>
+         It disables/enables the repeated prompts to warn that you are
+	 sending a reply to many people.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Предупреждать при ответе нескольким получателям</short>
+         <long>Включает/выключает предупреждения </long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/prompts/reply_close_browser</key>
+      <applyto>/apps/evolution/mail/prompts/reply_close_browser</applyto>
+      <owner>evolution-mail</owner>
+      <type>string</type>
+      <default>ask</default>
+      <locale name="C">
+         <short>Asks whether to close the message window when the user forwards or replies to the message shown in the window</short>
+         <long>
+	 Possible values are:
+	 never - to never close browser window
+	 always - to always close browser window
+	 ask - (or any other value) will ask user
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Спрашивать при закрытии окна сообщения, когда пользователь перенаправляет или отвечает на сообщение, которое отображается в окне</short>
+         <long>Допустимые значения: «never» — никогда не закрывать окно браузера «always» — всегда закрывать окно браузера «ask» (или любое другое значение) — спрашивать у пользователя</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/prompts/send_invalid_recip</key>
+      <applyto>/apps/evolution/mail/prompts/send_invalid_recip</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+         <short>Prompt before sending to recipients not entered as mail addresses</short>
+         <long>It disables/enables the repeated prompts to warn that you are trying to send a message to recipients not entered as mail addresses</long>
+      </locale>
+
+      <locale name="ru">
+         <short>Предупреждать перед отправкой получателям, не входящим в список адресатов</short>
+         <long>Включает/выключает предупреждения при отправке личных сообщений, попадающих получателям, не указанным в списке адресатов</long>
+      </locale>
+    </schema>
+
+       <!-- Trash settings -->
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/trash/empty_on_exit</key>
+      <applyto>/apps/evolution/mail/trash/empty_on_exit</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+         <short>Empty Trash folders on exit</short>
+         <long>
+          Empty all Trash folders when exiting Evolution.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Очищать корзину при выходе</short>
+         <long>Очищать все корзины при выходе из Evolution.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/trash/empty_on_exit_days</key>
+      <applyto>/apps/evolution/mail/trash/empty_on_exit_days</applyto>
+      <owner>evolution-mail</owner>
+      <type>int</type>
+      <default>0</default>
+      <locale name="C">
+         <short>Minimum days between emptying the trash on exit</short>
+         <long>
+        Minimum time between emptying the trash on exit, in days.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Минимальное количество дней между очисткой корзины при выходе</short>
+         <long>Минимальное время между очисткой корзины при выходе, в днях.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/trash/empty_date</key>
+      <applyto>/apps/evolution/mail/trash/empty_date</applyto>
+      <owner>evolution-mail</owner>
+      <type>int</type>
+      <default>0</default>
+      <locale name="C">
+         <short>Last time Empty Trash was run</short>
+         <long>
+        The last time Empty Trash was run, in days since January 1st, 1970 (Epoch).
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Последний раз мусорная корзина очищалась</short>
+         <long>Время последней очистки корзины (в днях с начала эпохи (1 января 1970)).</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/display/error_timeout</key>
+      <applyto>/apps/evolution/mail/display/error_timeout</applyto>
+      <owner>evolution-mail</owner>
+      <type>int</type>
+      <default>60</default>
+      <locale name="C">
+         <short>Amount of time in seconds the error should be shown on the status bar.</short>
+         <long>
+        Amount of time in seconds the error should be shown on the status bar.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Количество времени в секундах, в течение которого ошибка должна показываться в строке состояния.</short>
+         <long>Количество времени в секундах, в течение которого ошибка должна показываться в строке состояния.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/evolution/mail/display/error_level</key>
+      <applyto>/apps/evolution/mail/display/error_level</applyto>
+      <owner>evolution-mail</owner>
+      <type>int</type>
+      <default>0</default>
+      <locale name="C">
+         <short>Level beyond which the message should be logged.</short>
+         <long>
+           This can have three possible values. "0" for errors.
+           "1" for warnings. "2" for debug messages.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Уровень, за которым сообщение должно заноситься в журнал.</short>
+         <long>У этого ключа может быть одно из трёх значений: «0» — ошибки, «1» — предупреждения; «2» — отладочные сообщения.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/display/show_real_date</key>
+      <applyto>/apps/evolution/mail/display/show_real_date</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+         <short>Show original "Date" header value.</short>
+         <long>
+           Show the original "Date" header (with a local time only if the time zone differs).
+	    Otherwise always show "Date" header value in a user preferred format and local time zone.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Показать исходное значение заголовка «Дата»</short>
+         <long>Показать исходный заголовок «Дата» (с локальным временем, только если отличается часовой пояс). В противном случае, всегда показывать значение заголовка «Дата» в формате и с часовым поясом, выбранным пользователем.</long>
+      </locale>
+    </schema>
+
+
+    <!-- Labels and Colours -->
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/labels</key>
+      <applyto>/apps/evolution/mail/labels</applyto>
+      <owner>evolution-mail</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[I_mportant:#EF2929,_Work:#F57900,_Personal:#4E9A06,_To Do:#3465A4,_Later:#75507B]</default>
+      <locale name="C">
+         <short>List of Labels and their associated colors</short>
+         <long>
+           List of labels known to the mail component of
+           Evolution. The list contains strings containing name:color
+           where color uses the HTML hex encoding.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Список меток и связанных с ними цветов</short>
+         <long>Список меток, известных почтовому компоненту Evolution. Список содержит строки имя:цвет, где цвет использует кодировку цвета HTML.</long>
+      </locale>
+    </schema>
+
+    <!-- Junk -->
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/junk/check_incoming</key>
+      <applyto>/apps/evolution/mail/junk/check_incoming</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+         <short>Check incoming mail being junk</short>
+         <long>
+          Run junk test on incoming mail.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Проверять, являются ли входящие сообщения спамом</short>
+         <long>Проверять на спам входящую почту.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/junk/empty_on_exit</key>
+      <applyto>/apps/evolution/mail/junk/empty_on_exit</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+         <short>Empty Junk folders on exit</short>
+         <long>
+          Empty all Junk folders when exiting Evolution.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Очищать каталог спама при выходе</short>
+         <long>Очищать все каталоги со спамом при выходе из Evolution.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/junk/empty_on_exit_days</key>
+      <applyto>/apps/evolution/mail/junk/empty_on_exit_days</applyto>
+      <owner>evolution-mail</owner>
+      <type>int</type>
+      <default>0</default>
+      <locale name="C">
+         <short>Minimum days between emptying the junk on exit</short>
+         <long>
+        Minimum time between emptying the junk on exit, in days.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Минимальное количество дней между очисткой спама при выходе</short>
+         <long>Минимальное время между очисткой спама при выходе, в днях.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/junk/empty_date</key>
+      <applyto>/apps/evolution/mail/junk/empty_date</applyto>
+      <owner>evolution-mail</owner>
+      <type>int</type>
+      <default>0</default>
+      <locale name="C">
+         <short>Last time Empty Junk was run</short>
+         <long>
+        The last time Empty Junk was run, in days since January 1st, 1970 (Epoch).
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Последний раз спам очищался</short>
+         <long>Время последней очистки от спама (в днях с начала эпохи (1 января 1970)).</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/junk/default_plugin</key>
+      <applyto>/apps/evolution/mail/junk/default_plugin</applyto>
+      <owner>evolution-mail</owner>
+      <type>string</type>
+      <default>Bogofilter</default>
+      <locale name="C">
+         <short>The default plugin for Junk hook</short>
+         <long>
+          This is the default junk plugin, even though there are multiple plugins
+          enabled. If the default listed plugin is disabled, then it won't fall back
+          to the other available plugins.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Модуль, обрабатывающий спам по умолчанию</short>
+         <long>Это модуль обработки спама по умолчанию, даже если несколько модулей обработки спама включены одновременно. Если модуль по умолчанию выключен, доступные модули обработки спама всё равно не будут использоваться.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/junk/lookup_addressbook</key>
+      <applyto>/apps/evolution/mail/junk/lookup_addressbook</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+         <short>Determines whether to lookup in address book for sender email</short>
+         <long>
+         Determines whether to lookup the sender email in address book. If found, it shouldn't be a spam. It looks up in the books marked for autocompletion. It can be slow, if remote address books (like LDAP) are marked for autocompletion.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Определяет, нужно ли искать отправителя в адресной книге</short>
+         <long>Определяет, нужно ли искать электронный адрес отправителя в адресной книге. Если он там есть, то сообщение, видимо, не является спамом. Поиск производится в адресных книгах, помеченных для автодополнения. Поиск может быть медленным, если для автодополнения помечены удалённые книги (например, LDAP).</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/junk/lookup_addressbook_local_only</key>
+      <applyto>/apps/evolution/mail/junk/lookup_addressbook_local_only</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+         <short>Determines whether to look up addresses for junk filtering in local address book only</short>
+         <long>
+         This option is related to the key lookup_addressbook and is used to determine whether to look up addresses in local address book only to exclude mail sent by known contacts from junk filtering.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Определяет, нужно ли искать адреса для фильтрации спама только в локальной адресной книге</short>
+         <long>Этот параметр относится к ключу lookup_addressbook и определяет, использовать ли только локальные адресные книги при исключении известных контактов при фильтрации спама.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/junk/check_custom_header</key>
+      <applyto>/apps/evolution/mail/junk/check_custom_header</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+         <short>Determines whether to use custom headers to check for junk</short>
+         <long>
+          Determines whether to use custom headers to check for junk. If this option is enabled and the headers are mentioned, it will be improve the junk checking speed.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Определяет, надо ли использовать указанные пользователем заголовки для выявления спама</short>
+         <long>Определяет, надо ли использовать указанные пользователем заголовки для выявления спама. Если этот ключ установлен и заголовки указаны, то скорость проверки на спам повысится.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/evolution/mail/junk/custom_header</key>
+      <applyto>/apps/evolution/mail/junk/custom_header</applyto>
+      <owner>evolution-mail</owner>
+       <type>list</type>
+      <list_type>string</list_type>
+      <default>[X-Spam-Flag=YES,X-Spam-Level=*****]</default>
+      <locale name="C">
+         <short>Custom headers to use while checking for junk.</short>
+         <long>
+         Custom headers to use while checking for junk. The list elements
+         are string in the format "headername=value".
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Указанные пользователем заголовки для выявления спама</short>
+         <long>Указанные пользователем заголовки для выявления спама. Формат в GConf: «заголовок=значение».</long>
+      </locale>
+    </schema>
+    <!-- Account settings -->
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/default_account</key>
+      <applyto>/apps/evolution/mail/default_account</applyto>
+      <owner>evolution-mail</owner>
+      <type>string</type>
+      <default></default>
+      <locale name="C">
+         <short>UID string of the default account.</short>
+         <long>
+           UID string of the default account.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Строка UID основной учётной записи.</short>
+         <long>Строка UID основной учётной записи.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/accounts</key>
+      <applyto>/apps/evolution/mail/accounts</applyto>
+      <owner>evolution-mail</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[]</default>
+      <locale name="C">
+         <short>List of accounts</short>
+         <long>
+           List of accounts known to the mail component of
+           Evolution. The list contains strings naming 
+           subdirectories relative to /apps/evolution/mail/accounts.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Список учётных записей</short>
+         <long>Список учётных записей, известных почтовому компоненту Evolution. Этот список содержит строки, соответствующие именам каталогов в /apps/evolution/mail/accounts.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/licenses</key>
+      <applyto>/apps/evolution/mail/licenses</applyto>
+      <owner>evolution-mail</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[]</default>
+      <locale name="C">
+         <short>List of accepted licenses</short>
+         <long>
+           List of protocol names whose license has been accepted.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Список принятых лицензий</short>
+         <long>Список имен протоколов, чьи лицензии были приняты.</long>
+      </locale>
+    </schema>
+
+    <!-- save directory settings -->
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/save_dir</key>
+      <applyto>/apps/evolution/mail/save_dir</applyto>
+      <owner>evolution-mail</owner>
+      <type>string</type>
+      <default></default>
+      <locale name="C">
+         <short>Save directory</short>
+         <long>
+           Directory for saving mail component files.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Сохранить каталог</short>
+         <long>Каталог для сохранения файлов компонентов почты.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/composer/current_folder</key>
+      <applyto>/apps/evolution/mail/composer/current_folder</applyto>
+      <owner>evolution-mail</owner>
+      <type>string</type>
+      <default></default>
+      <locale name="C">
+         <short>Composer load/attach directory</short>
+         <long>
+           Directory for loading/attaching files to composer.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Каталог загрузки/прикрепления при написании сообщения</short>
+         <long>Каталог для сохранения файлов компонентов почты.</long>
+      </locale>
+    </schema>
+
+    <!-- Widget States -->
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/filter_editor_height</key>
+      <applyto>/apps/evolution/mail/filter_editor_height</applyto>
+      <type>int</type>
+      <default>650</default>
+      <locale name="C">
+        <short>"Filter Editor" window height</short>
+        <long>
+          Initial height of the "Filter Editor" window.
+          The value updates as the user resizes the window vertically.
+        </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Высота окна «Редактор фильтров»</short>
+        <long>Исходное значение высоты окна «Редактор фильтров». Значение обновляется, когда пользователь изменяет вертикальные размеры окна.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/filter_editor_maximized</key>
+      <applyto>/apps/evolution/mail/filter_editor_maximized</applyto>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>"Filter Editor" window maximize state</short>
+        <long>
+          Initial maximize state of the "Filter Editor" window.
+          The value updates when the user maximizes or unmaximizes the
+          window.  Note, this particular value is not used by Evolution
+          since the "Filter Editor" window cannot be maximized.  This
+          key exists only as an implementation detail.
+        </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Развёрнутое состояние окна «Редактор фильтров»</short>
+        <long>Исходное состояние окна «Редактор фильтров». Значение обновляется, когда пользователь разворачивает окно на весь экран или восстанавливает его. Заметьте, что значение не используется Evolution, так как окно «Редактор фильтров» не может быть развёрнуто на весь экран. Этот ключ существует только из-за деталей реализации.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/filter_editor_width</key>
+      <applyto>/apps/evolution/mail/filter_editor_width</applyto>
+      <type>int</type>
+      <default>400</default>
+      <locale name="C">
+        <short>"Filter Editor" window width</short>
+        <long>
+          Initial width of the "Filter Editor" window.
+          The value updates as the user resizes the window horizontally.
+        </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Ширина окна «Редактор фильтров»</short>
+        <long>Исходное значение ширины окна «Редактор фильтров». Значение обновляется, когда пользователь изменяет горизонтальные размеры окна.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/send_recv_on_start</key>
+      <applyto>/apps/evolution/mail/send_recv_on_start</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>Check for new messages on start</short>
+        <long>
+          Whether check for new messages when Evolution is started.
+          This includes also sending messages from Outbox.
+        </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Проверять почту при запуске</short>
+        <long>Проверять ли почту при запуске. Это также подразумевает отправку сообщений из папки для исходящих сообщений.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/send_recv_all_on_start</key>
+      <applyto>/apps/evolution/mail/send_recv_all_on_start</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Check for new messages in all active accounts</short>
+        <long>
+          Whether check for new messages in all active accounts regardless
+	  of the account "Check for new messages every X minutes" option
+	  when Evolution is started. This option is used only together
+	  with 'send_recv_on_start' option.
+        </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Проверять почту для всех включённых учётных записей</short>
+        <long>Проверять ли почту при запуске для всех включённых учётных записей, не взирая на параметр «Проверять почту каждые X минут». Этот параметр используется только одновременно с параметром «send_recv_on_start».</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/send_recv_height</key>
+      <applyto>/apps/evolution/mail/send_recv_height</applyto>
+      <owner>evolution-mail</owner>
+      <type>int</type>
+      <default>200</default>
+      <locale name="C">
+        <short>"Send and Receive Mail" window height</short>
+        <long>
+          Initial height of the "Send and Receive Mail" window.
+          The value updates as the user resizes the window vertically.
+        </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Высота окна «Получение и отправка почты»</short>
+        <long>Исходное значение высоты окна «Отправка и получение почты». Это значение изменяется, когда пользователь изменяет размер окна по вертикали.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/send_recv_maximized</key>
+      <applyto>/apps/evolution/mail/send_recv_maximized</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>"Send and Receive Mail" window maximize state</short>
+        <long>
+          Initial maximize state of the "Send and Receive Mail" window.
+          The value updates when the user maximizes or unmaximizes the
+          window.  Note, this particular value is not used by Evolution
+          since the "Send and Receive Mail" window cannot be maximized.
+          This key exists only as an implementation detail.
+        </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Развёрнутое состояние окна «Получение и отправка почты»</short>
+        <long>Исходное состояние окна «Отправка и получение почты». Это значение изменяется, когда пользователь разворачивает окно на весь экран или сворачивает его. Заметьте, что значение не используется Evolution, так как окно «Отправка и получение почты» не может быть развёрнуто на весь экран. Этот ключ существует только из-за деталей реализации.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/send_recv_width</key>
+      <applyto>/apps/evolution/mail/send_recv_width</applyto>
+      <owner>evolution-mail</owner>
+      <type>int</type>
+      <default>600</default>
+      <locale name="C">
+        <short>"Send and Receive Mail" window width</short>
+        <long>
+          Initial width of the "Send and Receive Mail" window.
+          The value updates as the user resizes the window horizontally.
+        </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Ширина окна «Получение и отправка почты»</short>
+        <long>Исходное значение ширины окна «Отправка и получение почты». Это значение изменяется, когда пользователь изменяет размер окна по горизонтали.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/vfolder_editor_height</key>
+      <applyto>/apps/evolution/mail/vfolder_editor_height</applyto>
+      <type>int</type>
+      <default>650</default>
+      <locale name="C">
+        <short>"Search Folder Editor" window height</short>
+        <long>
+          Initial height of the "Search Folder Editor" window.
+          The value updates as the user resizes the window vertically.
+        </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Высота окна «Редактор папок поиска»</short>
+        <long>Исходное значение высоты окна «Редактор папок поиска». Значение обновляется, когда пользователь изменяет вертикальные размеры окна.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/vfolder_editor_maximized</key>
+      <applyto>/apps/evolution/mail/vfolder_editor_maximized</applyto>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>"Search Folder Editor" window maximize state</short>
+        <long>
+          Initial maximize state of the "Search Folder Editor" window.
+          The value updates when the user maximizes or unmaximizes the
+          window.  Note, this particular value is not used by Evolution
+          since the "Search Folder Editor" window cannot be maximized.
+          This key exists only as an implementation detail.
+        </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Развёрнутое состояние окна «Редактор папок поиска»</short>
+        <long>Исходное состояние окна «Редактор папок поиска». Значение обновляется, когда пользователь разворачивает окно на весь экран или восстанавливает его. Заметьте, что значение не используется Evolution, так как окно «Редактор папок поиска» не может быть развёрнуто на весь экран. Этот ключ существует только из-за деталей реализации.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/vfolder_editor_width</key>
+      <applyto>/apps/evolution/mail/vfolder_editor_width</applyto>
+      <type>int</type>
+      <default>400</default>
+      <locale name="C">
+        <short>"Search Folder Editor" window width</short>
+        <long>
+          Initial width of the "Search Folder Editor" window.
+          The value updates as the user resizes the window horizontally.
+        </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Ширина окна «Редактор папок поиска»</short>
+        <long>Исходное значение ширины окна «Редактор папок поиска». Значение обновляется, когда пользователь изменяет горизонтальные размеры окна.</long>
+      </locale>
+    </schema>
+
+    <!-- Others -->
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/sync_interval</key>
+      <applyto>/apps/evolution/mail/sync_interval</applyto>
+      <owner>evolution-mail</owner>
+      <type>int</type>
+      <default>60</default>
+      <locale name="C">
+        <short>Server synchronization interval</short>
+        <long>
+          Controls how frequently local changes are synchronized with the
+          remote mail server.  The interval must be at least 30 seconds.
+        </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Интервал синхронизации с сервером</short>
+        <long>Определяет, как часто локальны изменения синхронизируются с удалённым почтовым сервером. Интервал должен быть хотя бы 30 секунд.</long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</gconfschemafile>

@@ -1,0 +1,32 @@
+#!/sbin/runscript
+# Copyright (c) 2007-2009 Roy Marples <roy@marples.name>
+# All rights reserved. Released under the 2-clause BSD license.
+
+description="Mount the root fs read/write"
+
+depend()
+{
+	need fsck
+	keyword -jail -openvz -prefix -vserver -lxc
+}
+
+start()
+{
+	case ",$(fstabinfo -o /)," in
+	*,ro,*) return 0;;
+	esac
+
+	if echo 2>/dev/null >/.test.$$; then
+		rm -f /.test.$$ /fastboot /forcefsck
+		return 0
+	fi
+
+	ebegin "Remounting root filesystem read/write"
+	case "$RC_UNAME" in
+		Linux)	mount -n -o remount,rw /;;
+		*)	mount -u -o rw /;;
+	esac
+	if eend $? "Root filesystem could not be mounted read/write"; then
+		rm -f /fastboot /forcefsck
+	fi
+}

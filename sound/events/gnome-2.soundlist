@@ -1,0 +1,38 @@
+[__section_info__]
+description=System events
+description[ru]=Системные события
+
+[login]
+file=startup3.wav
+description=Log in
+description[ru]=Вход в систему
+
+[logout]
+file=shutdown1.wav
+description=Log out
+description[ru]=Выход из системы
+
+[info]
+file=info.wav
+description=Informational message
+description[ru]=Информационное сообщение
+
+[warning]
+file=warning.wav
+description=Warning message
+description[ru]=Предупреждающее сообщение
+
+[error]
+file=error.wav
+description=Error message
+description[ru]=Сообщение об ошибке
+
+[question]
+file=question.wav
+description=Question dialog
+description[ru]=Диалог вопроса
+
+[generic]
+file=generic.wav
+description=Miscellaneous message
+description[ru]=Прочее сообщение

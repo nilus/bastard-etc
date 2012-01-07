@@ -1,0 +1,2 @@
+MANPATH=/etc/java-config/system-vm/man/
+CONFIG_PROTECT_MASK="/etc/env.d/java/"

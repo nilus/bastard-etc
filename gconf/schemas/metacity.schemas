@@ -1,0 +1,2175 @@
+<gconfschemafile>
+  <schemalist>
+
+    <!-- General preferences -->        
+
+    <schema>
+      <key>/schemas/apps/metacity/general/mouse_button_modifier</key>
+      <applyto>/apps/metacity/general/mouse_button_modifier</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>&lt;Alt&gt;</default>
+      <locale name="C">
+         <short>Modifier to use for modified window click actions</short>
+         <long>
+           Clicking a window while holding down this modifier key 
+           will move the window (left click), resize the window 
+           (middle click), or show the window menu (right click).
+           The middle and right click operations may be swapped
+           using the "resize_with_right_button" key.
+           Modifier is expressed as "&lt;Alt&gt;" or "&lt;Super&gt;"
+           for example.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Модификатор для действий по щелчку мыши</short>
+         
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/general/resize_with_right_button</key>
+      <applyto>/apps/metacity/general/resize_with_right_button</applyto>
+      <owner>metacity</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+         <short>Whether to resize with the right button</short>
+         <long>
+           Set this to true to resize with the right button and show a menu
+           with the middle button while holding down the key given in
+           "mouse_button_modifier"; set it to false to make it work the
+           opposite way around.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Изменение размера с использование правой кнопки мыши</short>
+         <long>Если ключ установлен, размер окна изменяется правой кнопкой мыши, а меню показывается средней, если удерживается клавиша, заданная в «mouse_button_modifier». Если ключ не установлен, функции кнопок мыши меняются местами.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/general/button_layout</key>
+      <applyto>/apps/metacity/general/button_layout</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>menu:minimize,maximize,close</default>
+      <locale name="C">
+         <short>Arrangement of buttons on the titlebar</short>
+         <long>
+           Arrangement of buttons on the titlebar. The 
+           value should be a string, such as 
+           "menu:minimize,maximize,spacer,close"; the colon separates the 
+           left corner of the window from the right corner, and 
+           the button names are comma-separated. Duplicate buttons
+           are not allowed. Unknown button names are silently ignored
+           so that buttons can be added in future metacity versions 
+           without breaking older versions.
+           A special spacer tag can be used to insert some space between
+           two adjacent buttons.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Расположение кнопок в заголовке окна</short>
+         <long>Расположение кнопок в заголовке окна. Значение должно быть строкой, например, «menu:minimize,maximize,spacer,close». Двоеточие разделяет левый и правый углы окна, имена кнопок разделяются запятыми. Дублирование кнопок не допускается. Неизвестные имена кнопок всегда игнорируются без уведомления, так что кнопки могут быть добавлены в будущих версиях, не нарушая предыдущих. Специальный элемент spacer может использоваться для вставки пробела между двумя кнопками.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/general/focus_mode</key>
+      <applyto>/apps/metacity/general/focus_mode</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>click</default>
+      <locale name="C">
+        <short>Window focus mode</short>
+        <long>
+          The window focus mode indicates how windows are activated. 
+          It has three possible values; "click" means windows must 
+          be clicked in order to focus them, "sloppy" means windows
+          are focused when the mouse enters the window, and "mouse" means
+          windows are focused when the mouse enters the window and 
+          unfocused when the mouse leaves the window.
+        </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Режим активации окна</short>
+        <long>Режим передачи фокуса в окно определяет, как активируются окна. У этого режима три возможных значения; «click» — означает, что для активации окна на нём надо щелкнуть; «sloppy» — означает, что окно активируется, когда на него перемещается указатель мыши; «mouse» — означает, что окно активируется, когда в него перемещается указатель мыши, и перестает быть активным, когда указатель мыши выходит из него.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/general/focus_new_windows</key>
+      <applyto>/apps/metacity/general/focus_new_windows</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>smart</default>
+      <locale name="C">
+         <short>Control how new windows get focus</short>
+         <long>
+          This option provides additional control over how newly created
+          windows get focus.  It has two possible values; "smart" applies
+          the user's normal focus mode, and "strict" results in windows
+          started from a terminal not being given focus.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Определяет, как новое окно получает фокус</short>
+         <long>Этот параметр предоставляет дополнительное управление тем, как новые окна получают фокус. Он имеет два возможных значения. Значение «smart» применяет обычный режим фокуса пользователя, а «strict» приводит к тому, что окна, запущенные из терминала, не получают фокус.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/general/raise_on_click</key>
+      <applyto>/apps/metacity/general/raise_on_click</applyto>
+      <owner>metacity</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+         <short>Whether raising should be a side-effect of other user
+                interactions</short>
+         <long>
+           Setting this option to false can lead to buggy behavior, so
+           users are strongly discouraged from changing it from the default
+           of true.
+
+           Many actions (e.g. clicking in the client area, moving or resizing the window)
+           normally raise the window as a side-effect. Setting this option to false, which
+           is strongly discouraged, will decouple raising from other user actions, and
+           ignore raise requests generated by applications. See
+           http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6.
+           Even when this option is false, windows can
+           still be raised by an alt-left-click anywhere on the window, a
+           normal click on the window decorations, or by special messages
+           from pagers, such as activation requests from tasklist applets.
+           This option is currently disabled in click-to-focus mode.
+
+           Note that the list of ways to raise windows when raise_on_click
+           is false does not include programmatic requests from
+           applications to raise windows; such requests will be ignored
+           regardless of the reason for the request.  If you are an
+           application developer and have a user complaining that your
+           application does not work with this setting disabled, tell them
+           it is _their_ fault for breaking their window manager and that
+           they need to change this option back to true or live with the
+           "bug" they requested.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Должно ли поднятие окна быть побочным эффектом других действий пользователя</short>
+         <long>Если этот параметр не установлен, возможно ошибочное поведение, поэтому мы настоятельно рекомендуем воздержаться от изменений значения по умолчанию. Многие действия (например, щелчок по окну, перемещение окна или изменение его размера) обычно поднимают окно на передний план. Если этот параметр не установлен, что настоятельно не рекомендуется, поднятие на передний план будет отделено от других действий и запросы на поднятие окна на передний план, поступающие от приложений, будут игнорироваться. Смотрите http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6. Даже если этот параметр не установлен, окна могут быть подняты на передний план с помощью одновременного нажатия на клавишу Alt и щелчка левой кнопкой мыши по любой области окна, щелчка по заголовку окна или специальных сообщений, таких как запросы на поднятие окна. Это поведение в данный момент выключено в режиме щелчка для передачи фокуса. Заметьте, что обозначенный выше список не включает в себя программные запросы от приложений о поднятии окон на передний план, такие запросы будут проигнорированы независимо от причины. Если вы разработчик приложения и вам приходится слушать замечания пользователей, что ваше приложение работает некорректно, укажите им, что _они_ допустили ошибку, выключив этот параметр и сломав менеджер окон, и что они должны вернуть этому параметру значение по умолчанию или прекратить посылать замечания.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/general/action_double_click_titlebar</key>
+      <applyto>/apps/metacity/general/action_double_click_titlebar</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>toggle_maximize</default>
+      <locale name="C">
+         <short>Action on title bar double-click</short>
+         <long>
+           This option determines the effects of double-clicking on the
+           title bar.  Current valid options are
+	   'toggle_shade', which will shade/unshade the window,
+	   'toggle_maximize' which will maximize/unmaximize the window,
+	   'toggle_maximize_horizontally' and 'toggle_maximize_vertically'
+	   which will maximize/unmaximize the window in that direction only,
+	   'minimize' which will minimize the window,
+	   'shade' which will roll the window up,
+	   'menu' which will display the window menu,
+	   'lower' which will put the window behind all the others,
+	   and 'none' which will not do anything.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Действие при двойном щелчке по заголовку окна</short>
+         <long>Этот ключ определяет действие двойного щелчка на заголовке окна. В настоящее время допустимыми значениями являются «toggle_shade» (скручивает окно в полоску или раскатывает обратно), «toggle_maximize» (разворачивает окно или восстанавливает обычный размер),  «toggle_maximize_vertically» и «toggle_maximize_horizontally» (разворачивает окно только в одном направлении или восстанавливает обычный размер), «minimize» (сворачивает окно), «shade» (скрутит окно вверх), «menu» (показывает меню окна), «lower» (помещает окно под другими) и, наконец, «none» (не делает ничего).</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/general/action_middle_click_titlebar</key>
+      <applyto>/apps/metacity/general/action_middle_click_titlebar</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>lower</default>
+      <locale name="C">
+         <short>Action on title bar middle-click</short>
+         <long>
+           This option determines the effects of middle-clicking on the
+           title bar.  Current valid options are
+	   'toggle_shade', which will shade/unshade the window,
+	   'toggle_maximize' which will maximize/unmaximize the window,
+	   'toggle_maximize_horizontally' and 'toggle_maximize_vertically'
+	   which will maximize/unmaximize the window in that direction only,
+	   'minimize' which will minimize the window,
+	   'shade' which will roll the window up,
+	   'menu' which will display the window menu,
+	   'lower' which will put the window behind all the others,
+	   and 'none' which will not do anything.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Действие при щелчке по заголовку окна средней кнопкой мыши</short>
+         <long>Этот ключ определяет действие щелчка средней кнопкой мыши по заголовку окна. В настоящее время допустимыми значениями являются «toggle_shade» (скручивает окно в полоску или раскатывает обратно), «toggle_maximize» (разворачивает окно или восстанавливает обычный размер),  «toggle_maximize_vertically» и «toggle_maximize_horizontally» (разворачивает окно только в одном направлении или восстанавливает обычный размер), «minimize» (сворачивает окно), «shade» (скрутит окно вверх), «menu» (показывает меню окна), «lower» (помещает окно под другими) и, наконец, «none» (не делает ничего).</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/general/action_right_click_titlebar</key>
+      <applyto>/apps/metacity/general/action_right_click_titlebar</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>menu</default>
+      <locale name="C">
+         <short>Action on title bar right-click</short>
+         <long>
+           This option determines the effects of right-clicking on the
+           title bar.  Current valid options are
+	   'toggle_shade', which will shade/unshade the window,
+	   'toggle_maximize' which will maximize/unmaximize the window,
+	   'toggle_maximize_horizontally' and 'toggle_maximize_vertically'
+	   which will maximize/unmaximize the window in that direction only,
+	   'minimize' which will minimize the window,
+	   'shade' which will roll the window up,
+	   'menu' which will display the window menu,
+	   'lower' which will put the window behind all the others,
+	   and 'none' which will not do anything.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Действие при щелчке по заголовку окна правой кнопкой мыши</short>
+         <long>Этот ключ определяет действие щелчка правой кнопкой мыши по заголовку окна. В настоящее время допустимыми значениями являются «toggle_shade» (скручивает окно в полоску или раскатывает обратно), «toggle_maximize» (разворачивает окно или восстанавливает обычный размер),  «toggle_maximize_vertically» и «toggle_maximize_horizontally» (разворачивает окно только в одном направлении или восстанавливает обычный размер), «minimize» (сворачивает окно), «shade» (скрутит окно вверх), «menu» (показывает меню окна), «lower» (помещает окно под другими) и, наконец, «none» (не делает ничего).</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/general/auto_raise</key>
+      <applyto>/apps/metacity/general/auto_raise</applyto>
+      <owner>metacity</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Automatically raises the focused window</short>
+        <long>
+          If set to true, and the focus mode is either "sloppy" or "mouse"
+          then the focused window will be automatically raised after a
+          delay specified by the auto_raise_delay key. This is not related
+          to clicking on a window to raise it, nor to entering a window
+          during drag-and-drop.
+        </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Автоматически поднимать активное окно</short>
+        <long>Если этот ключ установлен, и режим фокуса либо «sloppy», либо «mouse», тогда окно, находящееся в фокусе, будет автоматически поднято по истечении задержки, указанной в ключе auto_raise_delay. Это не касается ни щелчка по окну для его поднятия, ни перехода в окно путём перетаскивания в него.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/general/auto_raise_delay</key>
+      <applyto>/apps/metacity/general/auto_raise_delay</applyto>
+      <owner>metacity</owner>
+      <type>int</type>
+      <default>500</default>
+      <locale name="C">
+        <short>Delay in milliseconds for the auto raise option</short>
+        <long>
+          The time delay before raising a window if auto_raise is set to
+          true. The delay is given in thousandths of a second.
+        </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Задержка в миллисекундах для параметра автоматического поднятия окна</short>
+        <long>Время задержки всплывания окна, если установлен ключ auto_raise. Задержка измеряется в миллисекундах.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/general/theme</key>
+      <applyto>/apps/metacity/general/theme</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>Clearlooks</default>
+      <locale name="C">
+         <short>Current theme</short>
+         <long>
+          The theme determines the appearance of window borders,
+          titlebar, and so forth.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Текущая тема</short>
+         <long>Тема определяет внешний вид границ окна, заголовка окна и так далее.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/general/titlebar_uses_system_font</key>
+      <applyto>/apps/metacity/general/titlebar_uses_system_font</applyto>      
+      <owner>metacity</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+         <short>Use standard system font in window titles</short>
+         <long> 
+          If true, ignore the titlebar_font
+          option, and use the standard application font for window 
+          titles.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Использовать стандартный системный шрифт в заголовках окон</short>
+         <long>Если этот ключ установлен, то параметр titlebar_font игнорируется, и для заголовков окон используется стандартный шрифт приложения.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/general/titlebar_font</key>
+      <applyto>/apps/metacity/general/titlebar_font</applyto>   
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>Sans Bold 10</default>
+      <locale name="C">
+        <short>Window title font</short>
+        <long>
+          A font description string describing a font for window
+          titlebars. The size from the description will only be used if the
+          titlebar_font_size option is set to 0. Also, this option is
+          disabled if the titlebar_uses_desktop_font option is set to true.
+        </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Шрифт заголовка окна</short>
+        <long>Строка описания шрифта для заголовка окна. Размер из описания будет использоваться, только если для параметра titlebar_font_size выбрано значение 0. Этот параметр также отключён, если для параметра titlebar_uses_desktop_font выбрано значение «истина».</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/general/num_workspaces</key>
+      <applyto>/apps/metacity/general/num_workspaces</applyto>      
+      <owner>metacity</owner>
+      <type>int</type>
+      <default>4</default>
+      <locale name="C">
+        <short>Number of workspaces</short>
+        <long>
+          Number of workspaces. Must be more than zero, and has a fixed
+          maximum to prevent making the desktop unusable by accidentally
+          asking for too many workspaces.
+        </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Число рабочих мест</short>
+        <long>Число рабочих мест. Должно быть больше нуля. Имеет фиксированный максимум, чтобы нельзя было разрушить среду, запросив слишком много рабочих мест.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/general/visual_bell</key>
+      <applyto>/apps/metacity/general/visual_bell</applyto>      
+      <owner>metacity</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Enable Visual Bell</short>
+        <long>
+          Turns on a visual indication when an application or the system
+          issues a 'bell' or 'beep'; useful for the hard-of-hearing and for
+          use in noisy environments.
+        </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Включить видимый сигнал</short>
+        <long>Включает визуальную индикацию системного звукового сигнала. Это полезно для слабослышащих и при работе в шумном окружении.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/general/audible_bell</key>
+      <applyto>/apps/metacity/general/audible_bell</applyto>      
+      <owner>metacity</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>System Bell is Audible</short>
+        <long>
+          Determines whether applications or the system can generate
+          audible 'beeps'; may be used in conjunction with 'visual bell' to
+          allow silent 'beeps'.
+        </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Системный сигнал — слышимый</short>
+        <long>Определяет, могут ли приложения или система подавать слышимые звуковые сигналы. Может быть использован совместно с ключом «видимый сигнал», чтобы подавать бесшумные «гудки».</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/general/visual_bell_type</key>
+      <applyto>/apps/metacity/general/visual_bell_type</applyto>      
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>fullscreen</default>
+      <locale name="C">
+        <short>Visual Bell Type</short>
+        <long>
+          Tells Metacity how to implement the visual indication that the
+          system bell or another application 'bell' indicator has been
+          rung.  Currently there are two valid values, "fullscreen", which
+          causes a fullscreen white-black flash, and "frame_flash" which
+          causes the titlebar of the application which sent the bell signal
+          to flash.  If the application which sent the bell is unknown (as
+          is usually the case for the default "system beep"), the currently
+          focused window's titlebar is flashed.
+        </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Тип видимого сигнала</short>
+        <long>Указывает Metacity, как реализовать индикацию звукового сигнала. Сейчас существуют два значения этого ключа: «fullscreen» вызывает чёрно-белое мерцание экрана, «frame_flash» вызывает мерцание строки заголовка того окна, приложение в котором подало звуковой сигнал. Если неизвестно, какое приложение подало сигнал, мерцать будет заголовок активного окна.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/general/compositing_manager</key>
+      <applyto>/apps/metacity/general/compositing_manager</applyto>
+      <owner>metacity</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Compositing Manager</short>
+        <long>
+          Determines whether Metacity is a compositing manager.
+        </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Менеджер композиции</short>
+        <long>Определяет, является ли Metacity менеджером композиции.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/workspace_names/name</key>
+      <applyto>/apps/metacity/workspace_names/name_1</applyto>
+      <applyto>/apps/metacity/workspace_names/name_2</applyto>
+      <applyto>/apps/metacity/workspace_names/name_3</applyto>
+      <applyto>/apps/metacity/workspace_names/name_4</applyto>
+      <applyto>/apps/metacity/workspace_names/name_5</applyto>
+      <applyto>/apps/metacity/workspace_names/name_6</applyto>
+      <applyto>/apps/metacity/workspace_names/name_7</applyto>
+      <applyto>/apps/metacity/workspace_names/name_8</applyto>
+      <applyto>/apps/metacity/workspace_names/name_9</applyto>
+      <applyto>/apps/metacity/workspace_names/name_10</applyto>
+      <applyto>/apps/metacity/workspace_names/name_11</applyto>
+      <applyto>/apps/metacity/workspace_names/name_12</applyto>
+      <applyto>/apps/metacity/workspace_names/name_13</applyto>
+      <applyto>/apps/metacity/workspace_names/name_14</applyto>
+      <applyto>/apps/metacity/workspace_names/name_15</applyto>
+      <applyto>/apps/metacity/workspace_names/name_16</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default></default>
+      <locale name="C">
+         <short>Name of workspace</short>
+         <long>
+          The name of a workspace.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Имя рабочего места</short>
+         <long>Имя рабочего места.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/general/reduced_resources</key>
+      <applyto>/apps/metacity/general/reduced_resources</applyto>
+      <owner>metacity</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+         <short>If true, trade off usability for less resource usage</short>
+         <long>
+           If true, metacity will give the user less feedback by using
+           wireframes, avoiding animations, or other means.  This is a
+           significant reduction in usability for many users, but may allow
+           legacy applications to continue working, and may also be a
+           useful tradeoff for terminal servers.  However, the wireframe
+           feature is disabled when accessibility is on.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Если этот ключ установлен, то Metacity использует меньше системных ресурсов за счёт пониженного удобства в использовании.</short>
+         <long>Если этот ключ установлен, Metacity предоставляет пользователю меньше обратной связи за счёт использования контурных рамок, отключения анимации и другими способами. Это существенно снижает удобство для многих пользователей, но позволяет продлить срок службы старых приложений, а также может быть полезно для терминальных серверов. Следует отметить, что отображение контурной рамки отключается при включении специальных возможностей.</long>
+      </locale>
+    </schema>
+
+    <!-- Keybindings -->
+
+    <schema>
+      <key>/schemas/apps/metacity/global_keybindings/run_command</key>
+      <applyto>/apps/metacity/global_keybindings/run_command_1</applyto>
+      <applyto>/apps/metacity/global_keybindings/run_command_2</applyto>
+      <applyto>/apps/metacity/global_keybindings/run_command_3</applyto>
+      <applyto>/apps/metacity/global_keybindings/run_command_4</applyto>
+      <applyto>/apps/metacity/global_keybindings/run_command_5</applyto>
+      <applyto>/apps/metacity/global_keybindings/run_command_6</applyto>
+      <applyto>/apps/metacity/global_keybindings/run_command_7</applyto>
+      <applyto>/apps/metacity/global_keybindings/run_command_8</applyto>
+      <applyto>/apps/metacity/global_keybindings/run_command_9</applyto>
+      <applyto>/apps/metacity/global_keybindings/run_command_10</applyto>
+      <applyto>/apps/metacity/global_keybindings/run_command_11</applyto>
+      <applyto>/apps/metacity/global_keybindings/run_command_12</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+         <short>Run a defined command</short>
+         <long>
+          The keybinding that runs the correspondingly-numbered
+          command in /apps/metacity/keybinding_commands
+
+          The format looks like "&lt;Control&gt;a" or
+          "&lt;Shift&gt;&lt;Alt&gt;F1".
+
+          The parser is fairly liberal and allows lower or upper case,
+          and also abbreviations such as "&lt;Ctl&gt;" and
+          "&lt;Ctrl&gt;". If you set the option to the special string
+          "disabled", then there will be no keybinding for this
+          action.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Запустить определённую команду</short>
+         
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/keybinding_commands/command</key>
+      <applyto>/apps/metacity/keybinding_commands/command_1</applyto>
+      <applyto>/apps/metacity/keybinding_commands/command_2</applyto>
+      <applyto>/apps/metacity/keybinding_commands/command_3</applyto>
+      <applyto>/apps/metacity/keybinding_commands/command_4</applyto>
+      <applyto>/apps/metacity/keybinding_commands/command_5</applyto>
+      <applyto>/apps/metacity/keybinding_commands/command_6</applyto>
+      <applyto>/apps/metacity/keybinding_commands/command_7</applyto>
+      <applyto>/apps/metacity/keybinding_commands/command_8</applyto>
+      <applyto>/apps/metacity/keybinding_commands/command_9</applyto>
+      <applyto>/apps/metacity/keybinding_commands/command_10</applyto>
+      <applyto>/apps/metacity/keybinding_commands/command_11</applyto>
+      <applyto>/apps/metacity/keybinding_commands/command_12</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default> </default>
+      <locale name="C">
+         <short>Commands to run in response to keybindings</short>
+         <long>
+         The /apps/metacity/global_keybindings/run_command_N 
+         keys define keybindings that correspond to these commands.
+         Pressing the keybinding for run_command_N will 
+         execute command_N.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Команды для запуска по комбинациям клавиш</short>
+         <long>Ключи /apps/metacity/global_keybindings/run_command_N определяют комбинации клавиш, которые соответствуют этим командам. Нажатие комбинации run_command_N запустит на выполнение command_N.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/keybinding_commands/command_screenshot</key>
+      <applyto>/apps/metacity/keybinding_commands/command_screenshot</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>gnome-screenshot</default>
+      <locale name="C">
+         <short>The screenshot command</short>
+         <long>
+         The /apps/metacity/global_keybindings/run_command_screenshot
+         key defines a keybinding which causes the command specified
+         by this setting to be invoked.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Команда для получения снимка экрана</short>
+         <long>Ключ /apps/metacity/global_keybindings/run_command_screenshot определяет комбинацию клавиш, которая вызывает запуск команды, определённой в данном ключе.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/keybinding_commands/command_window_screenshot</key>
+      <applyto>/apps/metacity/keybinding_commands/command_window_screenshot</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>gnome-screenshot --window</default>
+      <locale name="C">
+         <short>The window screenshot command</short>
+         <long>
+         The /apps/metacity/global_keybindings/run_command_window_screenshot
+         key defines a keybinding which causes the command specified
+         by this setting to be invoked.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Команда для получения снимка окна</short>
+         <long>Ключ /apps/metacity/global_keybindings/run_command_window_screenshot определяет комбинацию клавиш, которая вызывает запуск команды, определённой в данном ключе.</long>
+      </locale>
+    </schema>
+
+    <!-- Schemas below are generated by schema-bindings.c when this file
+         becomes metacity.schemas.in     
+    -->
+    <schema>
+      <key>/schemas/apps/metacity/global_keybindings/switch_to_workspace_1</key>
+      <applyto>/apps/metacity/global_keybindings/switch_to_workspace_1</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Switch to workspace 1</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переключиться на рабочее место 1</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/global_keybindings/switch_to_workspace_2</key>
+      <applyto>/apps/metacity/global_keybindings/switch_to_workspace_2</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Switch to workspace 2</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переключиться на рабочее место 2</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/global_keybindings/switch_to_workspace_3</key>
+      <applyto>/apps/metacity/global_keybindings/switch_to_workspace_3</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Switch to workspace 3</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переключиться на рабочее место 3</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/global_keybindings/switch_to_workspace_4</key>
+      <applyto>/apps/metacity/global_keybindings/switch_to_workspace_4</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Switch to workspace 4</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переключиться на рабочее место 4</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/global_keybindings/switch_to_workspace_5</key>
+      <applyto>/apps/metacity/global_keybindings/switch_to_workspace_5</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Switch to workspace 5</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переключиться на рабочее место 5</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/global_keybindings/switch_to_workspace_6</key>
+      <applyto>/apps/metacity/global_keybindings/switch_to_workspace_6</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Switch to workspace 6</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переключиться на рабочее место 6</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/global_keybindings/switch_to_workspace_7</key>
+      <applyto>/apps/metacity/global_keybindings/switch_to_workspace_7</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Switch to workspace 7</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переключиться на рабочее место 7</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/global_keybindings/switch_to_workspace_8</key>
+      <applyto>/apps/metacity/global_keybindings/switch_to_workspace_8</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Switch to workspace 8</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переключиться на рабочее место 8</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/global_keybindings/switch_to_workspace_9</key>
+      <applyto>/apps/metacity/global_keybindings/switch_to_workspace_9</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Switch to workspace 9</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переключиться на рабочее место 9</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/global_keybindings/switch_to_workspace_10</key>
+      <applyto>/apps/metacity/global_keybindings/switch_to_workspace_10</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Switch to workspace 10</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переключиться на рабочее место 10</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/global_keybindings/switch_to_workspace_11</key>
+      <applyto>/apps/metacity/global_keybindings/switch_to_workspace_11</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Switch to workspace 11</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переключиться на рабочее место 11</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/global_keybindings/switch_to_workspace_12</key>
+      <applyto>/apps/metacity/global_keybindings/switch_to_workspace_12</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Switch to workspace 12</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переключиться на рабочее место 12</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/global_keybindings/switch_to_workspace_left</key>
+      <applyto>/apps/metacity/global_keybindings/switch_to_workspace_left</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Alt&gt;Left</default>
+      <locale name="C">
+        <short>Switch to workspace on the left of the current workspace</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переключиться на рабочее место слева от текущего</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/global_keybindings/switch_to_workspace_right</key>
+      <applyto>/apps/metacity/global_keybindings/switch_to_workspace_right</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Alt&gt;Right</default>
+      <locale name="C">
+        <short>Switch to workspace on the right of the current workspace</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переключиться на рабочее место справа от текущего</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/global_keybindings/switch_to_workspace_up</key>
+      <applyto>/apps/metacity/global_keybindings/switch_to_workspace_up</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Alt&gt;Up</default>
+      <locale name="C">
+        <short>Switch to workspace above the current workspace</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переключиться на рабочее место над текущим</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/global_keybindings/switch_to_workspace_down</key>
+      <applyto>/apps/metacity/global_keybindings/switch_to_workspace_down</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Alt&gt;Down</default>
+      <locale name="C">
+        <short>Switch to workspace below the current workspace</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переключиться на рабочее место под текущим</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/global_keybindings/switch_group</key>
+      <applyto>/apps/metacity/global_keybindings/switch_group</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Move between windows of an application, using a popup window</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.
+
+This keybinding may be reversed by holding down the &quot;shift&quot; key; therefore, &quot;shift&quot; cannot be one of the keys it uses.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переключиться между окнами приложения через всплывающее окно</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/global_keybindings/switch_group_backward</key>
+      <applyto>/apps/metacity/global_keybindings/switch_group_backward</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Move backward between windows of an application, using a popup window</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.
+
+This keybinding may be reversed by holding down the &quot;shift&quot; key; therefore, &quot;shift&quot; cannot be one of the keys it uses.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переключиться в обратном порядке между окнами приложения через всплывающее окно</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/global_keybindings/switch_windows</key>
+      <applyto>/apps/metacity/global_keybindings/switch_windows</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>&lt;Alt&gt;Tab</default>
+      <locale name="C">
+        <short>Move between windows, using a popup window</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.
+
+This keybinding may be reversed by holding down the &quot;shift&quot; key; therefore, &quot;shift&quot; cannot be one of the keys it uses.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переключиться между окнами через всплывающее окно</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/global_keybindings/switch_windows_backward</key>
+      <applyto>/apps/metacity/global_keybindings/switch_windows_backward</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Move backward between windows, using a popup window</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.
+
+This keybinding may be reversed by holding down the &quot;shift&quot; key; therefore, &quot;shift&quot; cannot be one of the keys it uses.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переключиться в обратном порядке между окнами с использованием всплывающего окна</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/global_keybindings/switch_panels</key>
+      <applyto>/apps/metacity/global_keybindings/switch_panels</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Alt&gt;Tab</default>
+      <locale name="C">
+        <short>Move between panels and the desktop, using a popup window</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.
+
+This keybinding may be reversed by holding down the &quot;shift&quot; key; therefore, &quot;shift&quot; cannot be one of the keys it uses.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переключиться между панелями и рабочим столом через всплывающее окно</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/global_keybindings/switch_panels_backward</key>
+      <applyto>/apps/metacity/global_keybindings/switch_panels_backward</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Move backward between panels and the desktop, using a popup window</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.
+
+This keybinding may be reversed by holding down the &quot;shift&quot; key; therefore, &quot;shift&quot; cannot be one of the keys it uses.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переключиться в обратном порядке между панелями и рабочим столом через всплывающее окно</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/global_keybindings/cycle_group</key>
+      <applyto>/apps/metacity/global_keybindings/cycle_group</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>&lt;Alt&gt;F6</default>
+      <locale name="C">
+        <short>Move between windows of an application immediately</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.
+
+This keybinding may be reversed by holding down the &quot;shift&quot; key; therefore, &quot;shift&quot; cannot be one of the keys it uses.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переключиться между окнами приложения немедленно</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/global_keybindings/cycle_group_backward</key>
+      <applyto>/apps/metacity/global_keybindings/cycle_group_backward</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Move backward between windows of an application immediately</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.
+
+This keybinding may be reversed by holding down the &quot;shift&quot; key; therefore, &quot;shift&quot; cannot be one of the keys it uses.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переключиться в обратном порядке между окнами приложения немедленно</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/global_keybindings/cycle_windows</key>
+      <applyto>/apps/metacity/global_keybindings/cycle_windows</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>&lt;Alt&gt;Escape</default>
+      <locale name="C">
+        <short>Move between windows immediately</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.
+
+This keybinding may be reversed by holding down the &quot;shift&quot; key; therefore, &quot;shift&quot; cannot be one of the keys it uses.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переключиться между окнами немедленно</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/global_keybindings/cycle_windows_backward</key>
+      <applyto>/apps/metacity/global_keybindings/cycle_windows_backward</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Move backward between windows immediately</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.
+
+This keybinding may be reversed by holding down the &quot;shift&quot; key; therefore, &quot;shift&quot; cannot be one of the keys it uses.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переключиться в обратном порядке между окнами немедленно</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/global_keybindings/cycle_panels</key>
+      <applyto>/apps/metacity/global_keybindings/cycle_panels</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Alt&gt;Escape</default>
+      <locale name="C">
+        <short>Move between panels and the desktop immediately</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.
+
+This keybinding may be reversed by holding down the &quot;shift&quot; key; therefore, &quot;shift&quot; cannot be one of the keys it uses.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переключиться между панелями и рабочим столом немедленно</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/global_keybindings/cycle_panels_backward</key>
+      <applyto>/apps/metacity/global_keybindings/cycle_panels_backward</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Move backward between panels and the desktop immediately</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.
+
+This keybinding may be reversed by holding down the &quot;shift&quot; key; therefore, &quot;shift&quot; cannot be one of the keys it uses.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переключиться в обратном порядке между панелями и рабочим столом немедленно</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/global_keybindings/show_desktop</key>
+      <applyto>/apps/metacity/global_keybindings/show_desktop</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Alt&gt;d</default>
+      <locale name="C">
+        <short>Hide all normal windows and set focus to the desktop</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Скрыть все обычные окна и активировать рабочий стол</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/global_keybindings/panel_main_menu</key>
+      <applyto>/apps/metacity/global_keybindings/panel_main_menu</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>&lt;Alt&gt;F1</default>
+      <locale name="C">
+        <short>Show the panel's main menu</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Вызвать главное меню панели</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/global_keybindings/panel_run_dialog</key>
+      <applyto>/apps/metacity/global_keybindings/panel_run_dialog</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>&lt;Alt&gt;F2</default>
+      <locale name="C">
+        <short>Show the panel's "Run Application" dialog box</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Показать диалоговое окно панели «Выполнить программу»</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/global_keybindings/run_command_screenshot</key>
+      <applyto>/apps/metacity/global_keybindings/run_command_screenshot</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>Print</default>
+      <locale name="C">
+        <short>Take a screenshot</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Получить снимок экрана</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/global_keybindings/run_command_window_screenshot</key>
+      <applyto>/apps/metacity/global_keybindings/run_command_window_screenshot</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>&lt;Alt&gt;Print</default>
+      <locale name="C">
+        <short>Take a screenshot of a window</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Получить снимок окна</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/global_keybindings/run_command_terminal</key>
+      <applyto>/apps/metacity/global_keybindings/run_command_terminal</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Run a terminal</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Открыть терминал</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/window_keybindings/activate_window_menu</key>
+      <applyto>/apps/metacity/window_keybindings/activate_window_menu</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>&lt;Alt&gt;space</default>
+      <locale name="C">
+        <short>Activate the window menu</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Активировать меню окна</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/window_keybindings/toggle_fullscreen</key>
+      <applyto>/apps/metacity/window_keybindings/toggle_fullscreen</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Toggle fullscreen mode</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переключить полноэкранный режим</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/window_keybindings/toggle_maximized</key>
+      <applyto>/apps/metacity/window_keybindings/toggle_maximized</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>&lt;Alt&gt;F10</default>
+      <locale name="C">
+        <short>Toggle maximization state</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переключить состояние развёрнутости на весь экран</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/window_keybindings/toggle_above</key>
+      <applyto>/apps/metacity/window_keybindings/toggle_above</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Toggle whether a window will always be visible over other windows</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Будет ли окно всегда расположено поверх других окон</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/window_keybindings/maximize</key>
+      <applyto>/apps/metacity/window_keybindings/maximize</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Maximize window</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Развернуть окно на весь экран</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/window_keybindings/unmaximize</key>
+      <applyto>/apps/metacity/window_keybindings/unmaximize</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>&lt;Alt&gt;F5</default>
+      <locale name="C">
+        <short>Restore window</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Восстановить окно</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/window_keybindings/toggle_shaded</key>
+      <applyto>/apps/metacity/window_keybindings/toggle_shaded</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Toggle shaded state</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переключить состояние скрученности в полоску</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/window_keybindings/minimize</key>
+      <applyto>/apps/metacity/window_keybindings/minimize</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>&lt;Alt&gt;F9</default>
+      <locale name="C">
+        <short>Minimize window</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Свернуть окно</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/window_keybindings/close</key>
+      <applyto>/apps/metacity/window_keybindings/close</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>&lt;Alt&gt;F4</default>
+      <locale name="C">
+        <short>Close window</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Закрыть окно</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/window_keybindings/begin_move</key>
+      <applyto>/apps/metacity/window_keybindings/begin_move</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>&lt;Alt&gt;F7</default>
+      <locale name="C">
+        <short>Move window</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переместить окно</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/window_keybindings/begin_resize</key>
+      <applyto>/apps/metacity/window_keybindings/begin_resize</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>&lt;Alt&gt;F8</default>
+      <locale name="C">
+        <short>Resize window</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Изменить размер окна</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/window_keybindings/toggle_on_all_workspaces</key>
+      <applyto>/apps/metacity/window_keybindings/toggle_on_all_workspaces</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Toggle whether window is on all workspaces or just one</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Будет ли окно помещено на всех рабочих местах или только на одном</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/window_keybindings/move_to_workspace_1</key>
+      <applyto>/apps/metacity/window_keybindings/move_to_workspace_1</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Move window to workspace 1</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переместить окно на рабочее место 1</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/window_keybindings/move_to_workspace_2</key>
+      <applyto>/apps/metacity/window_keybindings/move_to_workspace_2</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Move window to workspace 2</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переместить окно на рабочее место 2</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/window_keybindings/move_to_workspace_3</key>
+      <applyto>/apps/metacity/window_keybindings/move_to_workspace_3</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Move window to workspace 3</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переместить окно на рабочее место 3</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/window_keybindings/move_to_workspace_4</key>
+      <applyto>/apps/metacity/window_keybindings/move_to_workspace_4</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Move window to workspace 4</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переместить окно на рабочее место 4</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/window_keybindings/move_to_workspace_5</key>
+      <applyto>/apps/metacity/window_keybindings/move_to_workspace_5</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Move window to workspace 5</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переместить окно на рабочее место 5</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/window_keybindings/move_to_workspace_6</key>
+      <applyto>/apps/metacity/window_keybindings/move_to_workspace_6</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Move window to workspace 6</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переместить окно на рабочее место 6</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/window_keybindings/move_to_workspace_7</key>
+      <applyto>/apps/metacity/window_keybindings/move_to_workspace_7</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Move window to workspace 7</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переместить окно на рабочее место 7</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/window_keybindings/move_to_workspace_8</key>
+      <applyto>/apps/metacity/window_keybindings/move_to_workspace_8</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Move window to workspace 8</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переместить окно на рабочее место 8</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/window_keybindings/move_to_workspace_9</key>
+      <applyto>/apps/metacity/window_keybindings/move_to_workspace_9</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Move window to workspace 9</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переместить окно на рабочее место 9</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/window_keybindings/move_to_workspace_10</key>
+      <applyto>/apps/metacity/window_keybindings/move_to_workspace_10</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Move window to workspace 10</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переместить окно на рабочее место 10</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/window_keybindings/move_to_workspace_11</key>
+      <applyto>/apps/metacity/window_keybindings/move_to_workspace_11</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Move window to workspace 11</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переместить окно на рабочее место 11</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/window_keybindings/move_to_workspace_12</key>
+      <applyto>/apps/metacity/window_keybindings/move_to_workspace_12</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Move window to workspace 12</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переместить окно на рабочее место 12</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/window_keybindings/move_to_workspace_left</key>
+      <applyto>/apps/metacity/window_keybindings/move_to_workspace_left</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Shift&gt;&lt;Alt&gt;Left</default>
+      <locale name="C">
+        <short>Move window one workspace to the left</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переместить окно на одно рабочее место влево</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/window_keybindings/move_to_workspace_right</key>
+      <applyto>/apps/metacity/window_keybindings/move_to_workspace_right</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Shift&gt;&lt;Alt&gt;Right</default>
+      <locale name="C">
+        <short>Move window one workspace to the right</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переместить окно на одно рабочее место вправо</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/window_keybindings/move_to_workspace_up</key>
+      <applyto>/apps/metacity/window_keybindings/move_to_workspace_up</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Shift&gt;&lt;Alt&gt;Up</default>
+      <locale name="C">
+        <short>Move window one workspace up</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переместить окно на одно рабочее место вверх</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/window_keybindings/move_to_workspace_down</key>
+      <applyto>/apps/metacity/window_keybindings/move_to_workspace_down</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>&lt;Control&gt;&lt;Shift&gt;&lt;Alt&gt;Down</default>
+      <locale name="C">
+        <short>Move window one workspace down</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переместить окно на одно рабочее место вниз</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/window_keybindings/raise_or_lower</key>
+      <applyto>/apps/metacity/window_keybindings/raise_or_lower</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Raise window if it's covered by another window, otherwise lower it</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Поднять окно на передний план, если оно заслонено другими, иначе опустить его</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/window_keybindings/raise</key>
+      <applyto>/apps/metacity/window_keybindings/raise</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Raise window above other windows</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Поднять окно на передний план</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/window_keybindings/lower</key>
+      <applyto>/apps/metacity/window_keybindings/lower</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Lower window below other windows</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Поместить окно под другими окнами</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/window_keybindings/maximize_vertically</key>
+      <applyto>/apps/metacity/window_keybindings/maximize_vertically</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Maximize window vertically</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Развернуть окно на весь экран вертикально</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/window_keybindings/maximize_horizontally</key>
+      <applyto>/apps/metacity/window_keybindings/maximize_horizontally</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Maximize window horizontally</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Развернуть окно на весь экран горизонтально</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/window_keybindings/move_to_corner_nw</key>
+      <applyto>/apps/metacity/window_keybindings/move_to_corner_nw</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Move window to north-west (top left) corner</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переместить окно в северо-западный (верхний левый) угол</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/window_keybindings/move_to_corner_ne</key>
+      <applyto>/apps/metacity/window_keybindings/move_to_corner_ne</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Move window to north-east (top right) corner</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переместить окно в северо-восточный (верхний правый) угол</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/window_keybindings/move_to_corner_sw</key>
+      <applyto>/apps/metacity/window_keybindings/move_to_corner_sw</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Move window to south-west (bottom left) corner</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переместить окно в юго-западный (нижний левый) угол</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/window_keybindings/move_to_corner_se</key>
+      <applyto>/apps/metacity/window_keybindings/move_to_corner_se</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Move window to south-east (bottom right) corner</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переместить окно в юго-восточный (нижний правый) угол</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/window_keybindings/move_to_side_n</key>
+      <applyto>/apps/metacity/window_keybindings/move_to_side_n</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Move window to north (top) side of screen</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переместить окно к северной (верхней) стороне экрана</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/window_keybindings/move_to_side_s</key>
+      <applyto>/apps/metacity/window_keybindings/move_to_side_s</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Move window to south (bottom) side of screen</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переместить окно к южной (нижней) стороне экрана</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/window_keybindings/move_to_side_e</key>
+      <applyto>/apps/metacity/window_keybindings/move_to_side_e</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Move window to east (right) side of screen</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переместить окно к западной (правой) стороне экрана</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/window_keybindings/move_to_side_w</key>
+      <applyto>/apps/metacity/window_keybindings/move_to_side_w</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Move window to west (left) side of screen</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переместить окно к восточной (левой) стороне экрана</short>
+        
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/window_keybindings/move_to_center</key>
+      <applyto>/apps/metacity/window_keybindings/move_to_center</applyto>
+      <owner>metacity</owner>
+      <type>string</type>
+      <default>disabled</default>
+      <locale name="C">
+        <short>Move window to center of screen</short>
+        <long>The format looks like &quot;&lt;Control&gt;a&quot; or &quot;&lt;Shift&gt;&lt;Alt&gt;F1&quot;.
+
+The parser is fairly liberal and allows lower or upper case, and also abbreviations such as &quot;&lt;Ctl&gt;&quot; and &quot;&lt;Ctrl&gt;&quot;. If you set the option to the special string &quot;disabled&quot;, then there will be no keybinding for this action.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Переместить окно в центр экрана</short>
+        
+      </locale>
+    </schema>
+
+
+    <!-- Not used and/or crackrock -->
+
+    <schema>
+      <key>/schemas/apps/metacity/general/application_based</key>
+      <applyto>/apps/metacity/general/application_based</applyto>      
+      <owner>metacity</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>(Not implemented) Navigation works in terms of applications not windows</short>
+        <long>
+          If true, then Metacity works in terms of applications rather than
+          windows. The concept is a bit abstract, but in general an
+          application-based setup is more like the Mac and less like
+          Windows. When you focus a window in application-based mode, all
+          the windows in the application will be raised. Also, in
+          application-based mode, focus clicks are not passed through to
+          windows in other applications. Application-based mode is,
+          however, largely unimplemented at the moment.
+        </long>
+      </locale>
+
+      <locale name="ru">
+        <short>(Не реализовано) Навигация ведётся по приложениям, а не по окнам</short>
+        <long>Если этот ключ установлен, Metacity работает с приложениями, а не с окнами. Архитектура, основанная на приложениях, больше похожа на системы Mac, чем на Windows. При активизации окна в режиме, основанном на приложениях, поднимаются все окна приложения. Кроме того, в режиме, основанном на приложениях, щелчки мышью не передаются в окна других приложений. Реализация режима, основанного на приложениях, в настоящий момент ещё весьма далека от завершения.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/metacity/general/disable_workarounds</key>
+      <applyto>/apps/metacity/general/disable_workarounds</applyto>      
+      <owner>metacity</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Disable misfeatures that are required by old or broken
+               applications</short>
+        <long> 
+          Some applications disregard specifications in ways that result in
+          window manager misfeatures. This option puts Metacity in a
+          rigorously correct mode, which gives a more consistent user
+          interface, provided one does not need to run any misbehaving
+          applications.
+        </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Отключить неправильные свойства, нужные старым или сломанным приложениям</short>
+        <long>Некоторые приложения игнорируют спецификации, поэтому в менеджер окон встроены возможности для обхода ошибок в этих приложениях. Этот ключ переводит Metacity в режим строгого соответствия спецификациям, что даёт всем окнам более последовательный внешний вид, но при этом приложения с ошибками могут работать неправильно.</long>
+      </locale>
+    </schema>
+
+  </schemalist>  
+</gconfschemafile>
+
+
+
+

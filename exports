@@ -1,0 +1,2 @@
+# /etc/exports: NFS file systems being exported.  See exports(5).
+/media/disk/Download 10.1.0.5(sync,no_root_squash,rw,subtree_check)

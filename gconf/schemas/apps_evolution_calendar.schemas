@@ -1,0 +1,1163 @@
+<gconfschemafile>
+  <schemalist>
+
+    <!-- Display -->
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/display/primary_calendar</key>
+      <applyto>/apps/evolution/calendar/display/primary_calendar</applyto>
+      <owner>evolution-calendar</owner>
+      <type>string</type>
+      <default></default>
+      <locale name="C">
+        <short>Primary calendar</short>
+        <long>
+          The UID of the selected (or "primary") calendar in the
+          sidebar of the "Calendar" view.
+        </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Основной календарь</short>
+        <long>UID выбранного (или основного) календаря в боковой панели.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/display/timezone</key>
+      <applyto>/apps/evolution/calendar/display/timezone</applyto>
+      <owner>evolution-calendar</owner>
+      <type>string</type>
+      <default>UTC</default>
+      <locale name="C">
+        <short>Timezone</short>
+        <long>The default timezone to use for dates and times in the calendar, as an untranslated Olsen timezone database location like "America/New York".</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Часовой пояс</short>
+        <long>Часовой пояс по умолчанию, используемый для дат календаря, в виде непереведенного имени Olsen из базы часовых поясов, например «America/New York».</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/display/use_system_timezone</key>
+      <applyto>/apps/evolution/calendar/display/use_system_timezone</applyto>
+      <owner>evolution-calendar</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>Use system timezone</short>
+        <long>Use the system timezone instead of the timezone selected
+        in Evolution.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Использовать системный часовой пояс</short>
+        <long>Использовать системный часовой пояс вместо того, который указан в Evolution.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/display/day_second_zone</key>
+      <applyto>/apps/evolution/calendar/display/day_second_zone</applyto>
+      <owner>evolution-calendar</owner>
+      <type>string</type>
+      <default></default>
+      <locale name="C">
+        <short>The second timezone for a Day View</short>
+        <long>Shows the second time zone in a Day View, if set. Value is similar to one used in a 'timezone' key.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Вторичный часовой пояс в обзоре дня</short>
+        <long>Показывать вторичный часовой пояс в обзоре дня. Смысл значения такой же, как и в ключе «timezone».</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/display/day_second_zones</key>
+      <applyto>/apps/evolution/calendar/display/day_second_zones</applyto>
+      <owner>evolution-calendar</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[]</default>
+      <locale name="C">
+        <short>Recently used second time zones in a Day View</short>
+        <long>List of recently used second time zones in a Day View.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Недавние вторичные часовые пояса в обзоре дня</short>
+        <long>Список недавно использованных вторичных часовых поясов в обзоре дня.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/display/day_second_zones_max</key>
+      <applyto>/apps/evolution/calendar/display/day_second_zones_max</applyto>
+      <owner>evolution-calendar</owner>
+      <type>int</type>
+      <default>5</default>
+      <locale name="C">
+        <short>Maximum number of recently used timezones to remember.</short>
+        <long>Maximum number of recently used timezones to remember in a 'day_second_zones' list.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Максимальное число недавних часовых поясов.</short>
+        <long>Максимальное количество хранимых недавних часовых поясов в списке «day_second_zones».</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/display/use_24hour_format</key>
+      <applyto>/apps/evolution/calendar/display/use_24hour_format</applyto>
+      <owner>evolution-calendar</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Twenty four hour time format</short>
+        <long>Whether to show times in twenty four hour format instead of using am/pm.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>24-часовой формат времени</short>
+        <long>Показывать ли время в 24-часовом формате вместо am/pm.</long>
+      </locale>
+    </schema>
+ 
+    <schema>
+      <key>/schemas/apps/evolution/calendar/display/show_role</key>
+      <applyto>/apps/evolution/calendar/display/show_role</applyto>
+      <owner>evolution-calendar</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>Show Role field in the event/task/meeting editor</short>
+        <long>Whether to show role field in the event/task/meeting editor</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Отображать поле «Должность» в редакторе событий/задач/собраний</short>
+        <long>Отображать ли поле «Должность» в редакторе событий/задач/собраний</long>
+      </locale>
+    </schema>
+
+     <schema>
+      <key>/schemas/apps/evolution/calendar/display/show_status</key>
+      <applyto>/apps/evolution/calendar/display/show_status</applyto>
+      <owner>evolution-calendar</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Show status field in the event/task/meeting editor</short>
+        <long>Whether to show status field in the event/task/meeting editor</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Отображать поле «Состояние» в редакторе событий/задач/собраний</short>
+        <long>Отображать ли поле «Состояние» в редакторе событий/задач/собраний</long>
+      </locale>
+    </schema>
+
+     <schema>
+      <key>/schemas/apps/evolution/calendar/display/show_type</key>
+      <applyto>/apps/evolution/calendar/display/show_type</applyto>
+      <owner>evolution-calendar</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Show type field in the event/task/meeting editor</short>
+        <long>Whether to show type field in the event/task/meeting editor</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Показывать поле «Тип» в редакторе событий/задач/собраний</short>
+        <long>Отображать ли поле «Тип» в редакторе событий/задач/собраний</long>
+      </locale>
+    </schema>
+
+     <schema>
+      <key>/schemas/apps/evolution/calendar/display/show_rsvp</key>
+      <applyto>/apps/evolution/calendar/display/show_rsvp</applyto>
+      <owner>evolution-calendar</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Show RSVP field in the event/task/meeting editor</short>
+        <long>Whether to show RSVP field in the event/task/meeting editor</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Отображать поле «Просьба ответить» в редакторе событий/задач/собраний</short>
+        <long>Отображать ли поле «Просьба ответить» в редакторе событий/задач/собраний</long>
+      </locale>
+    </schema>
+
+     <schema>
+      <key>/schemas/apps/evolution/calendar/display/show_timezone</key>
+      <applyto>/apps/evolution/calendar/display/show_timezone</applyto>
+      <owner>evolution-calendar</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Show timezone field in the event/meeting editor</short>
+        <long>Whether to show timezone field in the event/meeting editor</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Показывать поле «Часовой пояс» в редакторе событий/собраний</short>
+        <long>Отображать ли поле «Часовой пояс» в редакторе событий/задач/собраний</long>
+      </locale>
+    </schema>
+
+     <schema>
+      <key>/schemas/apps/evolution/calendar/display/show_categories</key>
+      <applyto>/apps/evolution/calendar/display/show_categories</applyto>
+      <owner>evolution-calendar</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Show categories field in the event/meeting/task editor</short>
+        <long>Whether to show categories field in the event/meeting editor</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Отображать поле «Категории» в редакторе событий/задач/собраний</short>
+        <long>Отображать ли поле «Категории» в редакторе событий/собраний</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/display/week_start_day</key>
+      <applyto>/apps/evolution/calendar/display/week_start_day</applyto>
+      <owner>evolution-calendar</owner>
+      <type>int</type>
+      <default>1</default>
+      <locale name="C">
+        <short>Week start</short>
+        <long>Weekday the week starts on, from Sunday (0) to Saturday (6).</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Начало недели</short>
+        <long>День, с которого начинается неделя, с воскресенья (0) до субботы (6)</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/display/day_start_hour</key>
+      <applyto>/apps/evolution/calendar/display/day_start_hour</applyto>
+      <owner>evolution-calendar</owner>
+      <type>int</type>
+      <default>9</default>
+      <locale name="C">
+        <short>Workday start hour</short>
+        <long>Hour the workday starts on, in twenty four hour format, 0 to 23.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Час начала рабочего дня</short>
+        <long>Час начала рабочего дня, в 24-часовом формате, от 0 до 23.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/display/day_start_minute</key>
+      <applyto>/apps/evolution/calendar/display/day_start_minute</applyto>
+      <owner>evolution-calendar</owner>
+      <type>int</type>
+      <default>0</default>
+      <locale name="C">
+        <short>Workday start minute</short>
+        <long>Minute the workday starts on, 0 to 59.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Минута начала рабочего дня</short>
+        <long>Минуты начала рабочего дня, от 0 до 59</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/display/day_end_hour</key>
+      <applyto>/apps/evolution/calendar/display/day_end_hour</applyto>
+      <owner>evolution-calendar</owner>
+      <type>int</type>
+      <default>17</default>
+      <locale name="C">
+        <short>Workday end hour</short>
+        <long>Hour the workday ends on, in twenty four hour format, 0 to 23.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Час завершения рабочего дня</short>
+        <long>Час окончания рабочего дня, в 24-часовом формате, от 0 до 23.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/display/day_end_minute</key>
+      <applyto>/apps/evolution/calendar/display/day_end_minute</applyto>
+      <owner>evolution-calendar</owner>
+      <type>int</type>
+      <default>0</default>
+      <locale name="C">
+        <short>Workday end minute</short>
+        <long>Minute the workday ends on, 0 to 59.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Минуты завершения рабочего дня</short>
+        <long>Минуты завершения рабочего дня, от 0 до 59.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/display/time_divisions</key>
+      <applyto>/apps/evolution/calendar/display/time_divisions</applyto>
+      <owner>evolution-calendar</owner>
+      <type>int</type>
+      <default>30</default>
+      <locale name="C">
+        <short>Time divisions</short>
+        <long>Intervals shown in Day and Work Week views, in minutes.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Деления времени</short>
+        <long>Интервалы, отображаемые в режимах «День» и «Рабочая неделя», в минутах.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/display/hpane_position</key>
+      <applyto>/apps/evolution/calendar/display/hpane_position</applyto>
+      <owner>evolution-calendar</owner>
+      <type>int</type>
+      <default>400</default>
+      <locale name="C">
+        <short>Horizontal pane position</short>
+        <long>Position of the horizontal pane, between the date navigator calendar and the task list when not in the month view, in pixels.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Позиция горизонтальной панели</short>
+        <long>Положение горизонтальной панели между навигатором обзора и даты и списком задач когда не в режиме обзора месяца, в пикселах.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/display/vpane_position</key>
+      <applyto>/apps/evolution/calendar/display/vpane_position</applyto>
+      <owner>evolution-calendar</owner>
+      <type>int</type>
+      <default>150</default>
+      <locale name="C">
+        <short>Vertical pane position</short>
+        <long>Position of the vertical pane, between the view and the date navigator calendar and task list when not in the month view, in pixels.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Позиция вертикальной панели</short>
+        <long>Положение вертикальной панели между навигатором обзора и даты и списком задач когда не в режиме обзора месяца, в пикселах.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/display/month_hpane_position</key>
+      <applyto>/apps/evolution/calendar/display/month_hpane_position</applyto>
+      <owner>evolution-calendar</owner>
+      <type>int</type>
+      <default>32000</default>
+      <locale name="C">
+        <short>Month view horizontal pane position </short>
+        <long>Position of the horizontal pane, between the view and the date navigator calendar and task list in the month view, in pixels.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Позиция горизонтальной панели в обзоре месяца</short>
+        <long>Положение горизонтальной панели между навигатором обзора и даты и списком задач в режиме обзора месяца, в пикселах.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/display/month_vpane_position</key>
+      <applyto>/apps/evolution/calendar/display/month_vpane_position</applyto>
+      <owner>evolution-calendar</owner>
+      <type>int</type>
+      <default>150</default>
+      <locale name="C">
+        <short>Month view vertical pane position </short>
+        <long>Position of the vertical pane, between the view and the date navigator calendar and task list in the month view, in pixels.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Позиция вертикальной панели в обзоре месяца</short>
+        <long>Положение вертикальной панели между навигатором обзора и даты и списком задач в режиме обзора месяца, в пикселах.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/evolution/calendar/display/date_navigator_pane_position</key>
+      <applyto>/apps/evolution/calendar/display/date_navigator_pane_position</applyto>
+      <owner>evolution-calendar</owner>
+      <type>int</type>
+      <default>150</default>
+      <locale name="C">
+        <short>Month view vertical pane position </short>
+        <long>Position of the vertical pane, between the calendar lists and the date navigator calendar.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Позиция вертикальной панели в обзоре месяца</short>
+        <long>Позиция вертикальной панели между списками календаря и навигатором дат календаря.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/display/memo_layout</key>
+      <applyto>/apps/evolution/calendar/display/memo_layout</applyto>
+      <type>int</type>
+      <default>0</default>
+      <locale name="C">
+        <short>Memo layout style</short>
+        <long>
+          The layout style determines where to place the preview pane
+          in relation to the memo list.  "0" (Classic View) places the
+          preview pane below the memo list.  "1" (Vertical View) places
+          the preview pane next to the memo list.
+        </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Стиль заметок</short>
+        <long>Стиль расположения определяет место для панели предварительного просмотра относительно списка заметок. «0» (классический вид) помещает панель предварительного просмотра под списком заметок. «1» (вертикальный вид) помещает панель рядом со списком заметок.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/display/show_memo_preview</key>
+      <applyto>/apps/evolution/calendar/display/show_memo_preview</applyto>
+      <owner>evolution-calendar</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+         <short>Show the memo preview pane</short>
+         <long>
+           If "true", show the memo preview pane in the main window.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Показывать панель предварительного просмотра заметок</short>
+         <long>Если установлено, показывать панель предварительного просмотра заметок в главном окне.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/display/memo_hpane_position</key>
+      <applyto>/apps/evolution/calendar/display/memo_hpane_position</applyto>
+      <owner>evolution-calendar</owner>
+      <type>int</type>
+      <default>200</default>
+      <locale name="C">
+        <short>Memo preview pane position (horizontal)</short>
+        <long>
+          Position of the task preview pane when oriented horizontally.
+        </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Положение панели предварительного просмотра заметок (горизонтально)</short>
+        <long>Положение панели предварительного просмотра задач при горизонтальной ориентации.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/display/memo_vpane_position</key>
+      <applyto>/apps/evolution/calendar/display/memo_vpane_position</applyto>
+      <owner>evolution-calendar</owner>
+      <type>int</type>
+      <default>400</default>
+      <locale name="C">
+        <short>Memo preview pane position (vertical)</short>
+        <long>
+          Position of the memo preview pane when oriented vertically.
+        </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Положение панели предварительного просмотра заметок (вертикально)</short>
+        <long>Положение панели предварительного просмотра заметок при вертикальной ориентации.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/display/task_layout</key>
+      <applyto>/apps/evolution/calendar/display/task_layout</applyto>
+      <type>int</type>
+      <default>0</default>
+      <locale name="C">
+        <short>Task layout style</short>
+        <long>
+          The layout style determines where to place the preview pane
+          in relation to the task list.  "0" (Classic View) places the
+          preview pane below the task list.  "1" (Vertical View) places
+          the preview pane next to the task list.
+        </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Стиль размещения задач</short>
+        <long>Стиль расположения определяет место для панели предварительного просмотра относительно списка задач. «0» (классический вид) помещает панель предварительного просмотра под списком задач. «1» (вертикальный вид) помещает панель рядом со списком задач.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/display/show_task_preview</key>
+      <applyto>/apps/evolution/calendar/display/show_task_preview</applyto>
+      <owner>evolution-calendar</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+         <short>Show the task preview pane</short>
+         <long>
+           If "true", show the task preview pane in the main window.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Показывать панель предварительного просмотра задач</short>
+         <long>Если установлено, показывать панель предварительного просмотра задач в главном окне.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/display/task_hpane_position</key>
+      <applyto>/apps/evolution/calendar/display/task_hpane_position</applyto>
+      <owner>evolution-calendar</owner>
+      <type>int</type>
+      <default>200</default>
+      <locale name="C">
+        <short>Task preview pane position (horizontal)</short>
+        <long>
+          Position of the task preview pane when oriented horizontally.
+        </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Положение панели предварительного просмотра задач (горизонтально)</short>
+        <long>Положение панели предварительного просмотра задач при горизонтальной ориентации.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/display/task_vpane_position</key>
+      <applyto>/apps/evolution/calendar/display/task_vpane_position</applyto>
+      <owner>evolution-calendar</owner>
+      <type>int</type>
+      <default>400</default>
+      <locale name="C">
+        <short>Task preview pane position (vertical)</short>
+        <long>
+          Position of the task preview pane when oriented vertically.
+        </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Положение панели предварительного просмотра задач (вертикально)</short>
+        <long>Положение панели предварительного просмотра задач при вертикальной ориентации.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/display/compress_weekend</key>
+      <applyto>/apps/evolution/calendar/display/compress_weekend</applyto>
+      <owner>evolution-calendar</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>Compress weekends in month view</short>
+        <long>Whether to compress weekends in the month view, which puts Saturday and Sunday in the space of one weekday.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Ужимать выходные дни в обзоре месяца</short>
+        <long>Ужимать ли выходные дни в обзоре месяца (суббота и воскресенье занимают место одного рабочего дня).</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/display/show_event_end</key>
+      <applyto>/apps/evolution/calendar/display/show_event_end</applyto>
+      <owner>evolution-calendar</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>Show appointment end times in week and month views</short>
+        <long>Whether to display the end time of events in the week and month views.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Отображать время окончания встреч в обзоре недели и месяца</short>
+        <long>Показывать ли время завершения событий в обзоре недели и месяца.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/display/working_days</key>
+      <applyto>/apps/evolution/calendar/display/working_days</applyto>
+      <owner>evolution-calendar</owner>
+      <type>int</type>
+      <default>62</default>
+      <locale name="C">
+        <short>Work days</short>
+        <long>Days on which the start and end of work hours should be indicated.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Рабочие дни</short>
+        <long>Дни, когда должны отображаться начало и конец рабочих часов.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/display/marcus_bains_line</key>
+      <applyto>/apps/evolution/calendar/display/marcus_bains_line</applyto>
+      <owner>evolution-calendar</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>Marcus Bains Line</short>
+        <long>Whether to draw the Marcus Bains Line (line at current time) in the calendar.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Маркер текущего времени</short>
+        <long>Отображать ли маркер текущего времени в календаре.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/display/marcus_bains_color_dayview</key>
+      <applyto>/apps/evolution/calendar/display/marcus_bains_color_dayview</applyto>
+      <owner>evolution-calendar</owner>
+      <type>string</type>
+      <default>#ff0000</default>
+      <locale name="C">
+        <short>Marcus Bains Line Color - Day View</short>
+        <long>Color to draw the Marcus Bains line in the Day View.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Цвет маркера текущего времени - Обзор месяца</short>
+        <long>Цвет маркера текущего времени в обзоре дня</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/display/marcus_bains_color_timebar</key>
+      <applyto>/apps/evolution/calendar/display/marcus_bains_color_timebar</applyto>
+      <owner>evolution-calendar</owner>
+      <type>string</type>
+      <default>#ff0000</default>
+      <locale name="C">
+        <short>Marcus Bains Line Color - Time bar</short>
+        <long>Color to draw the Marcus Bains Line in the Time bar (empty for default).</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Цвет маркера текущего времени - полоса времени</short>
+        <long>Цвет маркера времени в расписании (для значения по умолчанию оставьте пустым).</long>
+      </locale>
+    </schema>
+
+     <schema>
+      <key>/schemas/apps/evolution/calendar/display/recur_events_italic</key>
+      <applyto>/apps/evolution/calendar/display/recur_events_italic</applyto>
+      <owner>evolution-calendar</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Recurrent Events in Italic</short>
+        <long>Show days with recurrent events in italic font in bottom left calendar.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Выделять повторяющийся события курсивом</short>
+        <long>Выделять в календаре курсивом дни, в которые входят повторяющиеся события.</long>
+      </locale>
+    </schema>
+
+    <!-- Memos -->
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/memos/primary_memos</key>
+      <applyto>/apps/evolution/calendar/memos/primary_memos</applyto>
+      <owner>evolution-calendar</owner>
+      <type>string</type>
+      <default></default>
+      <locale name="C">
+        <short>Primary memo list</short>
+        <long>
+          The UID of the selected (or "primary") memo list in the
+          sidebar of the "Memos" view.
+        </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Основной список заметок</short>
+        <long>UID выбранного (или основного) в боковой панели списка заметок.</long>
+      </locale>
+    </schema>
+
+    <!-- Tasks -->
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/tasks/primary_tasks</key>
+      <applyto>/apps/evolution/calendar/tasks/primary_tasks</applyto>
+      <owner>evolution-calendar</owner>
+      <type>string</type>
+      <default></default>
+      <locale name="C">
+        <short>Primary task list</short>
+        <long>
+          The UID of the selected (or "primary") task list in the
+          sidebar of the "Tasks" view.
+        </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Основной список задач</short>
+        <long>UID выбранного (или основного) в боковой панели списка задач.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/tasks/hide_completed</key>
+      <applyto>/apps/evolution/calendar/tasks/hide_completed</applyto>
+      <owner>evolution-calendar</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Hide completed tasks</short>
+        <long>Whether to hide completed tasks in the tasks view.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Скрывать выполненные задачи</short>
+        <long>Скрывать ли завершенные задачи в обзоре задач.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/tasks/hide_completed_units</key>
+      <applyto>/apps/evolution/calendar/tasks/hide_completed_units</applyto>
+      <owner>evolution-calendar</owner>
+      <type>string</type>
+      <default>days</default>
+      <locale name="C">
+        <short>Hide task units</short>
+        <long>Units for determining when to hide tasks, "minutes", "hours" or "days".</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Скрывать единицы задач</short>
+        <long>Единицы для определения момента скрытия задач, «minutes», «hours» или «days».</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/tasks/hide_completed_value</key>
+      <applyto>/apps/evolution/calendar/tasks/hide_completed_value</applyto>
+      <owner>evolution-calendar</owner>
+      <type>int</type>
+      <default>1</default>
+      <locale name="C">
+        <short>Hide task value</short>
+        <long>Number of units for determining when to hide tasks.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Скрывать значение задач</short>
+        <long>Количество единиц для определения момента, когда скрывать задачи.</long>
+      </locale>
+    </schema>
+
+    <!-- Tasks: Colors -->
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/tasks/colors/due_today</key>
+      <applyto>/apps/evolution/calendar/tasks/colors/due_today</applyto>
+      <owner>evolution-calendar</owner>
+      <type>string</type>
+      <default>#1e90ff</default>
+      <locale name="C">
+        <short>Tasks due today color</short>
+	<long>Background color of tasks that are due today, in "#rrggbb" format.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Цвет задач на сегодня</short>
+	<long>Цвет для задач на сегодня, в формате «#rrggbb»</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/tasks/colors/overdue</key>
+      <applyto>/apps/evolution/calendar/tasks/colors/overdue</applyto>
+      <owner>evolution-calendar</owner>
+      <type>string</type>
+      <default>#ff0000</default>
+      <locale name="C">
+        <short>Overdue tasks color</short>
+	<long>Background color of tasks that are overdue, in "#rrggbb" format.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Цвет просроченных задач</short>
+	<long>Цвет для просроченных задач, в формате «#rrggbb».</long>
+      </locale>
+    </schema>
+
+    <!-- Miscellaneous -->
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/prompts/confirm_delete</key>
+      <applyto>/apps/evolution/calendar/prompts/confirm_delete</applyto>
+      <owner>evolution-calendar</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>Ask for confirmation when deleting items</short>
+        <long>Whether to ask for confirmation when deleting an appointment or task.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Запрашивать подтверждение при удалении элементов</short>
+        <long>Запрашивать подтверждение при удалении встречи или задачи.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/prompts/confirm_purge</key>
+      <applyto>/apps/evolution/calendar/prompts/confirm_purge</applyto>
+      <owner>evolution-calendar</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>Confirm expunge</short>
+        <long>Whether to ask for confirmation when expunging appointments and tasks.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Подтверждение очистки</short>
+        <long>Запрашивать подтверждение при очистке встречи или задачи.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/other/use_default_reminder</key>
+      <applyto>/apps/evolution/calendar/other/use_default_reminder</applyto>
+      <owner>evolution-calendar</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Default appointment reminder</short>
+        <long>Whether to set a default reminder for appointments.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Упоминание о встрече по умолчанию</short>
+        <long>Устанавливать ли напоминание для событий по умолчанию.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/other/default_reminder_interval</key>
+      <applyto>/apps/evolution/calendar/other/default_reminder_interval</applyto>
+      <owner>evolution-calendar</owner>
+      <type>int</type>
+      <default>15</default>
+      <locale name="C">
+        <short>Default reminder value</short>
+        <long>Number of units for determining a default reminder.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Значение напоминания по умолчанию</short>
+        <long>Количество единиц для напоминания по умолчанию.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/other/default_reminder_units</key>
+      <applyto>/apps/evolution/calendar/other/default_reminder_units</applyto>
+      <owner>evolution-calendar</owner>
+      <type>string</type>
+      <default>minutes</default>
+      <locale name="C">
+        <short>Default reminder units</short>
+        <long>Units for a default reminder, "minutes", "hours" or "days".</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Единицы напоминания по умолчанию</short>
+        <long>Единицы напоминания по умолчанию, «minutes», «hours» или «days».</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/other/use_ba_reminder</key>
+      <applyto>/apps/evolution/calendar/other/use_ba_reminder</applyto>
+      <owner>evolution-calendar</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Birthday and anniversary reminder</short>
+        <long>
+          Whether to set a reminder for birthdays and anniversaries.
+        </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Напоминание о дне рождения и годовщине</short>
+        <long>Устанавливать ли напоминание для дней рождения и годовщин.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/other/ba_reminder_interval</key>
+      <applyto>/apps/evolution/calendar/other/ba_reminder_interval</applyto>
+      <owner>evolution-calendar</owner>
+      <type>int</type>
+      <default>15</default>
+      <locale name="C">
+        <short>Birthday and anniversary reminder value</short>
+        <long>
+          Number of units for determining a birthday or anniversary reminder.
+        </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Напоминание о дне рождения и годовщине (значение)</short>
+        <long>Количество единиц для установки напоминания.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/other/ba_reminder_units</key>
+      <applyto>/apps/evolution/calendar/other/ba_reminder_units</applyto>
+      <owner>evolution-calendar</owner>
+      <type>string</type>
+      <default>minutes</default>
+      <locale name="C">
+        <short>Birthday and anniversary reminder units</short>
+        <long>
+          Units for a birthday or anniversary reminder, "minutes", "hours"
+          or "days".
+        </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Напоминание о дне рождения и годовщине (единицы)</short>
+        <long>Единицы напоминания: «минуты», «часы» или «дни».</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/display/show_week_numbers</key>
+      <applyto>/apps/evolution/calendar/display/show_week_numbers</applyto>
+      <owner>evolution-calendar</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Show week numbers in Day View, Work Week View, and Date Navigator</short>
+        <long>Whether to show week numbers in various places in the Calendar.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Показывать номера недель в обзоре рабочего дня, недели и в навигаторе даты</short>
+        <long>Показывать ли номера недель в различных местах в календаре.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/display/month_scroll_by_week</key>
+      <applyto>/apps/evolution/calendar/display/month_scroll_by_week</applyto>
+      <owner>evolution-calendar</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>Scroll Month View by a week</short>
+        <long>Whether to scroll a Month View by a week, not by a month.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Листать обзор месяца по неделям</short>
+        <long>Листать обзор месяца по неделям, а не по месяцам.</long>
+      </locale>
+    </schema>
+
+    <!-- Alarm notification -->
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/notify/last_notification_time</key>
+      <applyto>/apps/evolution/calendar/notify/last_notification_time</applyto>
+      <owner>evolution-calendar</owner>
+      <type>int</type>
+      <default>-1</default>
+      <locale name="C">
+        <short>Last reminder time</short>
+        <long>Time the last reminder ran, in time_t.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Время последнего напоминателя</short>
+        <long>Время последнего запуска напоминателя, в формате in time_t.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/notify/calendars</key>
+      <applyto>/apps/evolution/calendar/notify/calendars</applyto>
+      <owner>evolution-calendar</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[]</default>
+      <locale name="C">
+        <short>Calendars to run reminders for</short>
+      </locale>
+
+      <locale name="ru">
+        <short>Календари для запуска напоминателей</short>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/notify/programs</key>
+      <applyto>/apps/evolution/calendar/notify/programs</applyto>
+      <owner>evolution-calendar</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[]</default>
+      <locale name="C">
+        <short>Reminder programs</short>
+        <long>Programs that are allowed to be run by reminders.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Программы-напоминатели</short>
+        <long>Программы, которым разрешено выполняться напоминателями.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/notify/notify_with_tray</key>
+      <applyto>/apps/evolution/calendar/notify/notify_with_tray</applyto>
+      <owner>evolution-calendar</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Show display reminders in notification tray</short>
+        <long>Whether or not to use the notification tray for display reminders.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Показывать напоминатели в области уведомления</short>
+        <long>Использовать ли область уведомления для отображения напоминателей.</long>
+      </locale>
+    </schema>
+    
+    <schema>
+      <key>/schemas/apps/evolution/calendar/publish/uris</key>
+      <applyto>/apps/evolution/calendar/publish/uris</applyto>
+      <owner>evolution-calendar</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[]</default>
+      <locale name="C">
+        <short>Free/busy server URLs</short>
+        <long>List of server URLs for free/busy publishing.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>URL сервера свободен/занят</short>
+        <long>Список URL серверов для публикации сведений о занятости.</long>
+      </locale>
+    </schema>    
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/publish/template</key>
+      <applyto>/apps/evolution/calendar/publish/template</applyto>
+      <owner>evolution-calendar</owner>
+      <type>string</type>
+      <default></default>
+      <locale name="C">
+        <short>Free/busy template URL</short>
+        <long>The URL template to use as a free/busy data fallback, %u is replaced by the user part of the mail address and %d is replaced by the domain.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>URL шаблона свободен/занят</short>
+        <long>Шаблон URL для отправки данных о занятости. %u заменяется на левую часть почтового адреса (имя пользователя), %d - домен.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/audio_dir</key>
+      <applyto>/apps/evolution/calendar/audio_dir</applyto>
+      <owner>evolution-calendar</owner>
+      <type>string</type>
+      <default></default>
+      <locale name="C">
+        <short>Save directory for reminder audio</short>
+         <long>
+           Directory for saving reminder audio files
+         </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Каталог сохранения для звуков напоминателей</short>
+         <long>Каталог для сохранения звуковых файлов напоминателей</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/calendar/display/error_timeout</key>
+      <applyto>/apps/evolution/calendar/display/error_timeout</applyto>
+      <owner>evolution-calendar</owner>
+      <type>int</type>
+      <default>60</default>
+      <locale name="C">
+          <short>Amount of time in seconds the error should be shown on the status bar.</short>
+          <long> Amount of time in seconds the error should be shown on the status bar.
+          </long>
+      </locale>
+
+      <locale name="ru">
+          <short>Количество времени в секундах, в течение которого ошибка должна показываться в строке состояния.</short>
+          <long>Количество времени в секундах, в течение которого ошибка должна показываться в строке состояния.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/evolution/calendar/display/error_level</key>
+      <applyto>/apps/evolution/calendar/display/error_level</applyto>
+      <owner>evolution-calendar</owner>
+      <type>int</type>
+      <default>0</default>
+      <locale name="C">
+         <short>Level beyond which the message should be logged.</short>
+         <long> This can have three possible values. 0 for errors. 1 for warnings.
+                2 for debug messages.
+         </long>
+      </locale>
+
+      <locale name="ru">
+         <short>Уровень, за которым сообщение должно заноситься в журнал.</short>
+         <long>У этого ключа может быть одно из трёх значений: 0 — ошибки, 1 — предупреждения; 2 — отладочные сообщения.</long>
+      </locale>
+    </schema>
+  </schemalist>
+</gconfschemafile>

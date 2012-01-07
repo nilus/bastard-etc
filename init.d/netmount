@@ -1,0 +1,106 @@
+#!/sbin/runscript
+# Copyright (c) 2007-2009 Roy Marples <roy@marples.name>
+# All rights reserved. Released under the 2-clause BSD license.
+
+description="Mounts network shares according to /etc/fstab."
+
+need_portmap()
+{
+	local opts=
+	local IFS="
+"
+	set -- $(fstabinfo --options --fstype nfs,nfs4)
+	for opts; do
+		case ,$opts, in
+			*,noauto,*|*,nolock,*);;
+			*) return 0;;
+		esac
+	done
+	return 1
+}
+
+depend()
+{
+	# Only have portmap as a dependency if there is a nfs mount in fstab
+	# that is set to mount at boot
+	local pmap=
+	if need_portmap; then
+		pmap="rpc.statd"
+		[ -x /etc/init.d/rpcbind ] \
+			&& pmap="$pmap rpcbind" \
+			|| pmap="$pmap portmap"
+	fi
+
+	config /etc/fstab
+	need net $pmap
+	use afc-client amd autofs openvpn
+	use dns nfs nfsmount portmap rpcbind rpc.statd rpc.lockd
+	keyword -jail -prefix -vserver
+}
+
+start()
+{
+	local myneed= myuse= pmap="portmap" nfsmounts=
+	[ -x /etc/init.d/rpcbind ] && pmap="rpcbind"
+
+	local x= fs= rc=
+	for x in $net_fs_list; do
+		case "$x" in
+			nfs|nfs4)
+			# If the nfsmount script took care of the nfs
+			# filesystems, then there's no point in trying
+			# them twice
+			service_started nfsmount && continue
+
+			# Only try to mount NFS filesystems if portmap was
+			# started. This is to fix "hang" problems for new
+			# users who do not add portmap to the default runlevel.
+			if need_portmap && ! service_started "$pmap"; then
+				continue
+			fi
+			;;
+		esac
+		fs="$fs${fs:+,}$x"
+	done
+
+	ebegin "Mounting network filesystems"
+	mount -at $fs
+	rc=$?
+	if [ "$RC_UNAME" = Linux ]; then
+		mount -a -O _netdev
+		rc=$?
+	fi
+	ewend $rc "Could not mount all network filesystems"
+	return 0
+}
+
+stop()
+{
+	local x= fs=
+
+	ebegin "Unmounting network filesystems"
+	. "$RC_LIBEXECDIR"/sh/rc-mount.sh
+
+	for x in $net_fs_list; do
+		fs="$fs${fs:+,}$x"
+	done
+	if [ -n "$fs" ]; then
+		umount -at $fs || eerror "Failed to simply unmount filesystems"
+	fi
+
+	eindent
+	fs=
+	for x in $net_fs_list; do
+		fs="$fs${fs:+|}$x"
+	done
+	[ -n "$fs" ] && fs="^($fs)$"
+	do_unmount umount ${fs:+--fstype-regex} $fs --netdev
+	retval=$?
+
+	eoutdent
+	if [ "$RC_UNAME" = Linux ]; then
+		umount -a -O _netdev
+		retval=$?
+	fi
+	eend $retval "Failed to unmount network filesystems"
+}
