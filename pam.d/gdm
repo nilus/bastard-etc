@@ -8,4 +8,6 @@ account    include		system-login
 password   include		system-login
 
 session    include		system-auth
+
 session    optional		pam_gnome_keyring.so auto_start
+
