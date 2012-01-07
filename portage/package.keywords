@@ -197,3 +197,8 @@ media-video/mplayer
 >=media-libs/gegl-0.1.8 ~amd64
 #required by www-client/firefox-9.0, required by @selected, required by @world (argument)
 >=dev-libs/nss-3.13.1-r1 ~amd64
+
+
+gnome-base/gnome-keyring
+app-crypt/seahorse
+>=gnome-base/libgnome-keyring-3.2.2 ~amd64
