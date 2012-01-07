@@ -1,0 +1,10 @@
+# handle multilib ourselves
+ABI=default
+MULTILIB_ABIS="default"
+DEFAULT_ABI=default
+LIBDIR_default="lib"
+CFLAGS_default=
+CPPFLAGS_default=
+CXXFLAGS_default=
+LDFLAGS_default=
+

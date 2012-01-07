@@ -1,0 +1,103 @@
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/evolution/eplugin/mail-notification/notify-only-inbox</key>
+      <applyto>/apps/evolution/eplugin/mail-notification/notify-only-inbox</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>Notify new messages for Inbox only.</short>
+        <long>Whether to notify new messages in Inbox folder only.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Оповещать о новых сообщениях только во «Входящих»</short>
+        <long>Оповещать ли о новых сообщениях только в папке «Входящие».</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/eplugin/mail-notification/status-enabled</key>
+      <applyto>/apps/evolution/eplugin/mail-notification/status-enabled</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>Enable icon in notification area.</short>
+        <long>Show new mail icon in notification area when new messages arrive.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Включить значок в области уведомления.</short>
+        <long>Извещает пользователя о появлении новой почты значком в области уведомлений.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/evolution/eplugin/mail-notification/sound-enabled</key>
+      <applyto>/apps/evolution/eplugin/mail-notification/sound-enabled</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>Play sound when new messages arrive.</short>
+        <long>Whether play sound or beep when new messages arrive.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Воспроизводить звуковой файл при приходе новой почты.</short>
+        <long>Воспроизводить ли звук или подавать гудок при получении новых сообщений.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/evolution/eplugin/mail-notification/sound-beep</key>
+      <applyto>/apps/evolution/eplugin/mail-notification/sound-beep</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>Beep or play sound file.</short>
+        <long>If "true", then beep, otherwise will play sound file when new messages arrive.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Подавать звуковой сигнал или воспроизводить звуковой файл.</short>
+        <long>Если этот ключ установлен, то подавать гудок, иначе проигрывать звуковой файл при поступлении новых сообщений.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/evolution/eplugin/mail-notification/sound-file</key>
+      <applyto>/apps/evolution/eplugin/mail-notification/sound-file</applyto>
+      <owner>evolution-mail</owner>
+      <type>string</type>
+      <default></default>
+      <locale name="C">
+        <short>Sound file name to be played.</short>
+        <long>Sound file to be played when new messages arrive, if not in beep mode.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Имя звукового файла, который надо проигрывать.</short>
+        <long>Звуковой файл, воспроизводимый при приходе новой почты, если не включён режим гудка.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/evolution/eplugin/mail-notification/sound-use-theme</key>
+      <applyto>/apps/evolution/eplugin/mail-notification/sound-use-theme</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>false</default>	
+      <locale name="C">
+        <short>Use sound theme</short>
+        <long>Play themed sound when new messages arrive, if not in beep mode.</long>
+      </locale>
+	
+      <locale name="ru">
+        <short>Использовать звуковую тему</short>
+        <long>Воспроизводить звук при получении новой почты, если не включён режим гудка.</long>
+      </locale>
+    </schema>	
+  </schemalist>
+</gconfschemafile>
+

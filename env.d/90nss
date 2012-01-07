@@ -1,0 +1,1 @@
+PRELINK_PATH_MASK=/usr/lib64/libfreebl3.so:/usr/lib64/libnssdbm3.so:/usr/lib64/libsoftokn3.so

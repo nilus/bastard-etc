@@ -1,0 +1,10 @@
+#required by =net-im/skype-2.2.0.25 (argument)
+>=net-im/skype-2.2.0.25 skype-eula
+#required by app-cdr/nero (argument)
+>=app-cdr/nero-4.0.0.0-r1 Nero-EULA-US
+#required by virtual/jre-1.6.0, required by dev-java/java-config-2.1.11-r3
+>=dev-java/sun-jre-bin-1.6.0.26 dlj-1.1
+#required by www-plugins/google-talkplugin (argument)
+>=www-plugins/google-talkplugin-2.3.2.0 google-talkplugin
+#required by media-sound/google-musicmanager (argument)
+>=media-sound/google-musicmanager-1.0.18.6104_beta google-talkplugin

@@ -1,0 +1,9 @@
+<!-- Nero Linux configuration file. -->
+<!-- Do not edit it manually unless you know what you are doing. -->
+
+<?xml version='1.0' encoding='UTF-8'?>
+<NeroLinux version='3.0.0.0' />
+<OptionsDB name='NeroLicense'>
+  <Option name='Serial number' type='string' encoding='UTF-8' value='8M1K-20C7-45CP-CAC2-XU3Z-9924-PMCP-709X' />
+</OptionsDB>
+

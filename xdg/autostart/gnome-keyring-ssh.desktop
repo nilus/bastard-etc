@@ -1,0 +1,15 @@
+[Desktop Entry]
+Type=Application
+Name=SSH Key Agent
+Name[ru]=Агент ключей SSH
+Comment=GNOME Keyring: SSH Agent
+Comment[ru]=Связка ключей GNOME: SSH-агент
+Exec=/usr/bin/gnome-keyring-daemon --start --components=ssh
+OnlyShowIn=GNOME;LXDE;
+X-GNOME-Autostart-Phase=Initialization
+X-GNOME-AutoRestart=false
+X-GNOME-Autostart-Notify=true
+X-GNOME-Bugzilla-Bugzilla=GNOME
+X-GNOME-Bugzilla-Product=gnome-keyring
+X-GNOME-Bugzilla-Component=general
+X-GNOME-Bugzilla-Version=2.32.1

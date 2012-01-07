@@ -1,0 +1,2 @@
+# Generated and used by eselect gnome-shell-extensions; do not edit manually
+declare -a enabled_saved='([0]="")'

@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=Network
+Name[ru]=Сеть
+Comment=Manage your network connections
+Comment[ru]=Управление сетевыми соединениями
+Icon=nm-device-wireless
+Exec=nm-applet
+Terminal=false
+Type=Application
+NoDisplay=true
+X-GNOME-Bugzilla-Bugzilla=GNOME
+X-GNOME-Bugzilla-Product=NetworkManager
+X-GNOME-Bugzilla-Component=general
+X-GNOME-Autostart-enabled=true

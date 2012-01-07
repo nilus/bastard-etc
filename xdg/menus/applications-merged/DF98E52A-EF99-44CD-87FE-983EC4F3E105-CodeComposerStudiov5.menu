@@ -1,0 +1,15 @@
+<!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN"
+    "http://www.freedesktop.org/standards/menu-spec/menu-1.0.dtd">
+<!-- Do not edit manually - generated and managed by xdg-desktop-menu -->
+<Menu>
+    <Name>Applications</Name>
+<Menu>
+    <Name>DF98E52A-EF99-44CD-87FE-983EC4F3E105-CodeComposerStudiov5</Name>
+    <Directory>DF98E52A-EF99-44CD-87FE-983EC4F3E105-CodeComposerStudiov5.0.0.directory</Directory>
+    <Include>
+        <Filename>CCSv5-program.desktop</Filename>
+        <Filename>CCSv5-ReleaseNote.desktop</Filename>
+        <Filename>CCSv5-uninstall.desktop</Filename>
+    </Include>
+</Menu>
+</Menu>

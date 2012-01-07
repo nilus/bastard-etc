@@ -1,0 +1,21 @@
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/evolution/mail/prompts/checkdefault</key>
+      <applyto>/apps/evolution/mail/prompts/checkdefault</applyto>
+      <owner>evolution-mail</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>Check whether Evolution is the default mailer</short>
+        <long>Every time Evolution starts, check whether or not it is the default mailer.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Проверять, является ли Evolution почтовой программой по умолчанию</short>
+        <long>Проверять при каждом запуске, является ли Evolution почтовой программой по умолчанию.</long>
+      </locale>
+    </schema>
+  </schemalist>
+</gconfschemafile>
+

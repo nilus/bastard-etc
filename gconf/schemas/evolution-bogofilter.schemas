@@ -1,0 +1,25 @@
+<gconfschemafile>
+  <schemalist>
+
+    <schema>
+      <key>/schemas/apps/evolution/mail/junk/bogofilter/unicode</key>
+      <applyto>/apps/evolution/mail/junk/bogofilter/unicode</applyto>
+      <owner>evolution-bogofilter</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>Convert mail messages to Unicode</short>
+        <long>
+          Convert message text to Unicode UTF-8 to unify spam/ham tokens
+          coming from different character sets.
+        </long>
+      </locale>
+
+      <locale name="ru">
+        <short>Преобразовывать почтовые сообщения в Юникод</short>
+        <long>Преобразовывать текст сообщения в кодировку UTF-8 для облегчения работы фильтров спама, имеющих проблемы с различными кодировками.</long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</gconfschemafile>

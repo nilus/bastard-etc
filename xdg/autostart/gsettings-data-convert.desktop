@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Name=GSettings Data Conversion
+Name[ru]=Преобразование данных GSettings
+Comment=Migrates user settings from GConf to dconf
+Comment[ru]=Переносит настройки пользователя из GConf в dconf
+Exec=gsettings-data-convert
+Terminal=false
+Type=Application
+OnlyShowIn=GNOME;
+X-GNOME-Autostart-Phase=Initialization

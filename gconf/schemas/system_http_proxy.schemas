@@ -1,0 +1,259 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/system/http_proxy/use_http_proxy</key>
+      <applyto>/system/http_proxy/use_http_proxy</applyto>
+      <owner>gnome-vfs</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Use HTTP proxy</short>
+        <long>Enables the proxy settings when accessing HTTP over the
+        Internet.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Использовать прокси-сервер для протокола HTTP</short>
+        <long>Включает установки прокси-сервера для протокола HTTP через Интернет.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/system/http_proxy/host</key>
+      <applyto>/system/http_proxy/host</applyto>
+      <owner>gnome-vfs</owner>
+      <type>string</type>
+      <default></default>
+      <locale name="C">
+        <short>HTTP proxy host name</short>
+        <long>The machine name to proxy HTTP through.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Имя прокси-сервера для протокола HTTP</short>
+        <long>Имя машины прокси-сервера для протокола HTTP.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/system/http_proxy/port</key>
+      <applyto>/system/http_proxy/port</applyto>
+      <owner>gnome-vfs</owner>
+      <type>int</type>
+      <default>8080</default>
+      <locale name="C">
+        <short>HTTP proxy port</short>
+        <long>The port on the machine defined by "/system/http_proxy/host"
+        that you proxy through.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Порт прокси-сервера для протокола HTTP</short>
+        <long>Порт на машине, определённой ключом &quot;/system/http_proxy/host&quot; для сервиса прокси.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/system/http_proxy/use_authentication</key>
+      <applyto>/system/http_proxy/use_authentication</applyto>
+      <owner>gnome-vfs</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Authenticate proxy server connections</short>
+        <long>If true, then connections to the proxy server require
+        authentication. The username/password combo is defined by
+        "/system/http_proxy/authentication_user" and
+        "/system/http_proxy/authentication_password".</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Соединения с прокси-сервером требуют авторизации</short>
+        <long>Если этот ключ установлен, то соединения с прокси-сервером требуют авторизации. Пара значений имя_пользователя/пароль определяется ключами &quot;/system/http_proxy/authentication_user&quot; и &quot;/system/http_proxy/authentication_password&quot;.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/system/http_proxy/authentication_user</key>
+      <applyto>/system/http_proxy/authentication_user</applyto>
+      <owner>gnome-vfs</owner>
+      <type>string</type>
+      <default></default>
+      <locale name="C">
+        <short>HTTP proxy username</short>
+        <long>User name to pass as authentication when doing HTTP proxying.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Имя пользователя прокси-сервера для протокола HTTP</short>
+        <long>Имя пользователя для использования при авторизации на прокси-сервере для протокола HTTP.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/system/http_proxy/authentication_password</key>
+      <applyto>/system/http_proxy/authentication_password</applyto>
+      <owner>gnome-vfs</owner>
+      <type>string</type>
+      <default></default>
+      <locale name="C">
+        <short>HTTP proxy password</short>
+        <long>Password to pass as authentication when doing HTTP proxying.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Пароль прокси-сервера для протокола HTTP</short>
+        <long>Пароль для авторизации на прокси-сервере протокола HTTP.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/system/http_proxy/ignore_hosts</key>
+      <applyto>/system/http_proxy/ignore_hosts</applyto>
+      <owner>gnome-vfs</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[localhost,127.0.0.0/8]</default>
+      <locale name="C">
+        <short>Non-proxy hosts</short>
+        <long>This key contains a list of hosts which are connected to
+	directly, rather than via the proxy (if it is active). The values can
+	be hostnames, domains (using an initial wildcard like *.foo.com), IP
+	host addresses (both IPv4 and IPv6) and network addresses with a
+	netmask (something like 192.168.0.0/24).</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Узлы, доступные без прокси</short>
+        <long>Этот ключ содержит список узлов, соединение с которыми осуществляется напрямую, минуя прокси-сервер (если последний используется). Значения могут быть именами узлов, доменами (с использованием расширителей типа *.foo.com), адресами узлов протокола IP (в вариантах IPv4 и IPv6) и сетевыми адресами с использованием маски (наподобие 192.168.0.0/24).</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/system/proxy/mode</key>
+      <applyto>/system/proxy/mode</applyto>
+      <owner>gnome-vfs</owner>
+      <type>string</type>
+      <default>none</default>
+      <locale name="C">
+        <short>Proxy configuration mode</short>
+        <long>Select the proxy configuration mode. Supported values are
+	"none", "manual", "auto".</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Режим конфигурации прокси-серверов</short>
+        <long>Режим конфигурации сервиса прокси. Возможные значения &quot;none&quot; (&quot;отсутствует&quot;), &quot;manual&quot; (&quot;ручной&quot;), &quot;auto&quot; (&quot;автоматический&quot;).</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/system/proxy/secure_host</key>
+      <applyto>/system/proxy/secure_host</applyto>
+      <owner>gnome-vfs</owner>
+      <type>string</type>
+      <default></default>
+      <locale name="C">
+        <short>Secure HTTP proxy host name</short>
+        <long>The machine name to proxy secure HTTP through.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Имя прокси-сервера для защищённого протокола HTTP</short>
+        <long>Имя машины прокси-сервера для защищённого протокола HTTP.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/system/proxy/secure_port</key>
+      <applyto>/system/proxy/secure_port</applyto>
+      <owner>gnome-vfs</owner>
+      <type>int</type>
+      <default>0</default>
+      <locale name="C">
+        <short>Secure HTTP proxy port</short>
+        <long>The port on the machine defined by "/system/proxy/secure_host"
+        that you proxy through.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Порт прокси-сервера для защищённого протокола HTTP</short>
+        <long>Порт на машине, определённой ключом &quot;/system/proxy/secure_host&quot; для сервиса прокси.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/system/proxy/ftp_host</key>
+      <applyto>/system/proxy/ftp_host</applyto>
+      <owner>gnome-vfs</owner>
+      <type>string</type>
+      <default></default>
+      <locale name="C">
+        <short>FTP proxy host name</short>
+        <long>The machine name to proxy FTP through.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Имя прокси-сервера для протокола FTP</short>
+        <long>Имя машины прокси-сервера для протокола FTP.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/system/proxy/ftp_port</key>
+      <applyto>/system/proxy/ftp_port</applyto>
+      <owner>gnome-vfs</owner>
+      <type>int</type>
+      <default>0</default>
+      <locale name="C">
+        <short>FTP proxy port</short>
+        <long>The port on the machine defined by "/system/proxy/ftp_host"
+        that you proxy through.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Порт прокси-сервера для протокола FTP</short>
+        <long>Порт на машине, определённой ключом &quot;/system/proxy/ftp_host&quot; для сервиса прокси.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/system/proxy/socks_host</key>
+      <applyto>/system/proxy/socks_host</applyto>
+      <owner>gnome-vfs</owner>
+      <type>string</type>
+      <default></default>
+      <locale name="C">
+        <short>SOCKS proxy host name</short>
+        <long>The machine name to proxy socks through.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Имя прокси-сервера для протокола SOCKS</short>
+        <long>Имя машины прокси-сервера для протокола SOCKS.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/system/proxy/socks_port</key>
+      <applyto>/system/proxy/socks_port</applyto>
+      <owner>gnome-vfs</owner>
+      <type>int</type>
+      <default>0</default>
+      <locale name="C">
+        <short>SOCKS proxy port</short>
+        <long>The port on the machine defined by "/system/proxy/socks_host"
+        that you proxy through.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Порт прокси-сервера для протокола SOCKS</short>
+        <long>Порт на машине, определённой ключом &quot;/system/proxy/socks_host&quot; для сервиса прокси.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/system/proxy/autoconfig_url</key>
+      <applyto>/system/proxy/autoconfig_url</applyto>
+      <owner>gnome-vfs</owner>
+      <type>string</type>
+      <default></default>
+      <locale name="C">
+        <short>Automatic proxy configuration URL</short>
+        <long>URL that provides proxy configuration values.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>URL автоматической настройки прокси</short>
+        <long>Ссылка (URL), предоставляющая значения для автоматической конфигурации прокси-серверов.</long>
+      </locale>
+    </schema>
+  </schemalist>
+</gconfschemafile>

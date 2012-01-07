@@ -1,0 +1,16 @@
+rootfs / rootfs rw 0 0
+/dev/root / reiserfs rw,noatime 0 0
+proc /proc proc rw,nosuid,nodev,noexec,relatime 0 0
+rc-svcdir /lib64/rc/init.d tmpfs rw,nosuid,nodev,noexec,relatime,size=1024k,mode=755 0 0
+sysfs /sys sysfs rw,nosuid,nodev,noexec,relatime 0 0
+debugfs /sys/kernel/debug debugfs rw,nosuid,nodev,noexec,relatime 0 0
+udev /dev devtmpfs rw,nosuid,relatime,size=10240k,nr_inodes=1277243,mode=755 0 0
+devpts /dev/pts devpts rw,nosuid,noexec,relatime,gid=5,mode=620 0 0
+shm /dev/shm tmpfs rw,nosuid,nodev,noexec,relatime 0 0
+fusectl /sys/fs/fuse/connections fusectl rw 0 0
+/dev/sda3 /media/disk fuseblk rw,nosuid,nodev,allow_other,allow_other,default_permissions,blksize=4096,default_permissions 0 0
+/dev/sda2 /media/disk-1 fuseblk rw,nosuid,nodev,allow_other,allow_other,default_permissions,blksize=4096,default_permissions 0 0
+usbfs /proc/bus/usb usbfs rw,noexec,nosuid,devmode=0664,devgid=85 0 0
+nfsd /proc/fs/nfsd nfsd rw,noexec,nosuid,nodev 0 0
+binfmt_misc /proc/sys/fs/binfmt_misc binfmt_misc rw,noexec,nosuid,nodev 0 0
+rpc_pipefs /var/lib/nfs/rpc_pipefs rpc_pipefs rw 0 0

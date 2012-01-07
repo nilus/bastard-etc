@@ -1,0 +1,447 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/desktop/gnome/interface/accessibility</key>
+      <applyto>/desktop/gnome/interface/accessibility</applyto>
+      <owner>gnome</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Enable Accessibility</short>
+        <long>Whether Applications should have accessibility support.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Включить специальные возможности</short>
+        <long>Поддерживать ли специальные возможности в приложениях.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/desktop/gnome/interface/enable_animations</key>
+      <applyto>/desktop/gnome/interface/enable_animations</applyto>
+      <owner>gnome</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>Enable Animations</short>
+	<long>Whether animations should be displayed. Note: This is a global
+	key, it changes the behaviour of the window manager, the panel etc.
+	</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Включить анимацию</short>
+	<long>Отображать ли анимацию. Обратите внимание: это глобальный ключ, его изменение повлияет на поведение оконного менеджера, панели и так далее.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/desktop/gnome/interface/menus_have_tearoff</key>
+      <applyto>/desktop/gnome/interface/menus_have_tearoff</applyto>
+      <owner>gnome</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Menus Have Tearoff</short>
+        <long>Whether menus should have a tearoff.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>В меню есть линии разрыва</short>
+        <long>Показывать ли линию отрыва в меню.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/desktop/gnome/interface/can_change_accels</key>
+      <applyto>/desktop/gnome/interface/can_change_accels</applyto>
+      <owner>gnome</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Can Change Accels</short>
+        <long>Whether the user can dynamically type a new accelerator when 
+	positioned over an active menuitem.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Можно ли изменять комбинации клавиш</short>
+        <long>Может ли пользователь динамически вводить новую комбинацию клавиш для пункта меню при указании на него.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/desktop/gnome/interface/toolbar_style</key>
+      <applyto>/desktop/gnome/interface/toolbar_style</applyto>
+      <owner>gnome</owner>
+      <type>string</type>
+      <default>both-horiz</default>
+      <locale name="C">
+        <short>Toolbar Style</short>
+        <long>Toolbar Style. Valid values are "both", "both-horiz", "icons", and
+	"text".</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Стиль панелей инструментов</short>
+        <long>Стиль панелей инструментов. Возможные значения: «both», «both_horiz», «icon», «text».</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/desktop/gnome/interface/menus_have_icons</key>
+      <applyto>/desktop/gnome/interface/menus_have_icons</applyto>
+      <owner>gnome</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>Menus Have Icons</short>
+        <long>Whether menus may display an icon next to a menu entry.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>В меню показываются значки</short>
+        <long>Показывать ли значки в пунктах меню.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/desktop/gnome/interface/buttons_have_icons</key>
+      <applyto>/desktop/gnome/interface/buttons_have_icons</applyto>
+      <owner>gnome</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Buttons Have Icons</short>
+        <long>Whether buttons may display an icon in addition to the button text.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Значки на кнопках</short>
+        <long>Показывать ли значки в кнопках вместе с текстом.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/desktop/gnome/interface/menubar_detachable</key>
+      <applyto>/desktop/gnome/interface/menubar_detachable</applyto>
+      <owner>gnome</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Menubar Detachable</short>
+        <long>Whether the user can detach menubars and move them around.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Открепляемые меню</short>
+        <long>Может ли пользователь откреплять меню и передвигать их по экрану.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/desktop/gnome/interface/toolbar_detachable</key>
+      <applyto>/desktop/gnome/interface/toolbar_detachable</applyto>
+      <owner>gnome</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Toolbar Detachable</short>
+        <long>Whether the user can detach toolbars and move them around.</long>
+	</locale>
+
+      <locale name="ru">
+        <short>Открепляемые панели инструментов</short>
+        <long>Может ли пользователь откреплять панели инструментов и передвигать их по экрану.</long>
+	</locale>
+    </schema>
+    <schema>
+      <key>/schemas/desktop/gnome/interface/toolbar_icons_size</key>
+      <applyto>/desktop/gnome/interface/toolbar_icons_size</applyto>
+      <owner>gnome</owner>
+      <type>string</type>
+      <default>large-toolbar</default>
+      <locale name="C">
+        <short>Toolbar Icon Size</short>
+        <long>Size of icons in toolbars, either "small-toolbar" or
+        "large-toolbar".</long>
+	</locale>
+
+      <locale name="ru">
+        <short>Размер значков на панелях инструментов</short>
+        <long>Размер значков на панелях инструментов: либо «small-toolbar», либо «large-toolbar».</long>
+	</locale>
+    </schema>
+    <schema>
+      <key>/schemas/desktop/gnome/interface/cursor_blink</key>
+      <applyto>/desktop/gnome/interface/cursor_blink</applyto>
+      <owner>gnome</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+	<short>Cursor Blink</short>
+	<long>Whether the cursor should blink.</long>
+      </locale>
+
+      <locale name="ru">
+	<short>Мигание курсора</short>
+	<long>Должен ли курсор мигать.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/desktop/gnome/interface/cursor_blink_time</key>
+      <applyto>/desktop/gnome/interface/cursor_blink_time</applyto>
+      <owner>gnome</owner>
+      <type>int</type>
+      <default>1200</default>
+      <locale name="C">
+	<short>Cursor Blink Time</short>
+	<long>Length of the cursor blink cycle, in milliseconds.</long>
+      </locale>
+
+      <locale name="ru">
+	<short>Время мигания курсора</short>
+	<long>Длина цикла мигания курсора (в миллисекундах).</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/desktop/gnome/interface/icon_theme</key>
+      <applyto>/desktop/gnome/interface/icon_theme</applyto>
+      <owner>gnome</owner>
+      <type>string</type>
+      <default>gnome</default>
+      <locale name="C">
+        <short>Icon Theme</short>
+        <long>Icon theme to use for the panel, nautilus etc.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Тема значков</short>
+        <long>Тема значков, для использования в панели, Nautilus и других местах.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/desktop/gnome/interface/gtk_theme</key>
+      <applyto>/desktop/gnome/interface/gtk_theme</applyto>
+      <owner>gnome</owner>
+      <type>string</type>
+      <default>Clearlooks</default>
+      <locale name="C">
+	<short>Gtk+ Theme</short>
+	<long>Basename of the default theme used by gtk+.</long>
+      </locale>
+
+      <locale name="ru">
+	<short>Тема GTK+</short>
+	<long>Базовое имя темы по умолчанию, используемой GTK+.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/desktop/gnome/interface/gtk_key_theme</key>
+      <applyto>/desktop/gnome/interface/gtk_key_theme</applyto>
+      <owner>gnome</owner>
+      <type>string</type>
+      <default>Default</default>
+      <locale name="C">
+	<short>Gtk+ Theme</short>
+	<long>Basename of the default theme used by gtk+.</long>
+      </locale>
+
+      <locale name="ru">
+	<short>Тема GTK+</short>
+	<long>Базовое имя темы по умолчанию, используемой GTK+.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/desktop/gnome/interface/font_name</key>
+      <applyto>/desktop/gnome/interface/font_name</applyto>
+      <owner>gnome</owner>
+      <type>string</type>
+      <default>Sans 10</default>
+      <locale name="C">
+	<short>Default font</short>
+	<long>Name of the default font used by gtk+.</long>
+      </locale>
+
+      <locale name="ru">
+	<short>Шрифт по умолчанию</short>
+	<long>Название шрифта по умолчанию, используемого GTK+.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/desktop/gnome/interface/gtk-im-preedit-style</key>
+      <applyto>/desktop/gnome/interface/gtk-im-preedit-style</applyto>
+      <owner>gnome</owner>
+      <type>string</type>
+      <default>callback</default>
+      <locale name="C">
+	<short>GTK IM Preedit Style</short>
+	<long>Name of the GTK+ input method Preedit Style used by gtk+.</long>
+      </locale>
+
+      <locale name="ru">
+	<short>Стиль предправки метода ввода GTK+</short>
+	<long>Имя стиля предправки метода ввода GTK+.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/desktop/gnome/interface/gtk-im-status-style</key>
+      <applyto>/desktop/gnome/interface/gtk-im-status-style</applyto>
+      <owner>gnome</owner>
+      <type>string</type>
+      <default>callback</default>
+      <locale name="C">
+	<short>GTK IM Status Style</short>
+	<long>Name of the GTK+ input method Status Style used by gtk+.</long>
+      </locale>
+
+      <locale name="ru">
+	<short>Стиль состояния метода ввода GTK+</short>
+	<long>Имя стиля состояния метода ввода GTK+.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/desktop/gnome/interface/gtk-im-module</key>
+      <applyto>/desktop/gnome/interface/gtk-im-module</applyto>
+      <owner>gnome</owner>
+      <type>string</type>
+      <default></default>
+      <locale name="C">
+        <short>GTK IM Module</short>
+        <long>Name of the input method module used by GTK+.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Модуль ввода GTK+</short>
+        <long>Название метода ввода, используемого GTK+.</long>
+      </locale>
+    </schema>
+    <schema>
+      <applyto>/desktop/gnome/interface/document_font_name</applyto>
+      <key>/schemas/desktop/gnome/interface/document_font_name</key>
+      <owner>gnome</owner>
+      <type>string</type>
+      <default>Sans 10</default>
+      <locale name="C">
+	<short>Document font</short>
+	<long>Name of the default font used for reading documents.</long>
+      </locale>
+
+      <locale name="ru">
+	<short>Шрифт документа</short>
+	<long>Имя шрифта, используемого по умолчанию для чтения документов.</long>
+      </locale>
+    </schema>
+    <schema>
+      <applyto>/desktop/gnome/interface/monospace_font_name</applyto>
+      <key>/schemas/desktop/gnome/interface/monospace_font_name</key>
+      <owner>gnome</owner>
+      <type>string</type>
+      <default>Monospace 10</default>
+      <locale name="C">
+	<short>Monospace font</short>
+	<long>Name of a monospaced (fixed-width) font for use
+              in locations like terminals.</long>
+      </locale>
+
+      <locale name="ru">
+	<short>Моноширинный шрифт</short>
+	<long>Название моноширинного (как у пишущей машинки) шрифта, используемого в приложениях вроде терминала.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/desktop/gnome/interface/use_custom_font</key>
+      <applyto>/desktop/gnome/interface/use_custom_font</applyto>
+      <owner>gnome</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+	<short>Use Custom Font</short>
+	<long>Whether to use a custom font in gtk+ applications.</long>
+      </locale>
+
+      <locale name="ru">
+	<short>Использовать другой шрифт</short>
+	<long>Следует ли использовать другой шрифт в приложениях GTK+.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/desktop/gnome/interface/status_bar_meter_on_right</key>
+      <applyto>/desktop/gnome/interface/status_bar_meter_on_right</applyto>
+      <owner>gnome</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+	<short>Status Bar on Right</short>
+	<long>Whether to display a status bar meter on the right.</long>
+      </locale>
+
+      <locale name="ru">
+	<short>Строка состояния справа</short>
+	<long>Отображать ли область для переноса в строке состояния справа.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/desktop/gnome/interface/file_chooser_backend</key>
+      <applyto>/desktop/gnome/interface/file_chooser_backend</applyto>
+      <owner>gnome</owner>
+      <type>string</type>
+      <default>gio</default>
+      <locale name="C">
+	<short>Module for GtkFileChooser</short>
+	<long>Module to use as the filesystem model for the
+	GtkFileChooser widget.  Possible values are "gio", "gnome-vfs" and
+	"gtk+".</long>
+      </locale>
+
+      <locale name="ru">
+	<short>Модуль для GtkFileChooser</short>
+	<long>Модуль для использования в качестве модели файловой системы в виджете GtkFileChooser. Возможные значения: «gio», «gnome-vfs» и «gtk+».</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/desktop/gnome/interface/menubar_accel</key>
+      <applyto>/desktop/gnome/interface/menubar_accel</applyto>
+      <owner>gnome</owner>
+      <type>string</type>
+      <default>F10</default>
+      <locale name="C">
+	<short>Menubar accelerator</short>
+	<long>Keyboard shortcut to open the menu bars.</long>
+      </locale>
+
+      <locale name="ru">
+	<short>Клавиатурный ускоритель меню</short>
+	<long>Комбинация клавиш клавиатуры для открытия меню.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/desktop/gnome/interface/show_input_method_menu</key>
+      <applyto>/desktop/gnome/interface/show_input_method_menu</applyto>
+      <owner>gnome</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+	<short>Show the 'Input Methods' menu</short>
+	<long>Whether the context menus of entries and text views 
+        should offer to change the input method.</long>
+      </locale>
+
+      <locale name="ru">
+	<short>Показывать меню «Использовать методы ввода»</short>
+	<long>Должны ли контекстные меню элементов ввода текста предлагать сменить метод ввода.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/desktop/gnome/interface/show_unicode_menu</key>
+      <applyto>/desktop/gnome/interface/show_unicode_menu</applyto>
+      <owner>gnome</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+	<short>Show the 'Unicode Control Character' menu</short>
+	<long>Whether the context menus of entries and text views 
+        should offer to insert control characters.</long>
+      </locale>
+
+      <locale name="ru">
+	<short>Показывать меню «Вставить управляющий символ набора Юникод»</short>
+	<long>Должны ли контекстные меню элементов ввода текста предлагать вставить управляющие символы.</long>
+      </locale>
+    </schema>
+  </schemalist>
+</gconfschemafile>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<event>
+    <name>Collect yours vim configuration files</name>
+    <name xml:lang="bg">Събира vim конфигурационните Ви файлове</name>
+    <name xml:lang="da">Saml dine konfigurationsfiler for vim</name>
+    <name xml:lang="es">Obtiene sus archivos de configuración vim</name>
+    <name xml:lang="fi">Kerää käyttäjän vim-asetustiedostot</name>
+    <name xml:lang="fr">Récupère vos fichiers de configuration vim</name>
+    <name xml:lang="it">Colleziona i tuoi file di configurazione vim </name>
+    <name xml:lang="nl">Verzmel jouw vim configuratie bestanden</name>
+    <name xml:lang="pl">Zbiera pliki konfiguracji użytkownika programu vim</name>
+    <name xml:lang="pt_BR">Coletar seus arquivos de configuração vim</name>
+    <name xml:lang="ru">Сбор пользовательских параметров vim</name>
+    <name xml:lang="sv">Samla in dina vim-Konfigurationsfiler</name>
+    <name xml:lang="uk">Зібрати ваші файли налаштувань vim</name>
+    <name xml:lang="zh_CN">收集您的 vim 配置文件</name>
+    <name xml:lang="zh_TW">收集您的 vim 組態檔</name>
+    <description>Save .vimrc and .gvimrc from your home directory</description>
+    <description xml:lang="bg">Запазва .vimrc и .gvimrc от домашната Ви директория</description>
+    <description xml:lang="da">Gem .vimrc og .gvimrc fra din hjemmemappe</description>
+    <description xml:lang="es">Guarda .vimrc y .gvimrc de su directorio temporal</description>
+    <description xml:lang="fi">Tallenna kotihakemiston .vimrc- ja .gvimrc-tiedostot</description>
+    <description xml:lang="fr">Enregistre .vimrc et gvimrc depuis votre dossier personnel</description>
+    <description xml:lang="it">Salva .vimrc e .gvimrc della tua home directory</description>
+    <description xml:lang="nl">Sla .vimrc en .gvimrc uit jouw persoonlijke map op</description>
+    <description xml:lang="pl">Zapisuje pliki .vimrc i .gvimrc z katalogu domowego użytkownika</description>
+    <description xml:lang="pt_BR">Salvar arquivos .vimrc e gvimrc da sua pasta pessoal</description>
+    <description xml:lang="ru">Чтение .vimrc и .gvimrc из домашнего каталога пользователя</description>
+    <description xml:lang="sv">Spara .vimrc och .gvimrc från din hemkatalog</description>
+    <description xml:lang="uk">Зберегти .vimrc та .gvimrc з вашого домашнього каталогу</description>
+    <description xml:lang="zh_CN">保存您的家目录中的 .vimrc 和 .gvimrc</description>
+    <description xml:lang="zh_TW">從您的家目錄儲存 .vimrc 與 .gvimrc</description>
+    <long-description>Checks if there are .vimrc and .gvimrc in your home directory and saves them as user_vimrc and user_gvimrc, respectively.</long-description>
+    <long-description xml:lang="bg">Проверява за наличието на .vimrc и .gvimrc във Вашата домашна директория и ги записва като user_vimrc и user_gvimrc, респективно.</long-description>
+    <long-description xml:lang="da">Kontrollér om der er en .vimrc og .gvimrc i din hjemmemappe og gem dem som user_vimrc og user_gvimrc.</long-description>
+    <long-description xml:lang="es">Verifica si existen directorios .vimrc y .gvimrc en su directorio personal y los guarda como user_vimrc y user_gvimrc, respectivamente.</long-description>
+    <long-description xml:lang="fi">Tarkistaa onko kotihakemistossa .vimrc- ja .gvimrc-tiedostot ja tallentaa ne user_vimrc- ja user_gvimrc-nimillä.</long-description>
+    <long-description xml:lang="fr">Contrôle s'il y a les fichiers .vimrc et .gvimrc dans votre dossier personnel et les enregistre respectivement comme user_vimrc et user_gvimrc.</long-description>
+    <long-description xml:lang="it">Verifica se ci sono i file .vimrc e .gvimrc nella tua home directory e li salva come user_vimrc and user_gvimrc, rispettivamente.</long-description>
+    <long-description xml:lang="nl">Controleert of er .vimrc en .gvimrc bestanden in jouw persoonlijke map zijn en slaat ze op als respectievelijk user_vimrc en user_gvimrc.</long-description>
+    <long-description xml:lang="pl">Sprawdza, czy istnieją pliki .vimrc i .gvimrc w katalogu domowym i zapisuje je jako user_vimrc i user_gvimrc.</long-description>
+    <long-description xml:lang="pt_BR">Verifica se existem arquivos .vimrc e gvimrc em sua pasta pessoal e os salva como user_vimrc e user_gvimrc, respectivamente.</long-description>
+    <long-description xml:lang="ru">Проверка домашне папки на наличие файлов .vimrc и .gvimrc и вложение последних в отчёты как user_vimrc и user_gvimrc.</long-description>
+    <long-description xml:lang="sv">Kontrollerar om det finns .vimrc och .gvimrc i din hemkatalog och sparar dem som user_vimrc respektiver user_gvimrc.</long-description>
+    <long-description xml:lang="uk">Шукає .vimrc і .gvimrc у вашому домашньому каталозі і зберігає їх як user_vimrc і user_gvimrc, відповідно.</long-description>
+    <long-description xml:lang="zh_CN">检查您的家目录下是否存在 .vimrc 和 .gvimrc  文件，分别把它们保存到 user_vimrc 和 user_gvimrc。</long-description>
+    <long-description xml:lang="zh_TW">檢查您的家目錄是否有 .vimrc 與 .gvimrc，並將它們個別儲存為 user_vimrc 與 user_gvimrc。</long-description>
+    <creates-items>user_vimrc,user_gvimrc</creates-items>
+</event>

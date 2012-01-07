@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=Mount Helper
+Name[ru]=Помощник монтирования
+Comment=Automount and autorun plugged devices
+Comment[ru]=Автомонтируемые и автозапускаемые подключаемые устройства
+Exec=/usr/libexec/gnome-fallback-mount-helper
+Icon=drive-optical
+Terminal=false
+Type=Application
+Categories=
+NoDisplay=true
+OnlyShowIn=GNOME;
+X-GNOME-Autostart-Notify=true
+AutostartCondition=GNOME3 if-session gnome-fallback

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Blueman Applet
+Name[ru]=Апплет Blueman
+Comment=Blueman Bluetooth Manager
+Comment[ru]=Менеджер Bluetooth Blueman
+Icon=blueman
+Exec=blueman-applet
+Terminal=false
+Type=Application
+Categories=
